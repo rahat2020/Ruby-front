@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "./components/Carousel/Carousel";
+import Footer from "./components/Footer/Footer";
 import GridView from "./components/GridView/GridView";
 import StickyNavBar from "./components/StickyNavBar/StickyNavBar";
 import TopNavBar from "./components/topNavBar/TopNavBar";
@@ -41,6 +42,7 @@ function App() {
             />
             <StickyNavBar/>
             <GridView newsList={newsList}/>
+            <Footer/>
         </div>
     );
 }

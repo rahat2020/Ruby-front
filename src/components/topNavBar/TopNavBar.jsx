@@ -46,7 +46,7 @@ const TopNavBar = () => {
                         More FA sites
                     </a>
                     <a href="#" className="ml-auto text-sm items-center">
-                        Powered by <span className="font-bold">Cognizant</span>
+                        Powered by <span className="font-bold">PUBLICITIX</span>
                     </a>
                 </div>
             </div>
