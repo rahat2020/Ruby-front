@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="633px" height="449px" viewBox="0 0 633 449" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>bgHeroTheme2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="40.2013902%" y1="73.9412644%" x2="55.7451975%" y2="9.54018391%" id="linearGradient-1">
+            <stop stop-color="#870064" offset="0%"></stop>
+            <stop stop-color="#A61C60" offset="25.19%"></stop>
+            <stop stop-color="#FF6B53" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="30.6322368%" y1="-41.6789082%" x2="64.7666161%" y2="83.2810286%" id="linearGradient-2">
+            <stop stop-color="#FF4441" offset="7.000762%"></stop>
+            <stop stop-color="#E23449" offset="22.05%"></stop>
+            <stop stop-color="#BB1D55" offset="45.62%"></stop>
+            <stop stop-color="#9E0D5D" offset="67.26%"></stop>
+            <stop stop-color="#8D0362" offset="86.09%"></stop>
+            <stop stop-color="#870064" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="New" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="New-Backgrounds-Copy-5" transform="translate(-1092.000000, -1880.000000)">
+            <g id="bgHeroTheme2" transform="translate(1092.000000, 1880.000000)">
+                <g id="Group" fill-rule="nonzero">
+                    <polygon id="Shape" fill="url(#linearGradient-1)" points="488.1 435 0 309.8 62.9 0 413.1 55.4 633 111"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-2)" opacity="0.8" points="610.7 329.8 195.7 449 17.9 64.4 537.5 5.7"></polygon>
+                </g>
+                <g id="Group" transform="translate(0.000000, -0.000244)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

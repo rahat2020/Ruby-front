@@ -1,0 +1,50 @@
+.checkFa{
+    width: 100%;
+    height: 80%;
+    margin-top: 4rem;
+    background: #001a3d;
+}
+.checkLeft{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    /* border: 1px solid #fff; */
+}
+.checkLeft .clbox{
+    margin-top:3rem ;
+}
+.check_para{
+    font-weight: 500;
+}
+.checkleft_title{
+    font-weight: bolder;
+}
+.checkRight{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: end;
+    /* border: 1px solid #fff; */
+}
+.checkRight .checkBtn{
+    padding: .68rem 2.44rem;
+    border: 1px solid #011E41;
+    color: #011E41;
+    font-weight: bold;
+}
+.checbtn_rghtArrow::before{
+    
+}
+.checbtn_rghtArrow{
+    margin-left: 2rem;
+}
+.checkRight .checkBtn:hover{
+    border: 1px solid #870064;
+    color: #870064;
+    font-weight: bold;
+}

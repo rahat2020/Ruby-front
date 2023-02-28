@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Carousel from "./components/Carousel/Carousel";
+import CheckFa from "./components/CheckFa/CheckFa";
 import Footer from "./components/Footer/Footer";
 import GridView from "./components/GridView/GridView";
 import StickyNavBar from "./components/StickyNavBar/StickyNavBar";
 import TopNavBar from "./components/topNavBar/TopNavBar";
+import Topsubnav from "./components/Topsubnav/Topsubnav";
+// import Topsubnav from "./components/Topsubnav/Topsubnav";
 
 function App() {
     const slides = [
@@ -34,6 +37,7 @@ function App() {
     return (
         <div className="App">
             <TopNavBar />
+            <Topsubnav/>
             <Carousel 
                 index={currentIndex} 
                 handleNextClick={handleNextSlideClick} 
@@ -42,6 +46,7 @@ function App() {
             />
             <StickyNavBar/>
             <GridView newsList={newsList}/>
+            <CheckFa/>
             <Footer/>
         </div>
     );

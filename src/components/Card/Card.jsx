@@ -1,14 +1,30 @@
-import React from 'react'
+import React from 'react';
+import './Card.css';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-const Card = ({news}) => {
+const Card = ({ news }) => {
   return (
-    <div className='card p-2 m-2 bg-white mx-320 rounded-sm border border-gray'>
-        <img className='scale-100 hover:scale-105 ease-in duration-200 border-b-4 border-black' src={news.url}/>
-        <div className='m-2'>
-            <h2 className='font-bold text-3xl'>Title</h2>
-            <p className='m-2'>Subtitle</p>
-            <a className='bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 m-2 border-2'>FIND OUT MORE</a>
+    <div className='card bg-white mb-4'>
+      <div className="card">
+        <div className="cardImg_container">
+          <img src={news.url} className="card_img" alt="..." />
         </div>
+        <div className="card_body">
+          <h2 className="card_text">FA WOMEN'S CONTINENTAL TYRES LEAGUE CUP FINAL 2023</h2>
+          <p className="card_para">Heading to Sunday's FA Women's Continental Tyres Cup Final on Sunday? Find out all you need to know with our fan guide</p>
+        </div>
+        <div className="card_btnConainer">
+          <button className='card_btn'>
+            <span className="cardbtn_text">
+            FIND OUT MORE
+            </span>
+          
+              {/* <ArrowRightIcon className="card_arrowIcon" />
+            <span className="card_iconContainer">
+            </span> */}
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
