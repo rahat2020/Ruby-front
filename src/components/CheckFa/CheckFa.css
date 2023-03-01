@@ -37,9 +37,7 @@
     color: #011E41;
     font-weight: bold;
 }
-.checbtn_rghtArrow::before{
-    
-}
+
 .checbtn_rghtArrow{
     margin-left: 2rem;
 }
@@ -47,4 +45,27 @@
     border: 1px solid #870064;
     color: #870064;
     font-weight: bold;
+}
+
+/* responsive styles */
+@media only screen and (max-width: 768px){
+    .checkLeft{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 468px){
+    .checkLeft{
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        padding: 1rem;
+    }
+    .checkRight{
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        padding: 1rem;
+    }
 }

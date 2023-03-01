@@ -18,10 +18,10 @@
             <stop stop-color="#870064" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="New" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="New" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="New-Backgrounds-Copy-5" transform="translate(-1092.000000, -1880.000000)">
             <g id="bgHeroTheme2" transform="translate(1092.000000, 1880.000000)">
-                <g id="Group" fill-rule="nonzero">
+                <g id="Group" fillRule="nonzero">
                     <polygon id="Shape" fill="url(#linearGradient-1)" points="488.1 435 0 309.8 62.9 0 413.1 55.4 633 111"></polygon>
                     <polygon id="Shape" fill="url(#linearGradient-2)" opacity="0.8" points="610.7 329.8 195.7 449 17.9 64.4 537.5 5.7"></polygon>
                 </g>

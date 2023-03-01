@@ -7,7 +7,7 @@ const CheckFa = () => {
     return (
         <div className='checkFa mb-5 pb-5'>
             <div className="conatainer">
-                <div className="row">
+                <div className="row checkFa_row">
                     <div className="col-md-6">
                         <div className="checkLeft">
                             <div className="clbox">

@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import './StickyNavbar.css'
 import { Link } from 'react-router-dom';
 
 const StickyNavBar = () => {
+    const [sticky, setSticky] = useState(false)
+    useEffect(() => {
+        const sticky_top = () => {
+            if (window.scrollY >= 476) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        }
+        console.log('sticky',sticky)
+        // changeColor()
+        window.addEventListener('scroll', sticky_top)
+    }, [])
+
     return (
-        <div className="stickyNav">
-            <div className="sticky-top">
+        <div className={sticky ? 'sticky-top sticky_top' : 'no_sticky'}  id="stickyNav">
+            <div className="ff">
                     <ul className="navbar_nav">
                         <li className="nav_item">
                             <Link to="/news" className="nav-link sticky_li" href="#">

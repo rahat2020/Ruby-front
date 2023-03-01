@@ -1,15 +1,17 @@
-.footer{
+.footer {
     width: 100%;
     height: 100%;
     margin-bottom: 4rem;
 }
-.footer_first{
+
+.footer_first {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
 }
-.footer_center{
+
+.footer_center {
     border-top: 2px solid #7e7e7e67;
 }
 
@@ -21,45 +23,54 @@
     height: 100%;
     /* border: 1px solid #000; */
 }
-.fpImg_container .fpimage{
+
+.fpImg_container .fpimage {
     width: 130px;
     height: 100%;
     object-fit: cover;
 }
-.nike, .continental,.sports{
+
+.nike,
+.continental,
+.sports {
     margin-left: 7rem;
 }
-.footer_main{
+
+.footer_main {
     background-image: url('../../assets/pinkbg.jpg');
     background-repeat: no-repeat;
-    background-position:center;
-    object-fit:cover;
+    background-position: center;
+    object-fit: cover;
     width: 100%;
     height: 40vh;
 }
-.footer_main .twitter_icon{
+
+.footer_main .twitter_icon {
     color: #fff !important;
     width: 40px;
     height: 30px;
     margin-top: 4rem;
 }
-.twitter_right{
+
+.twitter_right {
     display: flex;
     justify-content: flex-end;
     margin-top: 4rem;
-
 }
-.twitter_right .twitterDropdown{
+
+.twitter_right .twitterDropdown {
     background-color: #fdfdfd00;
     padding: .66rem 3rem;
     border: none;
     color: #fff;
     border-bottom: 1px solid #fff;
 }
-.twitter_title{
+
+.twitter_title {
     margin-left: -3rem;
     font-weight: bold;
 }
+
 .dropup .dropdown-toggle::after {
     display: inline-block;
     margin-left: 8em;
@@ -71,43 +82,47 @@
     border-bottom: 0.3em solid;
     border-left: .36em solid transparent;
 }
-.footer_links{
+
+.footer_links {
     border-top: 1px solid #ffffffdc;
 }
-.flinks_items{
+
+.flinks_items {
     width: 70%;
     margin-top: 1rem;
     display: flex;
     justify-content: flex-start;
     align-items: start;
 }
-.fiItem_li{
+
+.fiItem_li {
     color: #fff;
     font-weight: bold;
-    margin-right:1.66rem;
+    margin-right: 1.66rem;
     font-size: 1.15em;
 }
 
 /* footer last */
-.footer_last{
+.footer_last {
     background-image: url(https://womenscompetitions.thefa.com/Content/site/img/FemaleEngagement/bg/texture-fa-neutral.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.flImage_container{
+
+.flImage_container {
     width: 50%;
-    /* height: 50%; */
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
 }
-.flImage_container .flimg{
+
+.flImage_container .flimg {
     width: 100%;
     height: 100%;
- 
 }
-.flrightimg_container{
+
+.flrightimg_container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -115,13 +130,135 @@
     align-items: end;
     flex-direction: column;
 }
-.flrightimg_container .flRightImg{
-   width: 6.25rem;
-   height: 3.25rem;
+
+.flrightimg_container .flRightImg {
+    width: 6.25rem;
+    height: 3.25rem;
 }
-.flRight_text{
+
+.flRight_text {
     font-family: arial;
+    font-weight: bold;
     font-size: .7rem;
     line-height: 12px;
     color: #424242;
+}
+.footer_partner{
+    overflow: hidden;
+}
+/* responsive styles */
+@media only screen and (max-width: 768px) {
+    .topNav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+
+    .footer_partner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        white-space: nowrap;
+        width: 100vw !important;
+        /* overflow: hidden; */
+        height: 100%;
+    }
+
+    .footer_main {
+        background-image: url('../../assets/pinkbg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .twitter_right .twitterDropdown {
+        background-color: #fdfdfd00;
+        padding: .6rem 1rem;
+        margin-bottom: 2rem;
+        border: none;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .twitter_title {
+        margin-left: -1rem;
+        font-weight: bold;
+    }
+
+    .imgPme {
+        width: 20%;
+        height: 100%;
+    }
+
+    .fpImg_container .fpimage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .footer_main .twitter_icon {
+        margin-top: 1rem;
+    }
+
+    .nike,
+    .continental,
+    .sports {
+        margin-left: 2rem;
+    }
+
+    .twtIcn_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .twitter_right {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .flst_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+
+    .flrightimg_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .flimg_head_container{
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .flImage_container {
+        width: 300px;
+        height: 100px;
+    
+    }
+    .flrightimg_container .flRightImg {
+        width: 6.25rem;
+        height: 3.25rem;
+    }
+
+    .fiItem_li {
+        color: #fff;
+        font-weight: bold;
+        margin-right: 1.66rem;
+        font-size: .87em;
+    }
+
 }

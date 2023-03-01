@@ -1,16 +1,22 @@
-.stickyNav {
+#stickyNav {
     overflow: auto;
     white-space: nowrap;
-    /* background-color: #999; */
     width: 100vw;
     overflow: hidden;
     height: 100%;
-    position: sticky;
+    background-color: #fff;
+    /* position: sticky; */
     border-bottom: 1px solid #7e7e7e48;
     margin-bottom: 1rem;
 }
 
-
+#sticky{
+    position:-webkit-sticky !important;
+    background-color: red;
+}
+#no_sticky{
+    background-color: #fff;
+}
 .navbar_nav {
     display: flex;
     justify-content: flex-start;

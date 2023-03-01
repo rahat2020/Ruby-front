@@ -44,3 +44,15 @@
 .nav_right .navRight_text{
     margin-right: 7rem;
 }
+
+/* responsive styles */
+@media only screen and (max-width: 768px){
+    .topNav{
+        display: none;
+    }
+}
+@media only screen and (max-width: 468px){
+    .topNav{
+        display: none;
+    }
+}
