@@ -18,7 +18,7 @@ const StickyNavBar = () => {
     }, [])
 
     return (
-        <div className={sticky ? 'sticky-top sticky_top' : 'no_sticky'}  id="stickyNav">
+        <div className={sticky ? 'sticky_top' : 'no_sticky'}  id="stickyNav">
             <div className="ff">
                     <ul className="navbar_nav">
                         <li className="nav_item">
