@@ -22,22 +22,22 @@ const StickyNavBar = () => {
             <div className="ff">
                     <ul className="navbar_nav">
                         <li className="nav_item">
-                            <Link to="/news" className="nav-link sticky_li" href="#">
+                            <Link to="/all-news" className="nav-link sticky_li" href="#">
                                 NEWS
                             </Link>
                         </li>
                         <li className="nav_item">
-                            <Link to="/" className="nav-link sticky_li" href="#">
+                            <Link to="/league-table" className="nav-link sticky_li" href="#">
                                 LEAGUE TABLES
                             </Link>
                         </li>
                         <li className="nav_item">
-                            <Link to="/" className="nav-link sticky_li" href="#">
+                            <Link to="/fixtures-results" className="nav-link sticky_li" href="#">
                                 FIXTURES AND RESULTS
                             </Link>
                         </li>
                         <li className="nav_item">
-                            <Link to="/" className="nav-link sticky_li" href="#">
+                            <Link to="/tickets" className="nav-link sticky_li" href="#">
                                 TICKETS
                             </Link>
                         </li>

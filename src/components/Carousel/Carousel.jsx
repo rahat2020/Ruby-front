@@ -27,6 +27,7 @@ const Carousel = (props) => {
                     <div className="carousel-item caro_bannerContainer">
                         <img src={caro_two} className="d-block w-100 slide_one" alt="..." />
                         <img src={banner} alt="banner" className="banner_svg" />
+                        <span className="banner_text">WHERE TO WATCH THE BWSL AND BWC!</span>
                            <div className="mblBannerBox">
                             <span className="banner_mblText">
                                 WHERE TO WATCH THE BWSL AND BWC!
@@ -39,6 +40,7 @@ const Carousel = (props) => {
                     <div className="carousel-item caro_bannerContainer">
                         <img src={caro_third} className="d-block w-100 slide_one" alt="..." />
                         <img src={banner} alt="banner" className="banner_svg" />
+                        <span className="banner_text">WHERE TO WATCH THE BWSL AND BWC!</span>
                            <div className="mblBannerBox">
                             <span className="banner_mblText">
                                 WHERE TO WATCH THE BWSL AND BWC!

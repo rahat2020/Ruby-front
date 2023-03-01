@@ -3,6 +3,7 @@ import './Topsubnav.css';
 import image from '../../assets/logo.png';
 import verses from '../../assets/verse.png';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import {Link } from 'react-router-dom'
 
 const Topsubnav = () => {
     return (
@@ -11,7 +12,9 @@ const Topsubnav = () => {
                 <div className="row topsubnav">
                     <div className="col-md-6">
                         <div className="topsubLeft_imgContainer">
-                            <img src={image} alt="" className="topsubimg" />
+                            <Link to="/">
+                                <img src={image} alt="" className="topsubimg" />
+                            </Link>
                         </div>
                     </div>
                     <div className="col-md-6">

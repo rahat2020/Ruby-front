@@ -6,7 +6,7 @@ import continental from '../../assets/continental.jpg';
 import sports from '../../assets/sports.png';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import logoimg from '../../assets/logo.png';
-import cognizant from '../../assets/cognizant.png';
+import publicitix from '../../assets/publicitix.png';
 import './Footer.css';
 
 
@@ -100,7 +100,7 @@ const Footer = () => {
                         </div>
                         <div className="col-sm-6">
                             <div className="flrightimg_container">
-                                <img src={cognizant} alt="" className="flRightImg" />
+                                <img src={publicitix} alt="" className="flRightImg" />
                                 <p className="flRight_text">The Football Association © 2001 - 2021. All Rights Reserved</p>
                             </div>
                         </div>
@@ -108,19 +108,6 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        // Contact Us Privacy policy Terms of use Anti-Slavery Safeguarding
-        // <div className="">
-        //     <div className="w-full h-36 mt-12 mb-12 bg-blue-900 border-b-2 border-black">
-        //         <div className="container mx-auto flex justify-around">
-        //             <div className="mt-12 ml-12">
-        //                 <h1 className="font-bold text-xl text-white">CHECK OUT THE FA</h1>
-        //                 <h1 className="tex
-        //                 <h1 className="text-xs">POWERED BY</h1>
-        //                 <h1 className="">PUBLICITIX</h1>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     );
 };
 

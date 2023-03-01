@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-import Carousel from "../../components/Carousel/Carousel";
-import CheckFa from "../../components/CheckFa/CheckFa";
-import Footer from "../../components/Footer/Footer";
-import GridView from "../../components/GridView/GridView";
-import StickyNavBar from "../../components/StickyNavBar/StickyNavBar";
-import TopNavBar from "../../components/topNavBar/TopNavBar";
-import Topsubnav from "../../components/Topsubnav/Topsubnav";
+import Carousel from '../Carousel/Carousel'
+import StickyNavBar from '../StickyNavBar/StickyNavBar'
+import TopNavBar from '../topNavBar/TopNavBar'
+import Topsubnav from '../Topsubnav/Topsubnav'
 
-
-function HomePage() {
+const Headers = () => {
     const slides = [
         {
             url: "https://images.unsplash.com/photo-1532302989460-30bddf2bfda7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -36,22 +32,17 @@ function HomePage() {
     };
     return (
         <>
-            <div className="App">
-                <TopNavBar/>
-                <Topsubnav/>
-                <Carousel
-                    index={currentIndex}
-                    handleNextClick={handleNextSlideClick}
-                    handlePrevClick={handlePrevSlideClick}
-                    slides={slides}
-                />
-                <StickyNavBar/>
-                <GridView newsList={newsList} />
-                <CheckFa/>
-                <Footer/>
-            </div>
+            <TopNavBar />
+            <Topsubnav />
+            <Carousel
+                index={currentIndex}
+                handleNextClick={handleNextSlideClick}
+                handlePrevClick={handlePrevSlideClick}
+                slides={slides}
+            />
+            <StickyNavBar />
         </>
-    );
+    )
 }
 
-export default HomePage;
+export default Headers

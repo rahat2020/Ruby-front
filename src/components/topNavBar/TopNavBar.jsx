@@ -60,7 +60,7 @@ const TopNavBar = () => {
                 <div className="navleft_ul">
                     <a href="#" className="flex px-4 text-sm items-center">
                     
-                        <span className="topnav_li">St. George's Park</span>
+                        <span className="topnav_li">More FA-sites</span>
                         <KeyboardArrowDownIcon className="text-white"/>
                     </a>
                 </div>
@@ -69,7 +69,7 @@ const TopNavBar = () => {
             <div className="nav_right">
                 <div className="navRight_text">
                     <span>Powered by 
-                        <b className="ms-1">Cognizant</b>
+                        <b className="ms-1">PublicityX</b>
                     </span>
                 </div>
             </div>

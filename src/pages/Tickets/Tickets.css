@@ -1,0 +1,70 @@
+.tckt{
+    border: none !important;
+}
+.tcktImg_container{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tcktImg_container .tckt_tem_img{
+    width: 90%;
+    height: 100%;
+}
+.tckt_body{
+    position: relative;
+}
+.Tckt_btn{
+    border: 1px solid #F76555;
+    color: #011e41;
+    background-color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    min-width: 170px;
+    min-height: 35px;
+    font-size: .77rem;
+    font-weight: bolder;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+    border-radius: 0;
+}
+.Tckt_btn::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 6px;
+    border-color: transparent transparent transparent #fff;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+.Tckt_btn::after{
+    border-left: 2px solid #F76555;
+    content: '';
+    position: absolute;
+    background-color: #F76555;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    right: -8px;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+.Tckt_btn{
+    margin-right: 2rem;
+}
