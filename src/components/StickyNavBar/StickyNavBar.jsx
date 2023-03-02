@@ -42,7 +42,7 @@ const StickyNavBar = () => {
                             </Link>
                         </li>
                         <li className="nav_item">
-                            <Link to="/" className="nav-link sticky_li" href="#">
+                            <Link to="/for-girls" className="nav-link sticky_li" href="#">
                                 FOR GIRLS
                             </Link>
                         </li>
