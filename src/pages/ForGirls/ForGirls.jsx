@@ -7,38 +7,16 @@ import { Navigation, Thumbs } from 'swiper';
 import "swiper/css/navigation";
 import 'swiper/css';
 import ReactPlayer from 'react-player'
+import ForgirlsNav from './ForgirlsNav';
+import Footer from '../../components/Footer/Footer';
 
 const ForGirls = () => {
     return (
         <>
             <Headers />
+            <ForgirlsNav/>
             <div className="fgirls">
-                <div className="fg_nav">
-                    <div className="container">
-                        {/* <div className="fg_navWrapper"> */}
-                        <div className="row">
-                            <div className="col-lg-12 fgnavs">
-                                <ul className='fg_ul'>
-                                    <Link to="/" className="link">
-                                        <li className="fgul_lis first_item">
-                                            NEVER PLAYED
-                                        </li>
-                                    </Link>
-                                    <Link to="/" className="link">
-                                        <li className="fgul_lis">PLAY SOMETIMES</li>
-                                    </Link>
-                                    <Link to="/" className="link">
-                                        <li className="fgul_lis">PLAY A LOT</li>
-                                    </Link>
-                                    <Link to="/" className="link">
-                                        <li className="fgul_lis">WILDCATS</li>
-                                    </Link>
-                                </ul>
-                            </div>
-                        </div>
-                        {/* </div> */}
-                    </div>
-                </div>
+               
                 <div className="fgcategory">
                     <div className="container">
                         <div className="d-flex justify-content-between align-items-center mt-4">
@@ -148,6 +126,7 @@ const ForGirls = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

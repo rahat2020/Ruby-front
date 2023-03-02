@@ -24,10 +24,10 @@ const News = () => {
     return (
         <>
             <Headers />
-            <div className="container">
+            <div className="container news">
 
 
-                <div className='card bg-white mb-4'>
+                <div className='bg-white mb-4'>
                     <div className="row">
 
 

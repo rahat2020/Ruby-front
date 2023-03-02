@@ -5,9 +5,10 @@
     overflow: hidden;
     height: 100%;
     background-color: #fff;
-    /* position: sticky; */
+    position: sticky;
     border-bottom: 1px solid #7e7e7e48;
-    margin-bottom: 1rem;
+    top:13%;
+    z-index: 2;
 }
 
 /* #sticky{
@@ -32,8 +33,13 @@ ul li {
     align-items: center;
 }
 
+.nav_item{
+    border-right: 1px solid #ccc;
+    margin-top:1rem;    
+}
+
 .nav_item .sticky_li {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     line-height: 27px;
     color: #011e41;
