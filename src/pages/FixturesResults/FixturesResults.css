@@ -4,3 +4,150 @@
 .select_title{
     margin-right: 2rem;
 }
+.fixture-box{
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding-top: 22px;
+}
+
+@media(max-width:768px){
+    .fixture-box{
+        padding-bottom: 22px;
+    }
+    
+}
+
+.vs-card{
+    display: flex;
+}
+
+.vs-card span{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.vs-card h5{
+    margin: 0 15px 0 15px;
+    font-size: 15px;
+    font-weight: 900;
+    color: #F76555;
+}
+
+.fixture-box h4{
+    font-size: 16px;
+}
+
+.fixture-box p{
+    font-size: 12px;
+}
+
+
+.card_btn{
+    height: 30px;
+    border: 1px solid #011e41;
+    color: #011e41;
+    background-color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    min-width: 170px;
+    min-height: 35px;
+    font-size: .77rem;
+    font-weight: bolder;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+    border-radius: 0;
+}
+.card_btn::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 6px;
+    border-color: transparent transparent transparent #fff;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+.card_btn::after{
+    border-left: 2px solid #011e41;
+    content: '';
+    position: absolute;
+    background-color: #011e41;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    right: -8px;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+
+.card_btn_red{
+    margin-left: 10px;
+    height: 30px;
+    border: 1px solid #F76555;
+    color: #F76555;
+    background-color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    min-width: 170px;
+    min-height: 35px;
+    font-size: .77rem;
+    font-weight: bolder;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+    border-radius: 0;
+}
+.card_btn_red::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 6px;
+    border-color: transparent transparent transparent #fff;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+.card_btn_red::after{
+    border-left: 2px solid #F76555;
+    content: '';
+    position: absolute;
+    background-color: #F76555;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    right: -8px;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+
+.fixture-buttons{
+    display: flex;
+    padding-top: 10px;
+}

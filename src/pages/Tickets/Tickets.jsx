@@ -11,7 +11,7 @@ const Tickets = () => {
             <div className="container">
                 <div className="tickets">
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-md-3 colamThree">
                             <div className="card tckt " style={{ width: '13rem' }}>
                                 <div className="tcktImg_container d-flex justify-content-center align-items-center flex-column">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -28,7 +28,7 @@ const Tickets = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-3 colamThree">
                             <div className="card tckt " style={{ width: '13rem' }}>
                                 <div className="tcktImg_container d-flex justify-content-center align-items-center flex-column">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -45,7 +45,7 @@ const Tickets = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-3 colamThree">
                             <div className="card tckt " style={{ width: '13rem' }}>
                                 <div className="tcktImg_container d-flex justify-content-center align-items-center flex-column">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -62,7 +62,7 @@ const Tickets = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-3 colamThree">
                             <div className="card tckt " style={{ width: '13rem' }}>
                                 <div className="tcktImg_container d-flex justify-content-center align-items-center flex-column">
                                     <div className="d-flex justify-content-center align-items-center">

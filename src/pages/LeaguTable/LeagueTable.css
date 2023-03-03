@@ -1,0 +1,22 @@
+@media (max-width:768px) {
+    .team-name span{        
+        display: none;
+    } 
+    .team-name img{
+        margin-right: 0!important;
+    } 
+    .league-table{
+        font-size: 11px;
+    }
+}
+
+.league-title{
+    font-size: 30px;
+    font-weight: 900;
+    color: #a01d62;
+}
+
+.league-table-top{
+    display: flex;
+    margin-bottom: 20px;
+}

@@ -3,6 +3,7 @@ import Headers from '../../components/Headers/Headers';
 import './News.css';
 import news from '../../assets/caro_one.jpg'
 import Footer from '../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,8 +26,6 @@ const News = () => {
         <>
             <Headers />
             <div className="container news">
-
-
                 <div className='bg-white mb-4'>
                     <div className="row">
 
@@ -43,11 +42,13 @@ const News = () => {
                                             <p className="card_para">Heading to Sunday's FA Women's Continental Tyres Cup Final on Sunday? Find out all you need to know with our fan guide</p>
                                         </div>
                                         <div className="card_btnConainer">
-                                            <button className='card_btn'>
-                                                <span className="cardbtn_text">
-                                                    FIND OUT MORE
-                                                </span>
-                                            </button>
+                                            <Link to='/single-news'>
+                                                <button className='card_btn'>
+                                                    <span className="cardbtn_text">
+                                                        FIND OUT MORE
+                                                    </span>
+                                                </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +57,7 @@ const News = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }
