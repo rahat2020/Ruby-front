@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Result.css';
 import man from '../../../assets/manchester.jpg';
 import ball from '../../../assets/goal.svg';
@@ -6,11 +6,33 @@ import yc from '../../../assets/warning.svg';
 import Headers from '../../../components/Headers/Headers';
 import Footer from '../../../components/Footer/Footer';
 import CheckFa from '../../../components/CheckFa/CheckFa';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const Result = () => {
+    const { id } = useParams()
+    // console.log(id)
+    // FETCH DATA FROM DATABASE
+    const [data, setData] = useState([])
+    console.log('resultsData', data)
+
+    useEffect(() => {
+        const newsData = async () => {
+            const data = new FormData();
+            data.append('Process', 'find_game_with_Event_id');
+            data.append('Event_id', id);
+            // console.log('Process', data.append('Process', "see_all_news"));
+            const res = await axios.post('https://h.earnvest.xyz/news/Game/find_game_with_Event_id/', data);
+            // console.log(res.data);
+            setData(res.data);
+        }
+        newsData()
+    },)
+
+
     return (
         <>
-            <Headers/>
+            <Headers />
 
             <div className='result-header'>
                 <div className='result-date'>
@@ -18,21 +40,21 @@ const Result = () => {
                     <span>Bangabandhu Stadium</span>
                 </div>
 
-                <div className='container result-container' style={{paddingTop:'100px', maxWidth:'1000px', marginLeft:'auto', marginRight: 'auto'}}>
+                <div className='container result-container' style={{ paddingTop: '100px', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
                     <div className='row'>
 
                         <div className='col-md-5 result-card-right'>
                             <img src={man} alt="" />
-                            <h3>MANCHESTER <span>2</span></h3>                           
+                            <h3>MANCHESTER <span>2</span></h3>
                         </div>
 
                         <div className='col-md-2 result-vs'>
                             <h3>VS</h3>
                         </div>
-                        
+
                         <div className='col-md-5 result-card-left'>
                             <h3><span>2</span> MANCHESTER</h3>
-                            <img src={man} alt="" /> 
+                            <img src={man} alt="" />
                         </div>
 
                     </div>
@@ -54,79 +76,79 @@ const Result = () => {
                     <h2>Moments Of The Game</h2>
                     <div className='row'>
 
-                     <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
-                        <ul>
-                            <li>
-                                <h4 style={{fontWeight:'900'}}> <img src={ball} alt="" /> Rahi Bari / 32 min</h4>                                
-                            </li>
-                            <li>
-                                <h4 style={{fontWeight:'900'}}> <img src={yc} alt="" /> TR Niloy / 40 min</h4>                                
-                            </li>
-                        </ul>
-                     </div>
+                        <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
+                            <ul>
+                                <li>
+                                    <h4 style={{ fontWeight: '900' }}> <img src={ball} alt="" /> Rahi Bari / 32 min</h4>
+                                </li>
+                                <li>
+                                    <h4 style={{ fontWeight: '900' }}> <img src={yc} alt="" /> TR Niloy / 40 min</h4>
+                                </li>
+                            </ul>
+                        </div>
 
-                     <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
-                     <ul>
-                            <li>
-                                <h4 style={{fontWeight:'900'}}> Rahi Bari / 32 min  <img src={ball} alt="" /></h4>                                
-                            </li>
-                            <li>
-                                <h4 style={{fontWeight:'900'}}>  TR Niloy / 40 min <img src={yc} alt="" /></h4>                                
-                            </li>
-                        </ul>
-                     </div>
+                        <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
+                            <ul>
+                                <li>
+                                    <h4 style={{ fontWeight: '900' }}> Rahi Bari / 32 min  <img src={ball} alt="" /></h4>
+                                </li>
+                                <li>
+                                    <h4 style={{ fontWeight: '900' }}>  TR Niloy / 40 min <img src={yc} alt="" /></h4>
+                                </li>
+                            </ul>
+                        </div>
 
-                        
+
                     </div>
                 </div>
-                
+
             </div>
-            
+
             <div className="container mt-5 mb-5">
                 <div className='lineup'>
                     <h2>Starting Line Up</h2>
                     <div className='row'>
 
-                     <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
-                        <ul>
-                            <li>
-                                <h4>Rahi Bari</h4>
-                                <span>Goalkeeper</span>
-                                
-                            </li>
-                            <li>
-                            <h4>Toybur Rahman</h4>
-                                <span>Right Back</span>
-                            </li>
-                            <li>
-                            <h4>Raju Mat</h4>
-                                <span>Centre Back</span>
-                            </li>
-                        </ul>
-                     </div>
+                        <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
+                            <ul>
+                                <li>
+                                    <h4>Rahi Bari</h4>
+                                    <span>Goalkeeper</span>
 
-                     <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
-                        <ul>
-                            <li>
-                                <h4>Iker Casillas</h4>
-                                <span>Goalkeeper</span>
-                            </li>
-                            <li>
-                                <h4>Carvajal</h4>
-                                <span>Right Back</span>
-                            </li>
-                            <li>
-                                <h4>Luka Modric</h4>
-                                <span>Midfield</span>
-                            </li>
+                                </li>
+                                <li>
+                                    <h4>Toybur Rahman</h4>
+                                    <span>Right Back</span>
+                                </li>
+                                <li>
+                                    <h4>Raju Mat</h4>
+                                    <span>Centre Back</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                        </ul>
-                     </div>
+                        <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
+                            <ul>
+                                <li>
+                                    <h4>Iker Casillas</h4>
+                                    <span>Goalkeeper</span>
+                                </li>
+                                <li>
+                                    <h4>Carvajal</h4>
+                                    <span>Right Back</span>
+                                </li>
+                                <li>
+                                    <h4>Luka Modric</h4>
+                                    <span>Midfield</span>
+                                </li>
 
-                        
+                            </ul>
+                        </div>
+
+
                     </div>
                 </div>
-                
+
             </div>
 
             <div className="container mt-5 mb-5">
@@ -134,37 +156,37 @@ const Result = () => {
                     <h2>Substitutions</h2>
                     <div className='row'>
 
-                     <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
-                        <ul>
-                            <li>
-                                <h4>Murad Miya / 62 min</h4>
-                                <span>replaces Xavi</span>
-                                
-                            </li>
-                            <li>
-                            <h4>Toybur Rahman / 45 min</h4>
-                                <span>replaces Nadim</span>
-                            </li>                            
-                        </ul>
-                     </div>
+                        <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
+                            <ul>
+                                <li>
+                                    <h4>Murad Miya / 62 min</h4>
+                                    <span>replaces Xavi</span>
 
-                     <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
-                        <ul>
-                        <li>
-                                <h4>Kroos / 62 min</h4>
-                                <span>replaces Ozil</span>
-                                
-                            </li>                            
-                        </ul>
-                     </div>
+                                </li>
+                                <li>
+                                    <h4>Toybur Rahman / 45 min</h4>
+                                    <span>replaces Nadim</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                        
+                        <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
+                            <ul>
+                                <li>
+                                    <h4>Kroos / 62 min</h4>
+                                    <span>replaces Ozil</span>
+
+                                </li>
+                            </ul>
+                        </div>
+
+
                     </div>
                 </div>
-                
+
             </div>
-            <CheckFa/>
-            <Footer/>
+            <CheckFa />
+            <Footer />
         </>
     )
 }

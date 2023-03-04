@@ -4,22 +4,23 @@ import './News.css';
 import news from '../../assets/caro_one.jpg'
 import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
-
-
+import axios from 'axios';
 
 const News = () => {
-    const [newurl, setNewurl] = useState([])
+    // FETCH DATA FROM DATABASE
+    const [data, setData] = useState([])
+    // console.log('data', data)
 
-    console.log(newurl)
-
-    const newsList = [
-        { url: 'https://images.unsplash.com/photo-1525436519918-5671ec6c6b50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1298&q=80' },
-        { url: 'https://images.unsplash.com/photo-1542852869-ecc293ff89c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80' },
-        { url: 'https://images.unsplash.com/photo-1535506349729-56e253fac2b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1296&q=80' },
-        { url: 'https://images.unsplash.com/photo-1526841234980-b3c3645c92a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1346&q=80' }
-    ]
     useEffect(() => {
-        setNewurl(newsList)
+        const newsData = async () => {
+            const data = new FormData();
+            data.append('Process', "see_all_news");
+            // console.log('Process', data.append('Process', "see_all_news"));
+            const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
+            // console.log(res.data);
+            setData(res.data);
+        }
+        newsData()
     }, [])
 
     return (
@@ -31,18 +32,18 @@ const News = () => {
 
 
                         {
-                            newurl.map((item, index) => (
-                                <div className="col-md-4 mb-4">
-                                    <div className="card" key={index}>
+                            data.map((item, index) => (
+                                <div className="col-md-4 mb-4" key={index}>
+                                    <div className="card" >
                                         <div className="cardImg_container">
-                                            <img src={item.url} className="card_img" alt="..." />
+                                            <img src={`https://h.earnvest.xyz`+item.photo} className="card_img" alt="news-card-img" />
                                         </div>
                                         <div className="card_body">
-                                            <h2 className="card_text">FA WOMEN'S CONTINENTAL TYRES LEAGUE CUP FINAL 2023</h2>
-                                            <p className="card_para">Heading to Sunday's FA Women's Continental Tyres Cup Final on Sunday? Find out all you need to know with our fan guide</p>
+                                            <h2 className="card_text">{item.title}</h2>
+                                            <p className="card_para">{item.Description}</p>
                                         </div>
                                         <div className="card_btnConainer">
-                                            <Link to='/single-news'>
+                                            <Link to={`/single-news/${item.id}`}>
                                                 <button className='card_btn'>
                                                     <span className="cardbtn_text">
                                                         FIND OUT MORE

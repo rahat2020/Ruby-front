@@ -5,6 +5,18 @@ import m from '../../assets/manchester.jpg';
 import Footer from '../../components/Footer/Footer';
 
 const LeagueTable = () => {
+      // FETCH DATA FROM DATABASE
+    //   const [data, setData] = useState([])
+    //   useEffect(() => {
+    //       const newsData = async () => {
+    //           const data = new FormData();
+    //           data.append('Process', "see_all_news");
+    //           const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
+    //           setData(res.data);
+    //       }
+    //       newsData()
+    //   }, [])
+
     return (
         <>
             <Headers />

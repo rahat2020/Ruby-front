@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Headers from '../../components/Headers/Headers';
 import m from '../../assets/manchester.jpg';
 import './FixturesResults.css';
 import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios'
 
 const FixturesResults = () => {
+  // FETCH DATA FROM DATABASE
+  const [data, setData] = useState([])
+  // console.log('data', data)
+
+  useEffect(() => {
+    const newsData = async () => {
+      const data = new FormData();
+      data.append('Process', "see");
+      // console.log('Process', data.append('Process', "see_all_news"));
+      const res = await axios.post('https://h.earnvest.xyz/Event/find_all/', data);
+      // console.log(res.data);
+      setData(res.data);
+    }
+    newsData()
+  }, [])
+
+    // const date = data.map((item, i) =>(
+    //   <li key={i}>{item.Event_Date_Time}</li>
+    // ))
+    // console.log('date',date)
+  // const dateString = data.Event_Date_Time;
+  // const date = new Date(dateString);
+  // const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
   return (
     <>
       <Headers />
@@ -40,32 +64,39 @@ const FixturesResults = () => {
             <div className='fixture-box'>
               <div>
                 <div className='row'>
-                  <div className='col-md-1 col-sm-12 date'>
-                    <h4>SUN 5 MAR</h4>
-                  </div>
-                  <div className='col-md-2 col-sm-12 date'>
-                    <h4>KICH OFF 18:30</h4>
-                    <p> BANGABANDHU STADIUM <br /> DHAKA </p>
+                  {
+                    data.map((item, i) => (
+                      <>
+                        <div className='col-md-1 col-sm-12 date'>
+                          <h4>{item.Event_Date_Time.slice(0,10)}</h4>
+                        </div>
+                        <div className='col-md-2 col-sm-12 date'>
+                          <h4>KICK OFF {item.Event_Date_Time.slice(10,20)}</h4>
+                          <p> BANGABANDHU STADIUM <br /> DHAKA </p>
 
-                  </div>
-                  <div className='col-md-5 col-sm-12 vs-card'>
-                    <img src={m} alt="logo" style={{ width: '40px', height: '40px', marginRight: '20px' }} />
-                    <span>MENCHESTER</span>
+                        </div>
+                        <div className='col-md-5 col-sm-12 vs-card'>
+                          <img src={m} alt="logo" style={{ width: '40px', height: '40px', marginRight: '20px' }} />
+                          <span>{item.Home_Team}</span>
 
-                    <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>
-                    <span>MENCHESTER</span>
-                    <img src={m} alt="logo" style={{ width: '40px', height: '40px', marginLeft: '20px' }} />
-                  </div>
-                  <div className='fixture-buttons col-md-4 col-sm-12 date'>
-                    <Link to='/single-results'>
-                      <button className="card_btn">WATCH HERE</button>
-                    </Link>
-                    <Link to='/tickets'>
-                    <button className='card_btn_red'>BUY TICKETS</button>
-                    </Link>
-                   
+                          <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>
+                          <span>{item.Way_Team}</span>
+                          <img src={`https://h.earnvest.xyz`+item.Event_Logo} alt="logo" 
+                          style={{ width: '40px', height: '40px', marginLeft: '20px' }} />
+                        </div>
+                        <div className='fixture-buttons col-md-4 col-sm-12 date'>
+                          <Link to={`/single-results/${item.id}`}>
+                            <button className="card_btn">WATCH HERE</button>
+                          </Link>
+                          <Link to='/tickets'>
+                            <button className='card_btn_red'>BUY TICKETS</button>
+                          </Link>
+                        </div>
+                      </>
+                    ))
+                  }
 
-                  </div>
+
                 </div>
               </div>
             </div>

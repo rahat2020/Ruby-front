@@ -1,5 +1,7 @@
 .tckt{
     border: none !important;
+    width: 13rem;
+    margin: 2rem;
 }
 .tcktImg_container{
     width: 100%;
@@ -70,11 +72,30 @@
 }
 
 @media only screen and (max-width:430px) {
-    .colamThree{
-        display: flex;
+    .tckt{
+        border: none !important;
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        margin: 2rem;
+    }
+    .colamThree{
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (max-width:468px) {
+    .tckt{
+        border: none !important;
+        width: 100%;
+        margin: 2rem;
+    }
+    .colamThree{
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
         margin-bottom: 1rem;
     }
 }

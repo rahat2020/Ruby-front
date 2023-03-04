@@ -29,10 +29,10 @@ function App() {
                     <Route path="/" element={<HomePage/>} />
                     {/* NEWS ROUTE AND INNER ROUTE */}
                     <Route path="/all-news" element={<News/>} />
-                    <Route path="/single-news" element={<SingleNews/>} />
+                    <Route path="/single-news/:id" element={<SingleNews/>} />
 
                     {/* FIXTURES AND RESULTS */}
-                    <Route path="/single-results" element={<Result/>} />
+                    <Route path="/single-results/:id" element={<Result/>} />
                     <Route path="/league-table" element={<LeagueTable/>} />
                     <Route path="/fixtures-results" element={<FixturesResults/>} />
                     <Route path="/tickets" element={<Tickets/>} />
