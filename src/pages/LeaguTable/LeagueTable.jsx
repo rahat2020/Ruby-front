@@ -1,45 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Headers from '../../components/Headers/Headers';
 import './LeagueTable.css';
 import m from '../../assets/manchester.jpg';
 import Footer from '../../components/Footer/Footer';
+import axios from 'axios';
 
 const LeagueTable = () => {
-      // FETCH DATA FROM DATABASE
-    //   const [data, setData] = useState([])
-    //   useEffect(() => {
-    //       const newsData = async () => {
-    //           const data = new FormData();
-    //           data.append('Process', "see_all_news");
-    //           const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
-    //           setData(res.data);
-    //       }
-    //       newsData()
-    //   }, [])
+    const [data, setData] = useState([])
+    console.log('leagdata', data)
+
+    useEffect(() => {
+        const newsData = async () => {
+            const data = new FormData();
+            data.append('Process', "see_all_team");
+            console.log('Process', data.append('Process', "see_all_team"));
+            const res = await axios.post('https://h.earnvest.xyz/Team/find_all_team/', data);
+            console.log(res.data);
+            setData(res.data);
+        }
+        newsData()
+    }, [])
+
+    // sorting the data
+    // const [tableData, setTableData] = useState(data);
+    // const sortData = () => {
+    //   const sortedData = [...tableData].sort((a, b) => b.points - a.points);
+    //   setTableData(sortedData);
+    // };
+
+    // automatically will be fetched
+    // const [tableData, setTableData] = useState([]);
+    // useEffect(() => {
+    //   const sortedData = [...data].sort((a, b) => b.points - a.points);
+    //   setTableData(sortedData);
+    // }, [])
 
     return (
         <>
             <Headers />
             <div className="container mt-5 mb-5">
-                <div className='league-table-top'>
-
-                <h4 className='league-title mb-5'>Women's Super League</h4>
-                <div className="dropdown ms-5">
-                    <a className="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div className="d-flex justify-content-start align-items-start flex-column">
-                        <small className="select_com">SEASON</small>
-                        <span className="select_title">2023</span>
-                    </div>
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">2023/2024</a></li>
-                        <li><a className="dropdown-item" href="#">2023/2024</a></li>
-                        <li><a className="dropdown-item" href="#">2023/2024</a></li>
-                    </ul>
+                <div className='league-table-top '>
+                    <h4 className='league-title fw-bold shadow-sm p-2 rounded mb-5'>Women's Super League</h4>
                 </div>
 
-                </div>
-                
                 <table className="league-table table table-striped table-bordered border-light">
                     <thead>
                         <tr className="text-center">
@@ -56,92 +59,29 @@ const LeagueTable = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className='text-center fw-normal'>
-                            <th scope="row">1</th>
-                            <td>
-                            <div className='team-name'>
-                                <img src={m} alt="team-logo" style={{ width: '30px', height: '30px', marginRight: '20px' }} />
-                                <span>Menchester</span> 
-                                </div>
-                            </td>
-                            <td>32</td>
-                            <td>64</td>
-                            <td>23</td>
-                            <td>34</td>
-                            <td>00</td>
-                            <td>12</td>
-                            <td>+32</td>
-                            <td>33</td>
-                        </tr>
-                        <tr className='text-center fw-normal'>
-                            <th scope="row">1</th>
-                            <td>
-                            <div className='team-name'>
-                                <img src={m} alt="team-logo" style={{ width: '30px', height: '30px', marginRight: '20px' }} />
-                                <span>Menchester</span> 
-                                </div> 
-                            </td>
-                            <td>32</td>
-                            <td>64</td>
-                            <td>23</td>
-                            <td>34</td>
-                            <td>00</td>
-                            <td>12</td>
-                            <td>+32</td>
-                            <td>33</td>
-                        </tr>
-                        <tr className='text-center fw-normal'>
-                            <th scope="row">1</th>
-                            <td>
-                            <div className='team-name'>
-                                <img src={m} alt="team-logo" style={{ width: '30px', height: '30px', marginRight: '20px' }} />
-                                <span>Menchester</span> 
-                                </div> 
-                            </td>
-                            <td>32</td>
-                            <td>64</td>
-                            <td>23</td>
-                            <td>34</td>
-                            <td>00</td>
-                            <td>12</td>
-                            <td>+32</td>
-                            <td>33</td>
-                        </tr>
-                        <tr className='text-center fw-normal'>
-                            <th scope="row">1</th>
-                            <td>
-                            <div className='team-name'>
-                                <img src={m} alt="team-logo" style={{ width: '30px', height: '30px', marginRight: '20px' }} />
-                                <span>Menchester</span> 
-                                </div>
-                            </td>
-                            <td>32</td>
-                            <td>64</td>
-                            <td>23</td>
-                            <td>34</td>
-                            <td>00</td>
-                            <td>12</td>
-                            <td>+32</td>
-                            <td>33</td>
-                        </tr>
-                        <tr className='text-center fw-normal'>
-                            <th scope="row">1</th>
-                            <td>
-                                <div className='team-name'>
-                                <img src={m} alt="team-logo" style={{ width: '30px', height: '30px', marginRight: '20px' }} />
-                                <span>Menchester</span> 
-                                </div>
-                                
-                            </td>
-                            <td>32</td>
-                            <td>64</td>
-                            <td>23</td>
-                            <td>34</td>
-                            <td>00</td>
-                            <td>12</td>
-                            <td>+32</td>
-                            <td>33</td>
-                        </tr>
+                        {
+                            data.map((item, i) => (
+                                <tr className='text-center fw-normal' key={i}>
+                                    <th scope="row">{i}</th>
+                                    <td>
+                                        <div className='team-name'>
+                                            <img src={`https://h.earnvest.xyz` + item.Team_Logo} alt="team-logo" 
+                                            style={{ width: '30px', height: '30px', marginRight: '20px' }} />
+                                            <span>{item.Team_Name}</span>
+                                        </div>
+                                    </td>
+                                    <td>{item.Team_Total_play_count}</td>
+                                    <td>{item.Win_count}</td>
+                                    <td>{item.Loos_count}</td>
+                                    <td>{item.Drow_count}</td>
+                                    <td>{item.GF}</td>
+                                    <td>{item.GA}</td>
+                                    <td>{item.GD}</td>
+                                    <td>{item.PTS}</td>
+                                </tr>
+                            ))
+                        }
+
                     </tbody>
                 </table>
             </div>

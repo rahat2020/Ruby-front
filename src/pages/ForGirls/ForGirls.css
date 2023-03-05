@@ -8,11 +8,15 @@
     background: linear-gradient(135deg,#870064 0%,#ff6b53 80%);
     padding: 15px 0 15px;
     width: 100%;
+    min-height: 40px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     display: inline-block;
     position: relative;
+}
+.fgnavs{
+    min-height: 50px;
 }
 .fg_nav{
     position: relative;
@@ -89,10 +93,18 @@
     margin-left: 1.85rem;
     color: #011e41;
 }
-.fg_ul .first_item:nth-child(1){
+.fg_ul .first_item{
+    border-bottom: 3px solid #ffffff;
+}
+/* .fg_ul .first_item:nth-child(1){
+    color: #870064;
+    border-bottom: 3px solid #870064;
+} */
+#showUnderline{
     color: #870064;
     border-bottom: 3px solid #870064;
 }
+
 .fgul_lis:hover{
     color: #870064 !important;
     border-bottom: 3px solid #870064;
@@ -102,6 +114,8 @@
 .fgcLeft_all{
     color: #870064 !important;
 }
+
+
 .fg{
     width: 100%;
     /* overflow-x: scroll; */

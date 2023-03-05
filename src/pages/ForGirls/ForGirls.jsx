@@ -68,6 +68,8 @@ const ForGirls = () => {
                                     {
                                         data.map((item, index) => (
                                             <SwiperSlide key={index}>
+                                                <Link to={`/single-story/${item.id}`} className="link">
+
                                                 <div className="fgCard_contianer rounded bg-success border-light border">
                                                     <div className="card" style={{ width: '20rem' }}>
                                                         {/* <img src="..." className="card-img-top" alt="..." /> */}
@@ -84,6 +86,7 @@ const ForGirls = () => {
                                                         </div>
                                                     </div>
                                                 </div>
+                                                </Link>
                                             </SwiperSlide>
                                         ))
                                     }

@@ -9,3 +9,8 @@ html{
 .dropdown:hover .dropdown-menu{
     display: block;
 }
+
+.link{
+    text-decoration: none;
+    color: #011e41;
+}

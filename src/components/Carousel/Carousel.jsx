@@ -18,7 +18,7 @@ const Carousel = () => {
         const newsData = async () => {
             const data = new FormData();
             data.append('Process', "see_slide");
-            console.log('Process', data.append('Process', "see_slide"));
+            // console.log('Process', data.append('Process', "see_slide"));
             const res = await axios.post('https://h.earnvest.xyz/Slide_Image_Logo/find_all_Slide_logo/', data);
             // console.log(res.data);
             setData(res.data);

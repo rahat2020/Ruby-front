@@ -10,12 +10,59 @@
     padding-top: 22px;
 }
 
+.form_slct{
+    width: 100%;
+}
+.ffoptiopn{
+    position: relative;
+}
+.frcom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: .2rem !important;
+    background-color: red;
+}
+
+
 @media(max-width:768px){
     .fixture-box{
         padding-bottom: 22px;
     }
     
 }
+@media(max-width:368px){
+    .fixture-box{
+        padding-bottom: 22px;
+    }
+    .btn_fixture{
+        margin-left: 1rem;
+    }
+    .fixturesSelect{
+        display: block !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        /* gap: 2rem !important; */
+        margin-left: -1rem;
+    }
+   
+    
+}
+@media(max-width:468px){
+    .fixture-box{
+        padding-bottom: 22px;
+    }
+    .fixturesSelect{
+        display: block !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+}
+
 
 .vs-card{
     display: flex;

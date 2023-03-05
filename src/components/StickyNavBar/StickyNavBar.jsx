@@ -12,7 +12,7 @@ const StickyNavBar = () => {
                 setSticky(false);
             }
         }
-        console.log('sticky',sticky)
+        // console.log('sticky',sticky)
         // changeColor()
         window.addEventListener('scroll', sticky_top)
     }, [])

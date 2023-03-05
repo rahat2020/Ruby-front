@@ -17,6 +17,7 @@ import PlayAlot from "./pages/ForGirls/PlayAlot/PlayAlot";
 import WildCats from "./pages/ForGirls/WildCats/WildCats";
 import SingleNews from "./pages/News/SingleNews/SingleNews";
 import Result from "./pages/FixturesResults/Result/Result";
+import SingleStory from "./pages/ForGirls/SingleStory";
 // import PlaySomeTimes from "./pages/ForGirls/PlaySomeTimes/PlaySomeTimes";
 // import PlayAlot from "./pages/ForGirls/PlayAlot/PlayAlot";
 // import WildCats from "./pages/ForGirls/WildCats/WildCats";
@@ -43,6 +44,9 @@ function App() {
                     <Route path="/play-sometimes" element={<PlaySomeTimes/>} />
                     <Route path="/play-alot" element={<PlayAlot/>} />
                     <Route path="/wildcats" element={<WildCats/>} />
+
+                    {/* FORGIRLS SINGLE ROUTE */}
+                    <Route path="/single-story/:id" element={<SingleStory/>} />
 
                 </Routes>
             </div>

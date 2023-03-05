@@ -11,7 +11,13 @@
     width: 60%;
     height: 98%;
 }
-
+.link{
+    text-decoration: none;
+    color: #011e41;
+}
+.link:hover{
+    color: #042d5fe8;
+}
 .topsubLeft_imgContainer .topsubimg {
     width: 100%;
     height: 100%;

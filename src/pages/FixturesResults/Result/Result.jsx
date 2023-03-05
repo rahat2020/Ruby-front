@@ -13,21 +13,72 @@ const Result = () => {
     const { id } = useParams()
     // console.log(id)
     // FETCH DATA FROM DATABASE
-    const [data, setData] = useState([])
-    console.log('resultsData', data)
+    const [data, setData] = useState({})
+    console.log('data', data?.Goal_json_data_to_dict)
+    // console.log('data', data?.Goal_json_data_to_dict?.map(i => Number(i.Home_Team_Goal_Count_In_1)))
+    // console.log('data', data.game_json_data_to_dict)
+    // console.log('resultsData', data?.Substituitons_json_data_to_dict)
+    // console.log('resultsData', data?.game_json_data_to_dict?.Event_for_game)
+
+
+
+    // FETCHING GOAL DETAILS
+
+    const initialValue = 0;
+    const homeTeamGoal = data?.Goal_json_data_to_dict?.map(i => Number(i.Home_Team_Goal_Count_In_1)).reduce(
+        (accumulator, currentValue) => accumulator + currentValue, initialValue);
+    console.log('initialValue', homeTeamGoal)
+
+    const awayValue = 0;
+    const awayTeamGoal = data?.Goal_json_data_to_dict?.map(i => Number(i.Way_Team_Goal_Count_In_1)).reduce(
+        (accumulator, currentValue) => accumulator + currentValue, awayValue);
+    console.log('initialValue', awayTeamGoal)
+
+    console.log('awayTeamGoal', awayTeamGoal)
 
     useEffect(() => {
         const newsData = async () => {
             const data = new FormData();
             data.append('Process', 'find_game_with_Event_id');
             data.append('Event_id', id);
-            // console.log('Process', data.append('Process', "see_all_news"));
-            const res = await axios.post('https://h.earnvest.xyz/news/Game/find_game_with_Event_id/', data);
-            // console.log(res.data);
+            const res = await axios.post('https://h.earnvest.xyz/Game/find_game_with_Event_id/', data);
+            // console.log(res)
             setData(res.data);
         }
         newsData()
-    },)
+    },[] )
+
+    // fetching EVENT data FOR STADIUM NAME
+    const [stadNmae, setstadNmae] = useState([])
+    console.log('stadNmae', stadNmae.Home_Team)
+
+    useEffect(() => {
+        const newsData = async () => {
+            const data = new FormData();
+            data.append('Process', 'see');
+            data.append('id', id);
+            const res = await axios.post('https://h.earnvest.xyz/Event/find_individual_id/', data);
+            // console.log(res)
+            setstadNmae(res.data);
+        }
+        newsData()
+    },[] )
+
+    // FETCHING TEAM DETAILS
+    const [homeTeamLogo, setHomeTeamLogo] = useState('')
+    console.log('homeTeamLogo', homeTeamLogo)
+
+    useEffect(() => {
+        const newsData = async () => {
+            const data = new FormData();
+            data.append('Process', 'find_team_with_team_name');
+            data.append('team_name', stadNmae?.Home_Team);
+            const res = await axios.post('https://h.earnvest.xyz/Team/find_team_with_team_name/', data);
+            // console.log(res)
+            setHomeTeamLogo(res.data);
+        }
+        newsData()
+    },[] )
 
 
     return (
@@ -37,15 +88,29 @@ const Result = () => {
             <div className='result-header'>
                 <div className='result-date'>
                     <h5>3rd March, 8:00pm</h5>
-                    <span>Bangabandhu Stadium</span>
+                    <span>{stadNmae?.Stadium_Name}</span>
                 </div>
 
-                <div className='container result-container' style={{ paddingTop: '100px', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
+                <div className='container result-container'
+                    style={{
+                        paddingTop: '100px', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto'
+                    }}>
                     <div className='row'>
-
                         <div className='col-md-5 result-card-right'>
-                            <img src={man} alt="" />
-                            <h3>MANCHESTER <span>2</span></h3>
+                            <img src={`https://h.earnvest.xyz` + homeTeamLogo?.Team_Logo} alt="" />
+                            {/* <img src={man} alt="" /> */}
+                            <h3>
+                                {data?.game_json_data_to_dict?.home_Team_name}
+                                <span>
+                                    {/* {
+                                        data?.Goal_json_data_to_dict?.map((item, i) => (
+                                            item.Home_Team_Goal_Count_In_1
+                                        ))
+                                    } */}
+                                    {homeTeamGoal}
+                                </span>
+                            </h3>
+
                         </div>
 
                         <div className='col-md-2 result-vs'>
@@ -53,8 +118,19 @@ const Result = () => {
                         </div>
 
                         <div className='col-md-5 result-card-left'>
-                            <h3><span>2</span> MANCHESTER</h3>
-                            <img src={man} alt="" />
+                            <h3>
+                                <span>
+                                    {/* {
+                                        data?.Goal_json_data_to_dict?.map((item, i) => (
+                                            item.Way_Team_Goal_Count_In_1 ? item.Way_Team_Goal_Count_In_1 : '0'
+                                        ))
+                                    } */}
+                                    {awayTeamGoal}
+                                </span>
+                                {data?.game_json_data_to_dict?.way_Team_name}
+                            </h3>
+                            {/* <img src={man} alt="" /> */}
+                            <img src={`https://h.earnvest.xyz` + homeTeamLogo?.Team_Logo} alt="" />
                         </div>
 
                     </div>
@@ -73,6 +149,21 @@ const Result = () => {
 
             <div className="container mb-5">
                 <div className='moments'>
+                    {/* <h2>
+                        {
+                            data?.Goal_json_data_to_dict?.map((item,i)=>(
+                                item.Home_Team_Goal_Count_In_1
+                            ))
+                        }
+                    </h2> */}
+
+                    {/* <h2>
+                        {
+                            data?.Substituitons_json_data_to_dict?.map((item, i) => (
+                                item.Substituitons_Name
+                            ))
+                        }
+                    </h2> */}
                     <h2>Moments Of The Game</h2>
                     <div className='row'>
 

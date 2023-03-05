@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import Headers from '../../../components/Headers/Headers';
-import './SingleNews.css';
-import ni from '../../../assets/newsimage.jpg';
-import ci from '../../../assets/caro_one.jpg';
-import ci2 from '../../../assets/caro_two.jpg';
-import Footer from '../../../components/Footer/Footer';
-import CheckFa from "../../../components/CheckFa/CheckFa";
+// import ni from '../../../assets/newsimage.jpg';
+// import ci from '../../../assets/caro_one.jpg';
+// import ci2 from '../../../assets/caro_two.jpg';
+// import Footer from '../../../components/Footer/Footer';
+// import CheckFa from "../../../components/CheckFa/CheckFa";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios'
+import Headers from '../../components/Headers/Headers';
+import CheckFa from '../../components/CheckFa/CheckFa';
+import Footer from '../../components/Footer/Footer';
 
-const SingleNews = () => {
+const SingleStory = () => {
     const { id } = useParams()
     // console.log(id)
-    
+
     // FETCH SINGLE DATA WITH ID FROM DATABASE
     const [data, setData] = useState([])
-    // console.log('data', data)
+    console.log('singleStrydata', data)
+
 
     useEffect(() => {
         const newsData = async () => {
             const data = new FormData();
-            data.append('Process', "see_one_news");
+            data.append('Process', "see_one_FA");
             data.append('spacific_news_id', id);
             console.log('specific_news', data.append('spacific_news_id', id));
-            const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
+            const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -32,19 +34,20 @@ const SingleNews = () => {
     }, [])
 
     // FETCH TRENDING NEWS DATA
-    const [tdata, setTData] = useState([])
-    console.log('tdata', tdata)
-    useEffect(() => {
-        const newsData = async () => {
-            const data = new FormData();
-            data.append('Process', "see_all_news");
-            console.log('Process', data.append('Process', "see_all_news"));
-            const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
-            console.log(res.data);
-            setTData(res.data);
-        }
-        newsData()
-    }, [])
+    // const [tdata, setTData] = useState([])
+    // console.log('tdata', tdata)
+    // useEffect(() => {
+    //     const newsData = async () => {
+    //         const data = new FormData();
+    //         data.append('Process', "see_one_FA");
+    //         data.append('spacific_news_id', id);
+    //         console.log('spacific_news_id', data.append('Process', "see_all_news"));
+    //         const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+    //         console.log(res.data);
+    //         setTData(res.data);
+    //     }
+    //     newsData()
+    // }, [])
 
     const handleReload = () => {
         window.location.reload();
@@ -58,18 +61,7 @@ const SingleNews = () => {
                 <h4 className='news-subtitle'>{data.subtitle}</h4>
 
                 <div className='article-body'>
-                    {data.Description}
-                    {/* <p>It's the FA Women’s Continental Tyres League Cup Final on Sunday 5 March, as Arsenal meet Chelsea at Selhurst Park to challenge for the first silverware of the 2022-23 season.
-                        Ahead of the game, we caught up with both coaches and a player from each team to get their thoughts on the occasion and the game.
-                    </p>
-                    <p>“Finals are the reason we play football – the stakes are high, but the rewards are great. At Arsenal, we have a long tradition of winning silverware and this represents an opportunity to add to that.
-
-                        “Even though we prepare everything like we would for any other game, the week building up to a final feels different. There’s that extra edge of anticipation and the sense of occasion on the morning of the game. We know these matches mean more to our supporters and we take that responsibility very seriously.
-
-                        “We face a very strong opponent in Chelsea. We saw how clinical they are in our FA Cup game last Sunday and though that result left us bitterly disappointed, the nature of football means there is always another game to play.
-
-                        “We’re determined to bounce back strongly from that result and we come into this Final feeling ready and prepared. These games are decided by fine margins and our job is to make sure we come out on the right side of them.”
-                    </p> */}
+                    {data ? data.Description : 'Artcile is not created properly' }
                 </div>
 
                 <div className='trending'>
@@ -79,8 +71,8 @@ const SingleNews = () => {
 
                             <div className='row'>
 
-                                {
-                                    tdata.slice(0, 3).map((item, i) => (
+                                {/* {
+                                    data.slice(0, 3).map((item, i) => (
                                         <div className='col-md-4' key={i}>
                                             <div className='card bg-white mb-4'>
                                                 <div className="card">
@@ -105,7 +97,7 @@ const SingleNews = () => {
                                             </div>
                                         </div>
                                     ))
-                                }
+                                } */}
 
                             </div>
                         </div>
@@ -120,5 +112,5 @@ const SingleNews = () => {
     )
 }
 
-export default SingleNews
+export default SingleStory
 
