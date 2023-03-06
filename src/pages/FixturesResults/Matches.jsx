@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Headers from '../../components/Headers/Headers';
 import m from '../../assets/manchester.jpg';
-import './FixturesResults.css';
+import './Matches.css';
 import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import axios from 'axios'
 
-const FixturesResults = () => {
+const Matches = () => {
   // FETCH DATA FROM DATABASE
   const [data, setData] = useState([])
   // console.log('data', data)
@@ -121,4 +121,4 @@ const FixturesResults = () => {
   )
 }
 
-export default FixturesResults
+export default Matches

@@ -6,7 +6,7 @@ import './Card.css';
 const Card = ({ news }) => {
   console.log('card_news', news);
   return (
-    <div className='card bg-white mb-4'>
+    <div className='card bg-white mb-4 shadow' style={{borderRadius:'10px'}}>
       <div className="card">
         <div className="cardImg_container">
           <img src={`https://h.earnvest.xyz` + news.photo} className="card_img" alt="..." />

@@ -14,6 +14,7 @@ const Result = () => {
     // console.log(id)
     // FETCH DATA FROM DATABASE
     const [data, setData] = useState({})
+    console.log('data', data?.Goal_json_data_to_dict?.map(i => i.Goal_Date_Time))
     console.log('data', data?.Goal_json_data_to_dict)
     // console.log('data', data?.Goal_json_data_to_dict?.map(i => Number(i.Home_Team_Goal_Count_In_1)))
     // console.log('data', data.game_json_data_to_dict)
@@ -21,20 +22,24 @@ const Result = () => {
     // console.log('resultsData', data?.game_json_data_to_dict?.Event_for_game)
 
 
-
+    const time = (data?.Goal_json_data_to_dict?.map(i => i?.Goal_Date_Time))
+    const newTime = new Date(time)
+    // console.log('newTime',newTime)
+    const exactTime = newTime.toLocaleTimeString()
+    // console.log('exactTime', exactTime)
     // FETCHING GOAL DETAILS
 
     const initialValue = 0;
     const homeTeamGoal = data?.Goal_json_data_to_dict?.map(i => Number(i.Home_Team_Goal_Count_In_1)).reduce(
         (accumulator, currentValue) => accumulator + currentValue, initialValue);
-    console.log('initialValue', homeTeamGoal)
+    // console.log('initialValue', homeTeamGoal)
 
     const awayValue = 0;
     const awayTeamGoal = data?.Goal_json_data_to_dict?.map(i => Number(i.Way_Team_Goal_Count_In_1)).reduce(
         (accumulator, currentValue) => accumulator + currentValue, awayValue);
-    console.log('initialValue', awayTeamGoal)
-
-    console.log('awayTeamGoal', awayTeamGoal)
+    // console.log('initialValue', awayTeamGoal)
+    // 
+    // console.log('awayTeamGoal', awayTeamGoal)
 
     useEffect(() => {
         const newsData = async () => {
@@ -46,11 +51,11 @@ const Result = () => {
             setData(res.data);
         }
         newsData()
-    },[] )
+    }, [])
 
     // fetching EVENT data FOR STADIUM NAME
     const [stadNmae, setstadNmae] = useState([])
-    console.log('stadNmae', stadNmae.Home_Team)
+    // console.log('stadNmae', stadNmae.Home_Team)
 
     useEffect(() => {
         const newsData = async () => {
@@ -62,11 +67,11 @@ const Result = () => {
             setstadNmae(res.data);
         }
         newsData()
-    },[] )
+    }, [])
 
     // FETCHING TEAM DETAILS
     const [homeTeamLogo, setHomeTeamLogo] = useState('')
-    console.log('homeTeamLogo', homeTeamLogo)
+    // console.log('homeTeamLogo', homeTeamLogo)
 
     useEffect(() => {
         const newsData = async () => {
@@ -78,7 +83,7 @@ const Result = () => {
             setHomeTeamLogo(res.data);
         }
         newsData()
-    },[] )
+    }, [])
 
 
     return (
@@ -95,7 +100,7 @@ const Result = () => {
                     style={{
                         paddingTop: '100px', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto'
                     }}>
-                    <div className='row'>
+                    <div className='row responsive'>
                         <div className='col-md-5 result-card-right'>
                             <img src={`https://h.earnvest.xyz` + homeTeamLogo?.Team_Logo} alt="" />
                             {/* <img src={man} alt="" /> */}
@@ -114,7 +119,7 @@ const Result = () => {
                         </div>
 
                         <div className='col-md-2 result-vs'>
-                            <h3>VS</h3>
+                            <h3 className='text-white'>VS</h3>
                         </div>
 
                         <div className='col-md-5 result-card-left'>
@@ -170,10 +175,18 @@ const Result = () => {
                         <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
                             <ul>
                                 <li>
-                                    <h4 style={{ fontWeight: '900' }}> <img src={ball} alt="" /> Rahi Bari / 32 min</h4>
+                                    <h4 style={{ fontWeight: '900' }}> <img src={ball} alt="" />
+                                        {
+                                            data?.Goal_json_data_to_dict?.map((item, i) => (item.Scorer_Name))
+                                        } 
+                                        / {exactTime} min</h4>
                                 </li>
                                 <li>
-                                    <h4 style={{ fontWeight: '900' }}> <img src={yc} alt="" /> TR Niloy / 40 min</h4>
+                                    <h4 style={{ fontWeight: '900' }}> <img src={yc} alt="" />
+                                        {/* {
+                                            data?.Goal_json_data_to_dict?.map((item, i) =>(item.Scorer_Name))
+                                        } */}
+                                        / 40 min</h4>
                                 </li>
                             </ul>
                         </div>
@@ -181,7 +194,7 @@ const Result = () => {
                         <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
                             <ul>
                                 <li>
-                                    <h4 style={{ fontWeight: '900' }}> Rahi Bari / 32 min  <img src={ball} alt="" /></h4>
+                                    {/* <h4 style={{ fontWeight: '900' }}> {data.Way_Team_Goal_Count_In_1.Scorer_Name} / 32 min  <img src={ball} alt="" /></h4> */}
                                 </li>
                                 <li>
                                     <h4 style={{ fontWeight: '900' }}>  TR Niloy / 40 min <img src={yc} alt="" /></h4>

@@ -1,23 +1,50 @@
-.tckt{
+.tckt {
     border: none !important;
-    width: 13rem;
-    margin: 2rem;
-}
-.tcktImg_container{
     width: 100%;
-    height: 60%;
+    height: 350px;
+    margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px !important;
+    /* background-color: #3164f1; */
+    background: linear-gradient(180deg, #011e41 0%, #3164f1 100%);
 }
-.tcktImg_container .tckt_tem_img{
-    width: 90%;
+
+.tckt:hover {
+    /* transform:translateZ(10px) */
+    transform: translateY(10px) translateX(4px)
+
+}
+
+.tcktImg_container {
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 10px #c0c0c0cc; */
+    box-shadow: 0px 1px 9px 2px rgba(192,192,192,0.75);
+-webkit-box-shadow: 0px 1px 9px 2px rgba(192,192,192,0.75);
+-moz-box-shadow: 0px 1px 9px 2px rgba(192,192,192,0.75);
+}
+
+.tcktImg_container .tckt_tem_img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.tckt_body{
+
+.tckt_body {
     position: relative;
 }
-.Tckt_btn{
+
+.Tckt_btn {
     border: 1px solid #F76555;
     color: #011e41;
     background-color: #fff;
@@ -34,7 +61,8 @@
     -webkit-transition: all .3s ease-in-out 0s;
     border-radius: 0;
 }
-.Tckt_btn::before{
+
+.Tckt_btn::before {
     content: '';
     position: absolute;
     width: 0;
@@ -49,7 +77,8 @@
     -moz-transition: all .3s ease-in-out 0s;
     -webkit-transition: all .3s ease-in-out 0s;
 }
-.Tckt_btn::after{
+
+.Tckt_btn::after {
     border-left: 2px solid #F76555;
     content: '';
     position: absolute;
@@ -67,17 +96,19 @@
     -moz-transition: all .3s ease-in-out 0s;
     -webkit-transition: all .3s ease-in-out 0s;
 }
-.Tckt_btn{
+
+/* .Tckt_btn{
     margin-right: 2rem;
-}
+} */
 
 @media only screen and (max-width:430px) {
-    .tckt{
+    .tckt {
         border: none !important;
         width: 100%;
         margin: 2rem;
     }
-    .colamThree{
+
+    .colamThree {
         display: flex !important;
         width: 100% !important;
         justify-content: center !important;
@@ -85,13 +116,15 @@
         margin-bottom: 1rem;
     }
 }
+
 @media only screen and (max-width:468px) {
-    .tckt{
+    .tckt {
         border: none !important;
         width: 100%;
         margin: 2rem;
     }
-    .colamThree{
+
+    .colamThree {
         display: flex !important;
         width: 100% !important;
         justify-content: center !important;

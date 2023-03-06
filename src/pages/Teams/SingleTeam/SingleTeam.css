@@ -1,0 +1,124 @@
+.single_team{
+    overflow: hidden;
+    margin-top: 3rem;
+}
+.st_team .st_banner{
+    width: 100vw;
+    height: 76vh;
+    object-fit: cover;
+    background-position: center;
+    /* background-color: linear-gradient(180deg, #011e4177 0%, #3164f14f 100%); */
+
+}
+.st_data_box{
+    /* background-color: #00000041;
+    width: 100%;
+    height: 100%; */
+}
+.st_team{
+    position: relative;
+}
+.st_team .st_data_box{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    max-width: 800px;
+    height: 30px;
+}
+.st_logoContainer{
+    width: 240px;
+    height: 200px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-content: start;
+}
+.st_logoContainer .st_logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:50%;
+    box-shadow: 0px 1px 9px 2px #c0c0c0d8;
+    -webkit-box-shadow: 0px 1px 9px 2px #c0c0c0da;
+    -moz-box-shadow: 0px 1px 9px 2px #c0c0c0de;
+}
+
+.stData{
+    margin:2rem 0 0 4.94rem;
+}
+.stTeamText{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #000000cb;
+}
+.st_overViewWrap{
+    background: linear-gradient(71.81deg,#18184a 25.64%,#19398a 66.22%,#18184a 114.53%);
+    padding: 14px 50px;
+}
+.st_overViewWrap .stOverItems{
+    padding: 0 0 0 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-display: row;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* responsive styles */
+@media only screen and (max-width: 393px) {
+    .st_overViewWrap .stOverItems {
+        overflow: scroll;
+        white-space: nowrap;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+   
+    }
+    .stdTeamNameData{
+        margin: 1rem;
+    }
+    .stData{
+        margin-left: 1rem !important;
+    }
+    .stBtn{
+        margin-left: 40px !important;
+    }
+    .st_overViewWrap{
+        padding: 14px 0;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .st_overViewWrap .stOverItems {
+        overflow: scroll;
+        white-space: nowrap;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+   
+    }
+    .stdTeamNameData{
+        margin-left: 1rem;
+    }
+    .stData{
+        margin-left: -5rem !important;
+    }
+    .stBtn{
+        margin-left: 40px !important;
+    }
+    .st_overViewWrap{
+        padding: 14px 0;
+    }
+}
+@media only screen and (max-width: 468px) {
+    .st_overViewWrap .stOverItems {
+        overflow: scroll;
+        white-space: nowrap;
+        /* background-color: #999; */
+        width: 100vw;
+    }
+}
