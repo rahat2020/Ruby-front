@@ -51,7 +51,7 @@ const Result = () => {
             setData(res.data);
         }
         newsData()
-    }, [])
+    }, )
 
     // fetching EVENT data FOR STADIUM NAME
     const [stadNmae, setstadNmae] = useState([])
@@ -67,7 +67,7 @@ const Result = () => {
             setstadNmae(res.data);
         }
         newsData()
-    }, [])
+    }, )
 
     // FETCHING TEAM DETAILS
     const [homeTeamLogo, setHomeTeamLogo] = useState('')
@@ -83,7 +83,7 @@ const Result = () => {
             setHomeTeamLogo(res.data);
         }
         newsData()
-    }, [])
+    }, )
 
 
     return (
