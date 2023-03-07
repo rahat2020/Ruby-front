@@ -43,27 +43,6 @@ const StickyNavBar = () => {
         <div className="postion-sticky" id="stickyNav">
             <div className="ff">
                 <ul className="navbar_nav">
-                    <li className="nav_item">
-                        <Link to="/all-news" className="nav-link sticky_li" href="#">
-                            NEWS
-                        </Link>
-                    </li>
-                    <li className="nav_item">
-                        <Link to="/league-table" className="nav-link sticky_li" href="#">
-                            POINT TABLES
-                        </Link>
-                    </li>
-                    {/* <li className="nav_item dp_dwon_container" onMouseOver={handleDropdownClick}>
-                        <Link to="/fixtures-results" className="nav-link sticky_li" href="#">
-                            MATCHES
-                        </Link>
-                        <div className={`dropdown-menu ${isOpen ? 'open' : ''}`} onMouseOver={handleDropdownClick}>
-                            <Link to="/">Item 1</Link>
-                            <Link to="/">Item 2</Link>
-                            <Link to="/">Item 3</Link>
-                        </div>
-                        dropdown-toggle
-                    </li> */}
                     <li className="nav_item dropdown">
                         <Link to="/fixtures-results" className="nav-link sticky_li">
                             MATCHES
@@ -76,31 +55,6 @@ const StickyNavBar = () => {
                             <li><Link to="/" className="dropdown-item link">SCHEDULE</Link></li>
                             <li><Link to="/fixtures-results" className="dropdown-item link">RESULTS</Link></li>
                         </ul> */}
-                    </li>
-                    <li className="nav_item dropdown">
-                        <a className="nav-link  sticky_li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            MORE
-                        </a>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
-                                ABOUT <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
-                            </li>
-                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
-                                MOBILE PRODUCTIONS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
-                            </li>
-                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
-                                FANTASY <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
-                            </li>
-                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
-                                PHOTOS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
-                            </li>
-                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
-                                VENUES <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
-                            </li>
-                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
-                                FORGIRLS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
-                            </li>
-                        </ul>
                     </li>
                     <li className="nav_item dropdown">
                         <a className="nav-link  sticky_li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -134,7 +88,11 @@ const StickyNavBar = () => {
                             <li><Link to="/" className="dropdown-item link">2022</Link></li>
                         </ul> */}
                     </li>
-
+                    <li className="nav_item">
+                        <Link to="/league-table" className="nav-link sticky_li" href="#">
+                            POINT TABLES
+                        </Link>
+                    </li>
                     <li className="nav_item">
                         <Link to="/all_teams" className="nav-link sticky_li" href="#">
                             TEAMS
@@ -145,6 +103,53 @@ const StickyNavBar = () => {
                             AUCTION
                         </Link>
                     </li>
+                    <li className="nav_item">
+                        <Link to="/all-news" className="nav-link sticky_li" href="#">
+                            NEWS
+                        </Link>
+                    </li>
+
+                    {/* <li className="nav_item dp_dwon_container" onMouseOver={handleDropdownClick}>
+                        <Link to="/fixtures-results" className="nav-link sticky_li" href="#">
+                            MATCHES
+                        </Link>
+                        <div className={`dropdown-menu ${isOpen ? 'open' : ''}`} onMouseOver={handleDropdownClick}>
+                            <Link to="/">Item 1</Link>
+                            <Link to="/">Item 2</Link>
+                            <Link to="/">Item 3</Link>
+                        </div>
+                        dropdown-toggle
+                    </li> */}
+
+                    <li className="nav_item dropdown">
+                        <a className="nav-link  sticky_li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MORE
+                        </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
+                                ABOUT <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
+                            </li>
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
+                                MOBILE PRODUCTIONS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
+                            </li>
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
+                                FANTASY <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
+                            </li>
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
+                                PHOTOS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
+                            </li>
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
+                                VENUES <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
+                            </li>
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
+                                FORGIRLS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
 
                 </ul>
             </div>
