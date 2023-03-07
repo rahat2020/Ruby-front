@@ -45,7 +45,11 @@ const SingleTeam = () => {
                         alt="banner"
                         style={{ backgroundColor: "linear-gradient(180deg, #011e4177 0%, #3164f14f 100%" }}
                     />
-                    {/* // <img src={`https://h.earnvest.xyz/` + data.Team_banner ? ` https://h.earnvest.xyz/` + data.Team_banner : ban} /> */}
+
+                    {/* <div className="bgc">
+                        <img src={`https://h.earnvest.xyz` + data.Team_banner ? ` https://h.earnvest.xyz` + data.Team_banner : ban}
+                            className="st_banner" />
+                    </div> */}
                     <div className="st_data_box container">
                         <div className="row">
                             <div className="col-md-6">

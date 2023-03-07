@@ -48,13 +48,16 @@ const Teams = () => {
                                             <div className="tcard_text text-center fw-bold text-white fs-3">
                                                 <p>{item.Team_Name}</p>
                                             </div>
-                                            <button className='Tckt_btn'>
-                                                <Link to={`/all_teams/single_team/${item.id}`} className='link'>
-                                                    <span className="cardbtn_text fw-bold text-dark">
-                                                        SEE MORE
-                                                    </span>
-                                                </Link>
-                                            </button>
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <button className='Tckt_btn'>
+                                                    <Link to={`/all_teams/single_team/${item.id}`} className='link'>
+                                                        <span className="cardbtn_text fw-bold text-dark">
+                                                            SEE MORE
+                                                        </span>
+                                                    </Link>
+                                                </button>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

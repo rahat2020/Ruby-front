@@ -41,7 +41,7 @@ const Topsubnav = () => {
                                         <div className="topsubRight">
                                             <span className="topsubGmeTime">{item.Event_Date_Time}</span>
                                             {/* <span className="topsubGmeTime">NEXT GAME 2023-3-3 03:00 PM</span> */}
-                                            <p>
+                                            <p className='topTeamsNames'>
                                                 <span className="fw-bold">{item.Home_Team}</span>
                                                 <span className='topsubVerses'>
                                                     <img src={verses} alt="" className='topsubVerses_img' />
