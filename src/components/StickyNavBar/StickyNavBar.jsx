@@ -82,22 +82,22 @@ const StickyNavBar = () => {
                             MORE
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 ABOUT <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 MOBILE PRODUCTIONS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 FANTASY <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 PHOTOS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 VENUES <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 FORGIRLS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
                         </ul>
@@ -110,21 +110,24 @@ const StickyNavBar = () => {
                             <li className="stn_icon"><Link to="/All-videos" className="dropdown-item link">
                                 ALL VIDEOS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 HIGHLIGHTS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 INTERVIEWS <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
-                            <li className="stn_icon"><Link to="/" className="dropdown-item link">
+                            <li className="stn_icon"><Link to="/cms" className="dropdown-item link">
                                 PRESS CONFERENCE <ChevronRightIcon className="stnIcon_rightArrow" /></Link>
                             </li>
                         </ul>
                     </li>
                     <li className="nav_item dropdown">
-                        <a className="nav-link  sticky_li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <Link to="/cms" className="nav-link sticky_li">
                             STATS
-                        </a>
+                        </Link>
+                        {/* <a className="nav-link  sticky_li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                STATS
+                            </a> */}
                         {/* <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><Link to="/" className="dropdown-item link">2023</Link></li>
                             <li><Link to="/" className="dropdown-item link">2024</Link></li>
@@ -138,7 +141,7 @@ const StickyNavBar = () => {
                         </Link>
                     </li>
                     <li className="nav_item">
-                        <Link to="/aucntions" className="nav-link sticky_li" href="#">
+                        <Link to="/cms" className="nav-link sticky_li" href="#">
                             AUCTION
                         </Link>
                     </li>

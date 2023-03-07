@@ -1,0 +1,12 @@
+.cmsoon_container{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cmsImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

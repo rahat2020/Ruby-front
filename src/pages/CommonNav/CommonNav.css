@@ -137,6 +137,27 @@ ul li {
 }
 
 /* responsive styles */
+@media only screen and (max-width: 393px) {
+    #CMNstickyNav {
+        overflow: auto;
+        overflow-x: scroll;
+        white-space: nowrap;
+        /* background-color: #999; */
+        width: 100vw;
+    }
+
+    .navbar_nav {
+        margin-left: -1.7em;
+    }
+
+    .nav_item .sticky_li {
+        display: inline-block;
+        /* color: white; */
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+    }
+}
 @media only screen and (max-width: 468px) {
     #stickyNav {
         overflow: auto;

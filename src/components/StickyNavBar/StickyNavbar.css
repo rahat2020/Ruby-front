@@ -10,15 +10,17 @@
     top: 12%;
     z-index: 1200;
 }
+
 .navbar_nav {
     /* display: flex;
     justify-content: flex-start;
     align-items: start; */
     margin-left: 5rem;
     min-height: 65px;
-   
+
 
 }
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -26,7 +28,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 1000!important;
+    z-index: 1000 !important;
 }
 
 .navbar_nav ul li {
@@ -47,13 +49,15 @@
     flex-direction: column;
 } */
 
-.stn_icon{
+.stn_icon {
     transition: all 0.5s ease-in-out;
 }
-.stn_icon:hover .stnIcon_rightArrow{
+
+.stn_icon:hover .stnIcon_rightArrow {
     transform: rotate(360deg);
     transition: all 0.5s ease-in-out;
 }
+
 /* .moreDp li{
     display: flex;
     justify-content: center;
@@ -143,11 +147,12 @@ ul li {
         /* height: 30vh; */
         /* overflow: hidden; */
         /* height: 100%; */
-        /* overflow: auto; */
+        overflow: auto;
         /* white-space: nowrap; */
         /* background-color: #999; */
         width: 100vw;
     }
+
     .navbar_nav ul li {
         /* display: inline-block;
         position: relative; */
@@ -158,6 +163,7 @@ ul li {
         height: 100%;
         width: 100%;
     }
+
     .dropdown-menu {
         display: none;
         position: absolute;
@@ -165,8 +171,9 @@ ul li {
         top: 100%;
         left: 0;
         right: 0;
-        z-index: 1000!important;
+        z-index: 1000 !important;
     }
+
     ul li {
         list-style-type: none;
         list-style: none;
@@ -174,14 +181,16 @@ ul li {
         justify-content: center;
         align-items: center;
     }
-    
+
 }
+
 @media only screen and (max-width: 468px) {
     #stickyNav {
-        /* overflow: auto; */
-        /* white-space: nowrap; */
-        /* background-color: #999; */
+        /* overflow: auto;
+        white-space: nowrap;
+        background-color: #999; */
         width: 100vw;
+        top: 16%;
     }
 
     .navbar_nav {
@@ -195,6 +204,7 @@ ul li {
         padding: 14px;
         text-decoration: none;
     }
+
     .dropdown-menu {
         display: none;
         position: absolute;
@@ -202,6 +212,6 @@ ul li {
         top: 100%;
         left: 0;
         right: 0;
-        z-index: 1000!important;
+        z-index: 1000 !important;
     }
 }

@@ -23,6 +23,7 @@ import Teams from "./pages/Teams/Teams";
 import SingleTeam from "./pages/Teams/SingleTeam/SingleTeam";
 import TeamPlayers from "./pages/Teams/SingleTeam/TeamPlayers/TeamPlayers";
 import Footer from "./components/Footer/Footer";
+import ComingSoon from "./pages/ComingSoon/ComingSoon";
 // import PlaySomeTimes from "./pages/ForGirls/PlaySomeTimes/PlaySomeTimes";
 // import PlayAlot from "./pages/ForGirls/PlayAlot/PlayAlot";
 // import WildCats from "./pages/ForGirls/WildCats/WildCats";
@@ -34,6 +35,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="*" element={<HomePage />} />
+                    <Route path="/cms" element={<ComingSoon />} />
 
                     {/* NEWS ROUTE AND INNER ROUTE */}
                     <Route path="/all-news" element={<News />} />

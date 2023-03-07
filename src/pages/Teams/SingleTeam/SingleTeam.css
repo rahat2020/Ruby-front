@@ -71,9 +71,17 @@
 
 /* responsive styles */
 @media only screen and (max-width: 393px) {
+    .st_team .st_banner{
+        width: 100%;
+        /* height: 10%; */
+        overflow: hidden;
+        object-fit: cover;
+        background-position: center;
+        /* background-color: linear-gradient(180deg, #011e4177 0%, #3164f14f 100%); */
+    
+    }
     .st_overViewWrap .stOverItems {
-        overflow: scroll;
-        white-space: nowrap;
+       
         width: 100vw;
         display: flex;
         align-items: center;
@@ -95,9 +103,7 @@
 }
 @media only screen and (max-width: 350px) {
     .st_overViewWrap .stOverItems {
-        overflow: scroll;
-        white-space: nowrap;
-        width: 100vw;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
