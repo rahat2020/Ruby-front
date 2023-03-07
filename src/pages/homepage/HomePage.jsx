@@ -49,7 +49,6 @@ function HomePage() {
                 <StickyNavBar/>
                 <GridView newsList={newsList} />
                 <CheckFa/>
-                <Footer/>
             </div>
         </>
     );

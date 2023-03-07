@@ -290,7 +290,6 @@ const Result = () => {
 
             </div>
             <CheckFa />
-            <Footer />
         </>
     )
 }

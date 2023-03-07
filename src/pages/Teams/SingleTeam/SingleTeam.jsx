@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import Topsubnav from '../../../components/Topsubnav/Topsubnav';
+import CommonNav from '../../CommonNav/CommonNav';
 
 const SingleTeam = () => {
     const { id } = useParams()
@@ -34,7 +36,8 @@ const SingleTeam = () => {
 
     return (
         <>
-            <Headers />
+            <Topsubnav />
+            <CommonNav />
             <div className="single_team">
                 <div className="st_team">
                     <img src={ban}

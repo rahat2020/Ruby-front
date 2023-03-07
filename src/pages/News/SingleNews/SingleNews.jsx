@@ -9,11 +9,14 @@ import CheckFa from "../../../components/CheckFa/CheckFa";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios'
+import CommonNav from '../../CommonNav/CommonNav';
+import TopNavBar from '../../../components/topNavBar/TopNavBar';
+import Topsubnav from '../../../components/Topsubnav/Topsubnav';
 
 const SingleNews = () => {
     const { id } = useParams()
     // console.log(id)
-    
+
     // FETCH SINGLE DATA WITH ID FROM DATABASE
     const [data, setData] = useState([])
     // console.log('data', data)
@@ -51,15 +54,16 @@ const SingleNews = () => {
     }
     return (
         <>
-            <Headers />
+            <Topsubnav/>
+            <CommonNav />
+
             <div className="container mt-5 mb-5">
                 <img src={`https://h.earnvest.xyz` + data.photo} alt="team-logo" style={{ width: '100%' }} />
                 <h2 className='news-title'>{data.title}</h2>
-                <h4 className='news-subtitle'>{data.subtitle}</h4>
+                <h4 className='news-subtitle'>{data.subtitle ? data.subtitle : "It's the FA Women’s Continental Tyres League Cup Final"}</h4>
 
                 <div className='article-body'>
-                    {data.Description}
-                    {/* <p>It's the FA Women’s Continental Tyres League Cup Final on Sunday 5 March, as Arsenal meet Chelsea at Selhurst Park to challenge for the first silverware of the 2022-23 season.
+                    <p>It's the FA Women’s Continental Tyres League Cup Final on Sunday 5 March, as Arsenal meet Chelsea at Selhurst Park to challenge for the first silverware of the 2022-23 season.
                         Ahead of the game, we caught up with both coaches and a player from each team to get their thoughts on the occasion and the game.
                     </p>
                     <p>“Finals are the reason we play football – the stakes are high, but the rewards are great. At Arsenal, we have a long tradition of winning silverware and this represents an opportunity to add to that.
@@ -69,7 +73,9 @@ const SingleNews = () => {
                         “We face a very strong opponent in Chelsea. We saw how clinical they are in our FA Cup game last Sunday and though that result left us bitterly disappointed, the nature of football means there is always another game to play.
 
                         “We’re determined to bounce back strongly from that result and we come into this Final feeling ready and prepared. These games are decided by fine margins and our job is to make sure we come out on the right side of them.”
-                    </p> */}
+                    </p>
+                    {data.Description}
+
                 </div>
 
                 <div className='trending'>
@@ -115,7 +121,7 @@ const SingleNews = () => {
 
             </div>
             <CheckFa />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

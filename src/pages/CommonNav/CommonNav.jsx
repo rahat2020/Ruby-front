@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import './StickyNavbar.css'
+import './CommonNav.css'
 import { Link } from 'react-router-dom';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const StickyNavBar = () => {
+const CommonNav = () => {
     const [sticky, setSticky] = useState(false)
     useEffect(() => {
         const sticky_top = () => {
@@ -40,7 +40,7 @@ const StickyNavBar = () => {
     // };
 
     return (
-        <div className="postion-sticky" id="stickyNav">
+        <div className="postion-sticky" id="CMNstickyNav">
             <div className="ff">
                 <ul className="navbar_nav">
                     <li className="nav_item">
@@ -149,7 +149,7 @@ const StickyNavBar = () => {
     );
 };
 
-export default StickyNavBar;
+export default CommonNav;
 
         // <div className="container mx-auto items-center font-bold h-16 text-lg flex justify-around shadow-md">
         //     <a className="border-r-4 black pr-12 border-black">NEWS</a>

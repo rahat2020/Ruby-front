@@ -107,7 +107,6 @@ const SingleStory = () => {
 
             </div>
             <CheckFa />
-            <Footer />
         </>
     )
 }
