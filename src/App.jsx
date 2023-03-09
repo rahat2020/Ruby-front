@@ -53,7 +53,7 @@ function App() {
                     <Route path="/single_team/players/:id" element={<TeamPlayers />} />
 
                     {/* VIDEOS */}
-                    <Route path="/All-videos" element={<ForGirls />} />
+                    <Route path="/all_videos" element={<ForGirls />} />
 
                     {/* FORGIRLS SUB ROUTE*/}
                     <Route path="/never-played" element={<NeverPlayed />} />

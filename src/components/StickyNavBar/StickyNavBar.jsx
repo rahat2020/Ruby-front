@@ -57,7 +57,7 @@ const StickyNavBar = () => {
                         </ul> */}
                     </li>
                     <li className="nav_item dropdown">
-                        <Link t0="/All-videos" className="nav-link sticky_li">
+                        <Link to="/all_videos" className="nav-link sticky_li">
                             VIDEO
                         </Link>
                         {/* <a className="nav-link  sticky_li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
