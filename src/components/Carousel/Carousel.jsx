@@ -40,8 +40,8 @@ const Carousel = () => {
                 <div className="carousel-inner">
                     {data.map((item, index) => (
                         <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                            <img src={caro_two} className="d-block w-100 slide_one" alt="..." />
-                            {/* <img src={`https://h.amaderbazar-bd.com` + item.Slide_Image} className="d-block w-100 slide_one" alt="..." /> */}
+                            {/* <img src={caro_two} className="d-block w-100 slide_one" alt="..." /> */}
+                            <img src={`https://h.amaderbazar-bd.com` + item.Slide_Image} className="d-block w-100 slide_one" alt="..." />
                             <img src={banner} alt="banner" className="banner_svg" />
                             <span className="banner_text">{item.Slide_title}</span>
                             <div className="mblBannerBox">
