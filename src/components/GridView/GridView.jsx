@@ -13,7 +13,7 @@ const GridView = (props) => {
       const data = new FormData();
       data.append('Process', "see_all_news");
       // console.log('Process', data.append('Process', "see_all_news"));
-      const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
+      const res = await axios.post('https://h.amaderbazar-bd.com/news/find_all_news/', data);
       // console.log(res.data);
       setData(res.data);
     }

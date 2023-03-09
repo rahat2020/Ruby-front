@@ -9,7 +9,7 @@ const Card = ({ news }) => {
     <div className='card bg-white mb-4 shadow' style={{borderRadius:'10px'}}>
       <div className="card">
         <div className="cardImg_container">
-          <img src={`https://h.earnvest.xyz` + news.photo} className="card_img" alt="..." />
+          <img src={`https://h.amaderbazar-bd.com` + news.photo} className="card_img" alt="..." />
         </div>
         <div className="card_body">
           <h2 className="card_text">{news.title}</h2>

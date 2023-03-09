@@ -4,6 +4,7 @@ import './LeagueTable.css';
 import m from '../../assets/manchester.jpg';
 import Footer from '../../components/Footer/Footer';
 import axios from 'axios';
+import LeagueNav from './LeagueNav';
 
 const LeagueTable = () => {
     const [data, setData] = useState([])
@@ -14,7 +15,7 @@ const LeagueTable = () => {
             const data = new FormData();
             data.append('Process', "see_all_team");
             console.log('Process', data.append('Process', "see_all_team"));
-            const res = await axios.post('https://h.earnvest.xyz/Team/find_all_team/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Team/find_all_team/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -38,6 +39,7 @@ const LeagueTable = () => {
     return (
         <>
             <Headers />
+            <LeagueNav/>
             <div className="container mt-5 mb-5">
                 <div className='league-table-top '>
                     <h4 className='league-title fw-bold shadow-sm p-2 rounded mb-5'>Women's Super League</h4>
@@ -65,7 +67,7 @@ const LeagueTable = () => {
                                     <th scope="row">{i}</th>
                                     <td>
                                         <div className='team-name'>
-                                            <img src={`https://h.earnvest.xyz` + item.Team_Logo} alt="team-logo" 
+                                            <img src={`https://h.amaderbazar-bd.com` + item.Team_Logo} alt="team-logo" 
                                             style={{ width: '30px', height: '30px', marginRight: '20px' }} />
                                             <span>{item.Team_Name}</span>
                                         </div>

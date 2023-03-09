@@ -24,7 +24,7 @@ const NeverPlayed = () => {
             const data = new FormData();
             data.append('Process', "find_with_category_FA");
             data.append('category_value', value);
-            const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
             console.log(res.data);
             setData(res.data);
         }

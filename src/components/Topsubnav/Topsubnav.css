@@ -122,6 +122,14 @@
         align-items: center;
         flex-direction: column; */
     }
+    .topsubProfile {
+        width: 0;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
     .topsubProfile::before {
         border-left: 1px solid #cccccc00;
 

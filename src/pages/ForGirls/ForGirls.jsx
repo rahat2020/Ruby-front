@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Headers from '../../components/Headers/Headers';
 import './ForGirls.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs } from 'swiper';
 import "swiper/css/navigation";
 import 'swiper/css';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 import ForgirlsNav from './ForgirlsNav';
 import Footer from '../../components/Footer/Footer';
 import axios from 'axios';
@@ -22,7 +22,8 @@ const ForGirls = () => {
             const data = new FormData();
             data.append('Process', "see_all_FA");
             // console.log('Process', data.append('Process', "see_all_news"));
-            const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
+            // const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
             // console.log(res.data);
             setData(res.data);
         }

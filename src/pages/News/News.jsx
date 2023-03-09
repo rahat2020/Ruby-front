@@ -5,6 +5,7 @@ import news from '../../assets/caro_one.jpg'
 import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import NewsTab from './NewsTab/NewsTab';
 
 const News = () => {
     // FETCH DATA FROM DATABASE
@@ -16,7 +17,7 @@ const News = () => {
             const data = new FormData();
             data.append('Process', "see_all_news");
             // console.log('Process', data.append('Process', "see_all_news"));
-            const res = await axios.post('https://h.earnvest.xyz/news/find_all_news/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/news/find_all_news/', data);
             // console.log(res.data);
             setData(res.data);
         }
@@ -26,6 +27,7 @@ const News = () => {
     return (
         <>
             <Headers />
+            <NewsTab/>
             <div className="container news">
                 <div className='bg-white mb-4'>
                     <div className="row">
@@ -36,7 +38,7 @@ const News = () => {
                                 <div className="col-md-4 mb-4" key={index}>
                                     <div className="card" >
                                         <div className="cardImg_container">
-                                            <img src={`https://h.earnvest.xyz`+item.photo} className="card_img" alt="news-card-img" />
+                                            <img src={`https://h.amaderbazar-bd.com`+item.photo} className="card_img" alt="news-card-img" />
                                         </div>
                                         <div className="card_body">
                                             <h2 className="card_text">{item.title}</h2>

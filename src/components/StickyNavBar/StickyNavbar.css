@@ -12,13 +12,8 @@
 }
 
 .navbar_nav {
-    /* display: flex;
-    justify-content: flex-start;
-    align-items: start; */
     margin-left: 5rem;
     min-height: 65px;
-
-
 }
 
 .dropdown-menu {
@@ -147,31 +142,27 @@ ul li {
         /* height: 30vh; */
         /* overflow: hidden; */
         /* height: 100%; */
-        overflow: auto;
+        /* overflow: auto; */
         /* white-space: nowrap; */
         /* background-color: #999; */
         width: 100vw;
     }
-
-    .navbar_nav ul li {
-        /* display: inline-block;
-        position: relative; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-    }
-
     .dropdown-menu {
         display: none;
         position: absolute;
-        min-width: 7rem !important;
+        min-width: 10rem !important;
         top: 100%;
         left: 0;
         right: 0;
         z-index: 1000 !important;
+    }    
+    .navbar_nav {
+        margin-left: 5rem;
+        min-height: 65px !important;
+    }
+
+    .stn_icon{
+        font-size: 13px;
     }
 
     ul li {

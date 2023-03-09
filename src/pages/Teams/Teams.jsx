@@ -6,6 +6,7 @@ import './Teams.css';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import TeamsNav from './TeamsNav';
 
 const Teams = () => {
 
@@ -16,7 +17,7 @@ const Teams = () => {
         const newsData = async () => {
             const data = new FormData();
             data.append('Process', "see_all_team");
-            const res = await axios.post('https://h.earnvest.xyz/Team/find_all_team/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Team/find_all_team/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -33,6 +34,7 @@ const Teams = () => {
     return (
         <>
             <Headers />
+            <TeamsNav/>
             <div className="container">
                 <div className="tickets">
                     <div className="row">
@@ -42,7 +44,7 @@ const Teams = () => {
                                 <div className="col-md-3 colamThree" key={i}>
                                     <div className="card tckt ">
                                         <div className="tcktImg_container ">
-                                            <img src={`https://h.earnvest.xyz` + item.Team_Logo} className=" tckt_tem_img" alt="team-logo" />
+                                            <img src={`https://h.amaderbazar-bd.com` + item.Team_Logo} className=" tckt_tem_img" alt="team-logo" />
                                         </div>
                                         <div className="card_body tckt_body">
                                             <div className="tcard_text text-center fw-bold text-white fs-3">

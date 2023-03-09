@@ -46,7 +46,7 @@ const Result = () => {
             const data = new FormData();
             data.append('Process', 'find_game_with_Event_id');
             data.append('Event_id', id);
-            const res = await axios.post('https://h.earnvest.xyz/Game/find_game_with_Event_id/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Game/find_game_with_Event_id/', data);
             // console.log(res)
             setData(res.data);
         }
@@ -62,7 +62,7 @@ const Result = () => {
             const data = new FormData();
             data.append('Process', 'see');
             data.append('id', id);
-            const res = await axios.post('https://h.earnvest.xyz/Event/find_individual_id/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Event/find_individual_id/', data);
             // console.log(res)
             setstadNmae(res.data);
         }
@@ -78,7 +78,7 @@ const Result = () => {
             const data = new FormData();
             data.append('Process', 'find_team_with_team_name');
             data.append('team_name', stadNmae?.Home_Team);
-            const res = await axios.post('https://h.earnvest.xyz/Team/find_team_with_team_name/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Team/find_team_with_team_name/', data);
             // console.log(res)
             setHomeTeamLogo(res.data);
         }
@@ -102,7 +102,7 @@ const Result = () => {
                     }}>
                     <div className='row responsive'>
                         <div className='col-md-5 result-card-right'>
-                            <img src={`https://h.earnvest.xyz` + homeTeamLogo?.Team_Logo} alt="" />
+                            <img src={`https://h.amaderbazar-bd.com` + homeTeamLogo?.Team_Logo} alt="" />
                             {/* <img src={man} alt="" /> */}
                             <h3>
                                 {data?.game_json_data_to_dict?.home_Team_name}
@@ -135,7 +135,7 @@ const Result = () => {
                                 {data?.game_json_data_to_dict?.way_Team_name}
                             </h3>
                             {/* <img src={man} alt="" /> */}
-                            <img src={`https://h.earnvest.xyz` + homeTeamLogo?.Team_Logo} alt="" />
+                            <img src={`https://h.amaderbazar-bd.com` + homeTeamLogo?.Team_Logo} alt="" />
                         </div>
 
                     </div>

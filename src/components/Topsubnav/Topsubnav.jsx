@@ -15,7 +15,7 @@ const Topsubnav = () => {
             const data = new FormData();
             data.append('Process', "see");
             // console.log('Process', data.append('Process', "see"));
-            const res = await axios.post('https://h.earnvest.xyz/Event/find_all/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Event/find_all/', data);
             // console.log(res.data);
             setData(res.data);
         }

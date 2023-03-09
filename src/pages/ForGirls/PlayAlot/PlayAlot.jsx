@@ -23,7 +23,7 @@ const PlayAlot = () => {
       const data = new FormData();
       data.append('Process', "find_with_category_FA");
       data.append('category_value', value);
-      const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+      const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
       console.log(res.data);
       setData(res.data);
     }
@@ -38,7 +38,7 @@ const PlayAlot = () => {
   //     const data = new FormData();
   //     data.append('Process', "see_all_FA");
   //     // console.log('Process', data.append('Process', "see_all_news"));
-  //     const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+  //     const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
   //     // console.log(res.data);
   //     setData(res.data);
   //   }

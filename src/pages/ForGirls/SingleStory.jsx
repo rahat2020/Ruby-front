@@ -26,7 +26,7 @@ const SingleStory = () => {
             data.append('Process', "see_one_FA");
             data.append('spacific_news_id', id);
             console.log('specific_news', data.append('spacific_news_id', id));
-            const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -42,7 +42,7 @@ const SingleStory = () => {
     //         data.append('Process', "see_one_FA");
     //         data.append('spacific_news_id', id);
     //         console.log('spacific_news_id', data.append('Process', "see_all_news"));
-    //         const res = await axios.post('https://h.earnvest.xyz/FA/find_all_FA/', data);
+    //         const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
     //         console.log(res.data);
     //         setTData(res.data);
     //     }
@@ -56,7 +56,7 @@ const SingleStory = () => {
         <>
             <Headers />
             <div className="container mt-5 mb-5">
-                <img src={`https://h.earnvest.xyz` + data.photo} alt="team-logo" style={{ width: '100%' }} />
+                <img src={`https://h.amaderbazar-bd.com` + data.photo} alt="team-logo" style={{ width: '100%' }} />
                 <h2 className='news-title'>{data.title}</h2>
                 <h4 className='news-subtitle'>{data.subtitle}</h4>
 
@@ -77,7 +77,7 @@ const SingleStory = () => {
                                             <div className='card bg-white mb-4'>
                                                 <div className="card">
                                                     <div className="cardImg_container">
-                                                        <img src={`https://h.earnvest.xyz` + item.photo} className="card_img" alt="trending-news" />
+                                                        <img src={`https://h.amaderbazar-bd.com` + item.photo} className="card_img" alt="trending-news" />
                                                     </div>
                                                     <div className="card_body">
                                                         <h2 className="card_text">{item.title}</h2>

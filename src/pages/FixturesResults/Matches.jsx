@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import axios from 'axios'
+import LeagueNav from '../LeaguTable/LeagueNav';
 
 const Matches = () => {
   // FETCH DATA FROM DATABASE
@@ -17,7 +18,7 @@ const Matches = () => {
       const data = new FormData();
       data.append('Process', "see");
       // console.log('Process', data.append('Process', "see_all_news"));
-      const res = await axios.post('https://h.earnvest.xyz/Event/find_all/', data);
+      const res = await axios.post('https://h.amaderbazar-bd.com/Event/find_all/', data);
       // console.log(res.data);
       setData(res.data);
     }
@@ -35,6 +36,7 @@ const Matches = () => {
   return (
     <>
       <Headers />
+      <LeagueNav/>
       <div className="container  mt-5 mb-5">
         <div className="d-flex text-start my-4">
           <h4 className="fw-bold shadow-sm">BANGLADESH WOMEN'S SUPER LEAGUE</h4>
@@ -93,7 +95,7 @@ const Matches = () => {
                           <span>{item.Home_Team}</span>
                           <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>
                           <span>{item.Way_Team}</span>
-                          <img src={`https://h.earnvest.xyz` + item.Event_Logo} alt="logo"
+                          <img src={`https://h.amaderbazar-bd.com` + item.Event_Logo} alt="logo"
                             style={{ width: '40px', height: '40px', marginLeft: '20px' }} />
                         </div>
 

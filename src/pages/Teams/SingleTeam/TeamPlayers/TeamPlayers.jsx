@@ -20,7 +20,7 @@ const TeamPlayers = () => {
             const data = new FormData();
             data.append('Process', "find_team_with_id");
             data.append('specific_id', id);
-            const res = await axios.post('https://h.earnvest.xyz/Team/find_team_with_id/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Team/find_team_with_id/', data);
             console.log(res.data);
             setData(res.data);
         }

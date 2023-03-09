@@ -38,7 +38,7 @@ function HomePage() {
     return (
         <>
             <div className="App">
-                <TopNavBar/>
+                {/* <TopNavBar/> */}
                 <Topsubnav/>
                 <Carousel
                     index={currentIndex}

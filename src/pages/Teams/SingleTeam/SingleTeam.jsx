@@ -27,7 +27,7 @@ const SingleTeam = () => {
             const data = new FormData();
             data.append('Process', "find_team_with_id");
             data.append('specific_id', id);
-            const res = await axios.post('https://h.earnvest.xyz/Team/find_team_with_id/', data);
+            const res = await axios.post('https://h.amaderbazar-bd.com/Team/find_team_with_id/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -47,14 +47,14 @@ const SingleTeam = () => {
                     />
 
                     {/* <div className="bgc">
-                        <img src={`https://h.earnvest.xyz` + data.Team_banner ? ` https://h.earnvest.xyz` + data.Team_banner : ban}
+                        <img src={`https://h.amaderbazar-bd.com` + data.Team_banner ? ` https://h.amaderbazar-bd.com` + data.Team_banner : ban}
                             className="st_banner" />
                     </div> */}
                     <div className="st_data_box container">
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="st_logoContainer container">
-                                    <img src={`https://h.earnvest.xyz` + data.Team_Logo} alt="" className="st_logo" />
+                                    <img src={`https://h.amaderbazar-bd.com` + data.Team_Logo} alt="" className="st_logo" />
                                 </div>
 
                             </div>
