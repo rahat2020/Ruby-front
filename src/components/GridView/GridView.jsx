@@ -14,7 +14,7 @@ const GridView = () => {
     const newsData = async () => {
       const data = new FormData();
       data.append('Process', "see_all_news");
-      const res = await axios.post('http://67.223.117.207:8000/news/find_all_news/', data);
+      const res = await axios.post('https://api.wslbangladesh.com/news/find_all_news/', data);
       // console.log(res.data);
       setData(res.data);
     }
@@ -29,7 +29,7 @@ const GridView = () => {
     const videData = async () => {
       const data = new FormData();
       data.append('Process', "see_all_FA");
-      const res = await axios.post('http://67.223.117.207:8000/FA/find_all_FA/', data);
+      const res = await axios.post('https://api.wslbangladesh.com/FA/find_all_FA/', data);
       setVideoData(res.data);
     }
     videData()

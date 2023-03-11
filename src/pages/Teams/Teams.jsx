@@ -18,7 +18,7 @@ const Teams = () => {
         const newsData = async () => {
             const data = new FormData();
             data.append('Process', "see_all_team");
-            const res = await axios.post('http://67.223.117.207:8000/Team/find_all_team/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/Team/find_all_team/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -45,7 +45,7 @@ const Teams = () => {
                                 <div className="col-md-3 colamThree" key={i}>
                                     <div className="card tckt ">
                                         <div className="tcktImg_container ">
-                                            <img src={`http://67.223.117.207:8000` + item.Team_Logo} className=" tckt_tem_img" alt="team-logo" />
+                                            <img src={`https://api.wslbangladesh.com` + item.Team_Logo} className=" tckt_tem_img" alt="team-logo" />
                                         </div>
                                         <div className="card_body tckt_body">
                                             <div className="tcard_text text-center fw-bold text-white fs-3">

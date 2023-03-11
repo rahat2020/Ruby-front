@@ -16,7 +16,7 @@ const Topsubnav = () => {
             const data = new FormData();
             data.append('Process', "see");
             // console.log('Process', data.append('Process', "see"));
-            const res = await axios.post('http://67.223.117.207:8000/Event/find_all/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/Event/find_all/', data);
             // console.log(res.data);
             setData(res.data);
         }

@@ -15,7 +15,7 @@ const SingleSchedule = () => {
             const data = new FormData();
             data.append('Process', "see");
             // console.log('Process', data.append('Process', "see_all_news"));
-            const res = await axios.post('http://67.223.117.207:8000/Event/find_all/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/Event/find_all/', data);
             // console.log(res.data);
             setData(res.data);
         }
@@ -80,7 +80,7 @@ const SingleSchedule = () => {
                                                     <span>{item.Home_Team}</span>
                                                     <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>
                                                     <span>{item.Way_Team}</span>
-                                                    <img src={`http://67.223.117.207:8000` + item.Event_Logo} alt="logo"
+                                                    <img src={`https://api.wslbangladesh.com` + item.Event_Logo} alt="logo"
                                                         style={{ width: '40px', height: '40px', marginLeft: '20px' }} />
                                                 </div>
 

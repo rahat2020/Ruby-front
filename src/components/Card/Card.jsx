@@ -13,7 +13,7 @@ const Card = ({ news }) => {
           <div className="imgwrap">
             <img src={img} className="card_img" alt="..." />
           </div>
-          {/* <img src={`http://67.223.117.207:8000` + news.photo} className="card_img" alt="..." /> */}
+          {/* <img src={`https://api.wslbangladesh.com` + news.photo} className="card_img" alt="..." /> */}
         </div>
         <div className="card_body">
           <h2 className="card_text">{news.title}</h2>

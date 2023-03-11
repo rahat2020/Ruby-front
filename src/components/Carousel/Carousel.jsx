@@ -19,7 +19,7 @@ const Carousel = () => {
             const data = new FormData();
             data.append('Process', "see_slide");
             // console.log('Process', data.append('Process', "see_slide"));
-            const res = await axios.post('http://67.223.117.207:8000/Slide_Image_Logo/find_all_Slide_logo/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/Slide_Image_Logo/find_all_Slide_logo/', data);
             // console.log(res.data);
             setData(res.data);
         }
@@ -41,7 +41,7 @@ const Carousel = () => {
                     {data.map((item, index) => (
                         <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} id="caro_bannerContainer">
                             {/* <img src={caro_two} className="d-block w-100 slide_one" alt="..." /> */}
-                            <img src={`http://67.223.117.207:8000` + item.Slide_Image} className="d-block w-100 slide_one" alt="..." />
+                            <img src={`https://api.wslbangladesh.com` + item.Slide_Image} className="d-block w-100 slide_one" alt="..." />
                             <img src={banner} alt="banner" className="banner_svg" />
                             <span className="banner_text">{item.Slide_title.slice(0, 25)}</span>
                             <Link to="/fixtures-results" className="link">
@@ -61,7 +61,7 @@ const Carousel = () => {
                                 </Link>
 
                             </div>
-                            {/* <img src={`http://67.223.117.207:8000`+item.Slide_Image} className="d-block w-100" alt="" />
+                            {/* <img src={`https://api.wslbangladesh.com`+item.Slide_Image} className="d-block w-100" alt="" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>{item.Slide_title}</h5>
                             </div> */}

@@ -15,7 +15,7 @@ const LeagueTable = () => {
             const data = new FormData();
             data.append('Process', "see_all_team");
             console.log('Process', data.append('Process', "see_all_team"));
-            const res = await axios.post('http://67.223.117.207:8000/Team/find_all_team/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/Team/find_all_team/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -67,7 +67,7 @@ const LeagueTable = () => {
                                     <th scope="row">{item.id}</th>
                                     <td className='text-start'>
                                         <div className='team-name'>
-                                            <img src={`http://67.223.117.207:8000` + item.Team_Logo} alt="team-logo" 
+                                            <img src={`https://api.wslbangladesh.com` + item.Team_Logo} alt="team-logo" 
                                             style={{ width: '30px', height: '30px', marginRight: '20px' }} />
                                             <span>{item.Team_Name}</span>
                                         </div>

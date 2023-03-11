@@ -29,7 +29,7 @@ const SingleTeam = () => {
             const data = new FormData();
             data.append('Process', "find_team_with_id");
             data.append('specific_id', id);
-            const res = await axios.post('http://67.223.117.207:8000/Team/find_team_with_id/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/Team/find_team_with_id/', data);
             console.log(res.data);
             setData(res.data);
         }
@@ -44,7 +44,7 @@ const SingleTeam = () => {
         const videData = async () => {
             const data = new FormData();
             data.append('Process', "see_all_FA");
-            const res = await axios.post('http://67.223.117.207:8000/FA/find_all_FA/', data);
+            const res = await axios.post('https://api.wslbangladesh.com/FA/find_all_FA/', data);
             setVideoData(res.data);
         }
         videData()
@@ -62,14 +62,14 @@ const SingleTeam = () => {
                     />
 
                     {/* <div className="bgc">
-                        <img src={`http://67.223.117.207:8000` + data.Team_banner ? ` http://67.223.117.207:8000` + data.Team_banner : ban}
+                        <img src={`https://api.wslbangladesh.com` + data.Team_banner ? ` https://api.wslbangladesh.com` + data.Team_banner : ban}
                             className="st_banner" />
                     </div> */}
                     <div className="st_data_box container">
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="st_logoContainer container">
-                                    <img src={`http://67.223.117.207:8000` + data.Team_Logo} alt="" className="st_logo" />
+                                    <img src={`https://api.wslbangladesh.com` + data.Team_Logo} alt="" className="st_logo" />
                                 </div>
 
                             </div>

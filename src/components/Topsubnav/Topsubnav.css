@@ -108,8 +108,9 @@
 }
 
 .topsubProPic {
-    width: 2rem !important;
-    height: 2em !important;
+    /* width: 2rem !important;
+    height: 2em !important; */
+    display: none;
 }
 
 /* responsive styles */
