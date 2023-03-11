@@ -1,12 +1,10 @@
 #stickyNav {
     white-space: nowrap;
     width: 100%;
-    /* height: 30vh; */
-    /* overflow: hidden; */
-    /* height: 100%; */
+    height: 70px;
     background-color: #fff;
     position: sticky;
-    border-bottom: 1px solid #7e7e7e48;
+    
     top: 12%;
     z-index: 1200;
 }
@@ -24,8 +22,9 @@
     display: block;
 }
 .navbar_nav {
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     margin-top: 1rem;
+    border-bottom: 1px solid #7e7e7e48;
     /* min-height: 55px; */
 }
 
@@ -68,42 +67,7 @@ ul li {
     width: 100%;
     height: 100%;
     transition: all 0.5s ease-in-out;
-    /* border-bottom: 2px solid #fff; */
-
 }
-/* .nav_item::after {
-    border-right: 1px solid #e21010;
-    content: "";
-    top: 0;
-    left: 126px;
-    transform: rotate(20deg);
-    margin-top: 1rem;
-    position: relative;
-    transform: rotateX(225deg)
-} */
-
-/* .sticky_li::before{
-    border-bottom: 1px solid #fff;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    color: #ffffff;
-    transition: width .1s;
-  
-} */
-
-/* .sticky_li:hover::after {
-    border-bottom: 1px solid #000;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    color: #000;
-    transition: width .1s;
-} */
 
 .sticky_li:hover {
     transform: translateY(5px);
@@ -125,6 +89,7 @@ ul li {
     #stickyNav {
         white-space: nowrap;
         overflow-x: scroll;
+        height: 70px;
         width: 100vw;
         position: sticky;
     }
@@ -175,7 +140,7 @@ ul li {
         background-color: #999; */
         position: sticky;
         width: 100vw;
-        top: 196px;
+        top: 93px;
 
     }
 

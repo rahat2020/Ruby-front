@@ -56,22 +56,25 @@ const TeamsNav = () => {
                                         NEVER PLAYED</li>
                                 </Link>
                                 <Link to="/play-sometimes" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={playAcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        PLAY SOMETIMES</li>
+                                        <span style={{ marginLeft: '1rem' }}>PLAY SOMETIMES</span>
+                                    </li>
                                 </Link>
                                 <Link to="/play-alot" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={someTcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        PLAY A LOT</li>
+                                        <span style={{ marginLeft: '1rem' }}>PLAY A LOT</span>
+                                    </li>
                                 </Link>
                                 <Link to="/wildcats" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={wildcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        WILDCATS</li>
+                                        <span style={{ marginLeft: '1rem' }}>WILDCATS</span>
+                                    </li>
                                 </Link>
                             </ul>
                         </div>

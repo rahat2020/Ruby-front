@@ -13,13 +13,18 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer_first border-top border-light border-2">
-                <div className="ffImg_container shadow-sm p-3 ">
-                    <Link to="https://www.bff.com.bd/" target="_blank">
-                        <img src={bff} alt="" className="ffimg" />
-                    </Link>
-                    <Link to="http://ksportsbd.com/" target="_blank">
-                        <img src={ksports} alt="" className="ffimg " />
-                    </Link>
+                <div className="ffImg_container shadow-sm p-2 container">
+                    <div className="ffpartnerleft">
+                        <h4 className="text-uppercase fw-bold" style={{color:'#011E41'}}>Our official partner and organizer</h4>
+                    </div>
+                    <div className="ffpartnerright d-flex">
+                        <Link to="https://www.bff.com.bd/" target="_blank">
+                            <img src={bff} alt="" className="ffimg" />
+                        </Link>
+                        <Link to="http://ksportsbd.com/" target="_blank">
+                            <img src={ksports} alt="" className="ffimg " />
+                        </Link>
+                    </div>
                 </div>
             </div>
             <div className="footer_center"></div>

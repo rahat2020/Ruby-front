@@ -56,34 +56,39 @@ const MoreNav = () => {
                                         ABOUT</li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={playAcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        MOBILE PRODUCTIONS</li>
+                                        <span style={{ marginLeft: '1rem' }}>MOBILE PRODUCTIONS</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={someTcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        PHOTOS</li>
+                                        <span style={{ marginLeft: '1rem' }}>PHOTOS</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={wildcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        VENUES</li>
+                                        <span style={{ marginLeft: '1rem' }}>VENUES</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={wildcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        FANTASY</li>
+                                        <span style={{ marginLeft: '1rem' }}>FANTASY</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={wildcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        FORGIRLS</li>
+                                        <span style={{ marginLeft: '1rem' }}>FORGIRLS</span>
+                                    </li>
                                 </Link>
                             </ul>
                         </div>

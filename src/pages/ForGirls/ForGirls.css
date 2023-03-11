@@ -2,7 +2,7 @@
     width: 100%;
     overflow: hidden;
     margin-bottom: 5rem;
-
+    
 }
 .fg_nav{
     background: linear-gradient(135deg,#870064 0%,#ff6b53 80%);
@@ -18,8 +18,18 @@
 .fgnavs{
     min-height: 50px;
 }
-.fg_nav{
-    position: relative;
+
+.fgnavs .brekar::before{
+    transform: rotate(20deg);
+    position: absolute;
+    content: '';
+    border-left: 1px solid #ccc;
+    /* left: 0; */
+    /* right: 0; */
+    top: 12px;
+    height: 35px;
+    width: 1px;
+    display: block;
 }
 .fg_nav ul::before{
     z-index: 0;

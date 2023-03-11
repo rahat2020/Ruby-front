@@ -10,7 +10,7 @@ import Footer from '../../components/Footer/Footer';
 
 
 const HomeVideo = ({ item }) => {
-    console.log('item', item);
+    // console.log('item', item);
 
     return (
         <>
@@ -24,7 +24,7 @@ const HomeVideo = ({ item }) => {
                     <div className="card_body">
                         <h2 className="card_text">{item.title}</h2>
                         <p className="card_para">{item.subtitle}</p>
-                        <span className="card_desc">{item.Description.slice(0,60)}</span>
+                        <span className="card_desc" dangerouslySetInnerHTML={{__html:item.Description.slice(0,60)}}></span>
                     </div>
                     {/* <div className="card_btnConainer">
                         <Link to={`/single-news/${news.id}`}>

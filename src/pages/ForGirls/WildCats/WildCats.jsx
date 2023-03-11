@@ -22,7 +22,7 @@ const PlaySomeTimes = () => {
       const data = new FormData();
       data.append('Process', "find_with_category_FA");
       data.append('category_value', value);
-      const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
+      const res = await axios.post('http://67.223.117.207:8000/FA/find_all_FA/', data);
       console.log(res.data);
       setData(res.data);
     }

@@ -56,22 +56,25 @@ const ForgirlsNav = () => {
                                         HIGHLIGHTS</li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={playAcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        INTERVIEWS</li>
+                                        <span style={{ marginLeft: '1rem' }}>INTERVIEWS</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={someTcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        PRESS-CONFERENCE</li>
+                                        <span style={{ marginLeft: '1rem' }}> PRESS-CONFERENCE</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
-                                    <li className="fgul_lis"
+                                    <li className="fgul_lis brekar"
                                         id={wildcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        ALL-VIDEOS</li>
+                                        <span style={{ marginLeft: '1rem' }}>ALL-VIDEOS</span>
+                                    </li>
                                 </Link>
                             </ul>
                         </div>

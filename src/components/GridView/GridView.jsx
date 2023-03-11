@@ -14,7 +14,7 @@ const GridView = () => {
     const newsData = async () => {
       const data = new FormData();
       data.append('Process', "see_all_news");
-      const res = await axios.post('https://h.amaderbazar-bd.com/news/find_all_news/', data);
+      const res = await axios.post('http://67.223.117.207:8000/news/find_all_news/', data);
       // console.log(res.data);
       setData(res.data);
     }
@@ -29,7 +29,7 @@ const GridView = () => {
     const videData = async () => {
       const data = new FormData();
       data.append('Process', "see_all_FA");
-      const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
+      const res = await axios.post('http://67.223.117.207:8000/FA/find_all_FA/', data);
       setVideoData(res.data);
     }
     videData()
@@ -42,7 +42,7 @@ const GridView = () => {
           <h4 className="text-uppercase fw-bold" style={{ color: '#011E41' }}>latest News</h4>
         </div>
         {
-          data.map((news, index) => (
+          data.slice(0,3).map((news, index) => (
 
             <div className="col-md-4" key={index}>
               <Card news={news} />
@@ -57,8 +57,8 @@ const GridView = () => {
         <div className="row">
           {
             videoData.slice(0, 3).map((item, index) => (
-              <div className="col-md-4" >
-                <HomeVideo item={item} key={index} />
+              <div className="col-md-4" key={index} >
+                <HomeVideo item={item} />
               </div>
             ))
           }

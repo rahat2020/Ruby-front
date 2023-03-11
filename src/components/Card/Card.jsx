@@ -10,13 +10,15 @@ const Card = ({ news }) => {
     <div className='card bg-white mb-4'>
       <div className="card">
         <div className="cardImg_container">
-          <img src={img} className="card_img" alt="..." />
-          {/* <img src={`https://h.amaderbazar-bd.com` + news.photo} className="card_img" alt="..." /> */}
+          <div className="imgwrap">
+            <img src={img} className="card_img" alt="..." />
+          </div>
+          {/* <img src={`http://67.223.117.207:8000` + news.photo} className="card_img" alt="..." /> */}
         </div>
         <div className="card_body">
           <h2 className="card_text">{news.title}</h2>
           <p className="card_para">{news.subtitle}</p>
-          <span className="card_desc">{news.Description.slice(0,60)}</span>
+          <span className="card_desc" dangerouslySetInnerHTML={{ __html: news.Description.slice(0, 60) }}></span>
         </div>
         <div className="card_btnConainer">
           <Link to={`/single-news/${news.id}`}>

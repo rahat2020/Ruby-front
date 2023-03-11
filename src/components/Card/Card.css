@@ -1,11 +1,13 @@
-.card{
+.card {
     border: .3px solid #eeeeed !important;
     position: relative;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     border-radius: 0;
+    transition: all .2s ease;
 }
-.cardImg_container{
+
+.cardImg_container {
     width: 100%;
     height: 200px;
     display: flex;
@@ -14,35 +16,71 @@
     overflow: hidden;
     position: relative;
 }
-.card_img{
+
+.card_img {
     width: 100%;
-    height: 220px !important;
+    /* height: 220px !important; */
+    height: 100%;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
-.card:hover .card_img{
-    transform: scale(1.1)
+
+
+.cardImg_container .card_img{
+    border-bottom: 14px solid #870064 !important;
 }
-.card_body{
+.cardImg_container .imgwrap::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    height: 40px;
+    z-index: 2;
+    background: url(https://womenscompetitions.thefa.com/Content/site/img/FemaleEngagement/icons/ic-play-32-light.svg) #870064 right center no-repeat;
+}
+
+.cardImg_container .imgwrap::after {
+    content: '';
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+    width: 25px;
+    height: 40px;
+    background: #870064;
+    z-index: 1;
+    -webkit-transform: skewX(20deg);
+    -moz-transform: skewX(20deg);
+    -ms-transform: skewX(20deg);
+    -o-transform: skewX(20deg);
+    transform: skewX(20deg);
+}
+.card:hover .card_img {
+    transform: scale(1.1);
+}
+.card_body {
     height: 180px;
     padding: 1rem;
 }
-.card_body .card_text{
+
+.card_body .card_text {
     font-weight: 900;
     color: #011E41;
 }
-.card_body .card_para{
+
+.card_body .card_para {
     color: #636161a3;
     margin-top: 1rem;
     font-weight: 500;
     font-size: .77rem;
     /* font-size: .76rem; */
 }
-.card_btnConainer{
+
+.card_btnConainer {
     margin: 1rem 0 1rem 1rem;
 }
 
-.card_btn{
+.card_btn {
     border: 1px solid #011e41;
     color: #011e41;
     background-color: #fff;
@@ -59,7 +97,8 @@
     -webkit-transition: all .3s ease-in-out 0s;
     border-radius: 0;
 }
-.card_btn::before{
+
+.card_btn::before {
     content: '';
     position: absolute;
     width: 0;
@@ -74,7 +113,8 @@
     -moz-transition: all .3s ease-in-out 0s;
     -webkit-transition: all .3s ease-in-out 0s;
 }
-.card_btn::after{
+
+.card_btn::after {
     border-left: 2px solid #011e41;
     content: '';
     position: absolute;
@@ -92,15 +132,18 @@
     -moz-transition: all .3s ease-in-out 0s;
     -webkit-transition: all .3s ease-in-out 0s;
 }
-.cardbtn_text{
+
+.cardbtn_text {
     margin-right: 2rem;
 }
-.card_btn:hover::after{
+
+.card_btn:hover::after {
     border: 1px solid #870064;
     color: #870064;
     right: -5.88px;
     background-color: #870064;
 }
+
 /* 
 .card_btnConainer .card_btn{
     border: 1px solid #011E41;

@@ -7,13 +7,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 100%;
     height: 60%;
 }
-.ffImg_container .ffimg{
-    width: 55%;
-    height: 40%;
+.ffpartnerleft{
+    width: 50%;
+}
+.ffpartnerright{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ffpartnerright .ffimg{
+    width:50%;
     object-fit: cover;
+}
+.ffimg:hover{
+    box-shadow: 1px 1px 6px 2px rgba(247,247,247,0.75);
+-webkit-box-shadow: 1px 1px 6px 2px rgba(247,247,247,0.75);
+-moz-box-shadow: 1px 1px 6px 2px rgba(247,247,247,0.75);
 }
 .footer_first {
     display: flex;

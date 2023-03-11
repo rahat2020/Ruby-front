@@ -46,11 +46,14 @@ const LiveResult = () => {
             const data = new FormData();
             data.append('Process', 'find_game_with_Event_id');
             data.append('Event_id', id);
-            const res = await axios.post('https://h.amaderbazar-bd.com/Game/find_game_with_Event_id/', data);
+            const res = await axios.post('http://67.223.117.207:8000/Game/find_game_with_Event_id/', data);
             // console.log(res)
             setData(res.data);
         }
         newsData()
+        setTimeout(function () {
+            window.location.reload();
+          }, [3000])
     },)
 
     // fetching EVENT data FOR STADIUM NAME
@@ -62,7 +65,7 @@ const LiveResult = () => {
             const data = new FormData();
             data.append('Process', 'see');
             data.append('id', id);
-            const res = await axios.post('https://h.amaderbazar-bd.com/Event/find_individual_id/', data);
+            const res = await axios.post('http://67.223.117.207:8000/Event/find_individual_id/', data);
             // console.log(res)
             setstadNmae(res.data);
         }
@@ -78,7 +81,7 @@ const LiveResult = () => {
             const data = new FormData();
             data.append('Process', 'find_team_with_team_name');
             data.append('team_name', stadNmae?.Home_Team);
-            const res = await axios.post('https://h.amaderbazar-bd.com/Team/find_team_with_team_name/', data);
+            const res = await axios.post('http://67.223.117.207:8000/Team/find_team_with_team_name/', data);
             // console.log(res)
             setHomeTeamLogo(res.data);
         }
@@ -102,7 +105,7 @@ const LiveResult = () => {
                     }}>
                     <div className='row responsive'>
                         <div className='col-md-5 result-card-right'>
-                            <img src={`https://h.amaderbazar-bd.com` + homeTeamLogo?.Team_Logo} alt="" />
+                            <img src={`http://67.223.117.207:8000` + homeTeamLogo?.Team_Logo} alt="" />
                             {/* <img src={man} alt="" /> */}
                             <h3>
                                 {data?.game_json_data_to_dict?.home_Team_name}
@@ -135,7 +138,7 @@ const LiveResult = () => {
                                 {data?.game_json_data_to_dict?.way_Team_name}
                             </h3>
                             {/* <img src={man} alt="" /> */}
-                            <img src={`https://h.amaderbazar-bd.com` + homeTeamLogo?.Team_Logo} alt="" />
+                            <img src={`http://67.223.117.207:8000` + homeTeamLogo?.Team_Logo} alt="" />
                         </div>
 
                     </div>
@@ -178,7 +181,7 @@ const LiveResult = () => {
                                     <h4 style={{ fontWeight: '900' }}> <img src={ball} alt="" />
                                         {
                                             data?.Goal_json_data_to_dict?.map((item, i) => (item.Scorer_Name))
-                                        }
+                                        },
                                         / {exactTime} min
                                     </h4>
                                 </li>

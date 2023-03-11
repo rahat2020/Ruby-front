@@ -16,7 +16,7 @@ const Topsubnav = () => {
             const data = new FormData();
             data.append('Process', "see");
             // console.log('Process', data.append('Process', "see"));
-            const res = await axios.post('https://h.amaderbazar-bd.com/Event/find_all/', data);
+            const res = await axios.post('http://67.223.117.207:8000/Event/find_all/', data);
             // console.log(res.data);
             setData(res.data);
         }
@@ -27,7 +27,7 @@ const Topsubnav = () => {
         <div className="sticky-top topsubN">
             <div className="container">
                 <div className="row topsubnav">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                         <div className="topsubLeft_imgContainer">
                             <Link to="/">
                                 <img src={image} alt="" className="topsubimg" />
@@ -42,9 +42,9 @@ const Topsubnav = () => {
                                         <div className="topsubLeftimg">
                                             <img src={livegme} alt="live-game-img" className='topsubProPic' />
                                         </div>
-                                        <div className="topsubRight">
+                                        {/* <div className="topsubRight">
                                             <span className="topsubGmeTime">{item.Event_Date_Time}</span>
-                                            {/* <span className="topsubGmeTime">NEXT GAME 2023-3-3 03:00 PM</span> */}
+                                            <span className="topsubGmeTime">NEXT GAME 2023-3-3 03:00 PM</span>
                                             <p className='topTeamsNames'>
                                                 <span className="fw-bold">{item.Home_Team}</span>
                                                 <span className='topsubVerses'>
@@ -55,7 +55,7 @@ const Topsubnav = () => {
                                         </div>
                                         <div className="topsubProfile">
                                             <AccountCircleIcon className='topsubProPic' />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </Link>
                             ))
