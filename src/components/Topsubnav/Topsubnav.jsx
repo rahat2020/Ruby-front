@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Topsubnav.css';
 import image from '../../assets/logo.png';
 import verses from '../../assets/verse.png';
+import livegme from '../../assets/liveGme.jpg';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -50,8 +51,9 @@ const Topsubnav = () => {
                                             </p>
                                         </div>
                                         <div className="topsubProfile">
-                                            {/* <p>rahat</p> */}
-                                            <AccountCircleIcon className='topsubProPic' />
+                                           
+                                            {/* <AccountCircleIcon className='topsubProPic' /> */}
+                                            <img src={livegme} alt="live-game-img" className='topsubProPic'/>
                                         </div>
                                     </div>
                                 </Link>

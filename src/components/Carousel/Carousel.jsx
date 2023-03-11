@@ -51,7 +51,7 @@ const Carousel = () => {
                             </Link>
                             {/* <div className="caruwebBox"></div> */}
                             <div className="mblBannerBox">
-                                <span className="banner_mblText">
+                                <span className="banner_mblText text-uppercase">
                                     {item.Slide_title.slice(0, 25)}
                                 </span>
                                 <Link to="/fixtures-results">
