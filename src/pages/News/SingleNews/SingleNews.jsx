@@ -63,7 +63,7 @@ const SingleNews = () => {
                 <h4 className='news-subtitle'>{data.subtitle ? data.subtitle : "It's the FA Women’s Continental Tyres League Cup Final"}</h4>
 
                 <div className='article-body'>
-                    <p>It's the FA Women’s Continental Tyres League Cup Final on Sunday 5 March, as Arsenal meet Chelsea at Selhurst Park to challenge for the first silverware of the 2022-23 season.
+                    {/* <p>It's the FA Women’s Continental Tyres League Cup Final on Sunday 5 March, as Arsenal meet Chelsea at Selhurst Park to challenge for the first silverware of the 2022-23 season.
                         Ahead of the game, we caught up with both coaches and a player from each team to get their thoughts on the occasion and the game.
                     </p>
                     <p>“Finals are the reason we play football – the stakes are high, but the rewards are great. At Arsenal, we have a long tradition of winning silverware and this represents an opportunity to add to that.
@@ -73,7 +73,7 @@ const SingleNews = () => {
                         “We face a very strong opponent in Chelsea. We saw how clinical they are in our FA Cup game last Sunday and though that result left us bitterly disappointed, the nature of football means there is always another game to play.
 
                         “We’re determined to bounce back strongly from that result and we come into this Final feeling ready and prepared. These games are decided by fine margins and our job is to make sure we come out on the right side of them.”
-                    </p>
+                    </p> */}
                     {data.Description}
 
                 </div>

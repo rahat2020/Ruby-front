@@ -1,6 +1,7 @@
 import React from 'react';
 import './CheckFa.css';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { Link } from 'react-router-dom';
 
 
 const CheckFa = () => {
@@ -11,17 +12,19 @@ const CheckFa = () => {
                     <div className="col-md-6">
                         <div className="checkLeft">
                             <div className="clbox">
-                                <h3 className="checkleft_title">CHECK OUT THE FA</h3>
+                                <h3 className="checkleft_title text-uppercase">CHECK OUT THE BFF</h3>
                                 <span className="check_para">Get the latest news on everything football</span>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="checkRight">
-                            <button className="checkBtn">
-                                GO TO THE FA
-                               <span className='checbtn_rghtArrow'> <ArrowRightIcon/></span>
-                            </button>
+                            <Link to="https://www.bff.com.bd/" target="_blank">
+                                <button className="checkBtn text-upppercase">
+                                    GO TO THE BFF
+                                    <span className='checbtn_rghtArrow'> <ArrowRightIcon /></span>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -32,7 +32,6 @@ const Headers = () => {
     };
     return (
         <>
-            <TopNavBar />
             <Topsubnav />
             <Carousel
                 index={currentIndex}

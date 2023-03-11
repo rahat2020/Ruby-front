@@ -8,7 +8,7 @@
 }
 
 .topsubLeft_imgContainer {
-    width: 60%;
+    width: 100%;
     height: 98%;
 }
 .link{
@@ -19,9 +19,8 @@
     color: #042d5fe8;
 }
 .topsubLeft_imgContainer .topsubimg {
-    width: 100%;
+    width: 62%;
     height: 100%;
-
 }
 
 .topsRight {
@@ -97,14 +96,22 @@
     }
 }
 @media only screen and (max-width: 468px){
-    .topsubLeft_imgContainer {
-        width: 62%;
-        height: 100%;
-    }
     .topsubnav {
         /* border: 1px solid #000; */
         margin-top: .3rem;
-        height: 140px;
+        height: 198px;
+        position: sticky;
+        /* height: 140px; */
+    }
+    .topsubLeft_imgContainer {
+        width: 100% !important;
+        height: 100%;
+    }
+  
+    .topsubLeft_imgContainer .topsubimg {
+        width: 248px;
+        height: 100px;
+        object-fit: contain;
     }
     .topsubRight {
         display: flex;
@@ -115,12 +122,6 @@
         width: 100%;
         height: 100%;
         margin-left: 1rem;
-    }
-    .topTeamsNames{
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; */
     }
     .topsubProfile {
         width: 0;

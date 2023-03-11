@@ -39,7 +39,7 @@ const LeagueTable = () => {
     return (
         <>
             <Headers />
-            <LeagueNav/>
+            {/* <LeagueNav/> */}
             <div className="container mt-5 mb-5">
                 <div className='league-table-top '>
                     <h4 className='league-title fw-bold shadow-sm p-2 rounded mb-5'>Women's Super League</h4>
@@ -49,7 +49,7 @@ const LeagueTable = () => {
                     <thead>
                         <tr className="text-center">
                             <th scope="col">Rank</th>
-                            <th scope="col">Club</th>
+                            <th scope="col" className='text-start'>Club</th>
                             <th scope="col">P</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
@@ -64,8 +64,8 @@ const LeagueTable = () => {
                         {
                             data.map((item, i) => (
                                 <tr className='text-center fw-normal' key={i}>
-                                    <th scope="row">{i}</th>
-                                    <td>
+                                    <th scope="row">{item.id}</th>
+                                    <td className='text-start'>
                                         <div className='team-name'>
                                             <img src={`https://h.amaderbazar-bd.com` + item.Team_Logo} alt="team-logo" 
                                             style={{ width: '30px', height: '30px', marginRight: '20px' }} />
@@ -87,7 +87,6 @@ const LeagueTable = () => {
                     </tbody>
                 </table>
             </div>
-            <Footer />
         </>
     )
 }

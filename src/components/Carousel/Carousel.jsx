@@ -31,22 +31,28 @@ const Carousel = () => {
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     {data.map((item, index) => (
-                        <button key={index} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} 
-                        className={index === 0 ? 'active' : ''} aria-current={index === 0 ? 'true' : 'false'} aria-label={`Slide ${index + 1}`}
-                        style={{backgroundColor:'#011e4100'}}
+                        <button key={index} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index}
+                            className={index === 0 ? 'active' : ''} aria-current={index === 0 ? 'true' : 'false'} aria-label={`Slide ${index + 1}`}
+                            style={{ backgroundColor: '#011e4100' }}
                         ></button>
                     ))}
                 </div>
                 <div className="carousel-inner">
                     {data.map((item, index) => (
-                        <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                        <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} id="caro_bannerContainer">
                             {/* <img src={caro_two} className="d-block w-100 slide_one" alt="..." /> */}
                             <img src={`https://h.amaderbazar-bd.com` + item.Slide_Image} className="d-block w-100 slide_one" alt="..." />
                             <img src={banner} alt="banner" className="banner_svg" />
-                            <span className="banner_text">{item.Slide_title}</span>
+                            <span className="banner_text">{item.Slide_title.slice(0, 25)}</span>
+                            <Link to="/fixtures-results" className="link">
+                                <button className='caruWeb_btn'>
+                                    READ MORE
+                                </button>
+                            </Link>
+                            {/* <div className="caruwebBox"></div> */}
                             <div className="mblBannerBox">
                                 <span className="banner_mblText">
-                                    {item.Slide_title}
+                                    {item.Slide_title.slice(0, 25)}
                                 </span>
                                 <Link to="/fixtures-results">
                                     <button className='caru_btn'>
@@ -78,7 +84,7 @@ const Carousel = () => {
 export default Carousel;
 
 
-<div className="card_caro">
+{/* <div className="card_caro">
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
 
@@ -107,4 +113,4 @@ export default Carousel;
             <span className="visually-hidden">Next</span>
         </button>
     </div>
-</div> 
+</div>  */}

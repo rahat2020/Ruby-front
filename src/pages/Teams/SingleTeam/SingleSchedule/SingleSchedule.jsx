@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import m from '../../../assets/manchester.jpg';
+import m from '../../../../assets/manchester.jpg';
 import { Link } from 'react-router-dom';
-import './Result.css';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import axios from 'axios'
-import Headers from '../../../components/Headers/Headers';
+import axios from 'axios';
+import SingleTeam from '../SingleTeam';
 
-const Result = () => {
+const SingleSchedule = () => {
     // FETCH DATA FROM DATABASE
     const [data, setData] = useState([])
     // console.log('data', data)
@@ -33,8 +32,7 @@ const Result = () => {
 
     return (
         <>
-            <Headers />
-            {/* <MatchesNav /> */}
+        <SingleTeam/>
             <div className="container  mt-5 mb-5">
                 <div className="d-flex text-start my-4">
                     <h4 className="fw-bold shadow-sm">BANGLADESH WOMEN'S SUPER LEAGUE</h4>
@@ -55,8 +53,6 @@ const Result = () => {
                             <option value="2023/2026">2023/2026</option>
                         </select>
                     </div>
-
-
 
                 </div>
                 <div className="text-start my-4">
@@ -79,7 +75,7 @@ const Result = () => {
                                                     <p> BANGABANDHU STADIUM <br /> DHAKA </p>
                                                 </div>
 
-                                                <div className='col-md-5 col-sm-12 vs-card rsltcrd'>
+                                                <div className='col-md-5 col-sm-12 vs-card'>
                                                     <img src={m} alt="logo" style={{ width: '40px', height: '40px', marginRight: '20px' }} />
                                                     <span>{item.Home_Team}</span>
                                                     <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>
@@ -88,7 +84,7 @@ const Result = () => {
                                                         style={{ width: '40px', height: '40px', marginLeft: '20px' }} />
                                                 </div>
 
-                                                <div className='rslt_buttons col-md-3 col-sm-12 date'>
+                                                <div className='fixture-buttons col-md-3 col-sm-12 date'>
                                                     <Link to={`/single-results/${item.id}`}>
                                                         <button className="ResultCard_btn text-uppercase">WATCH highlights</button>
                                                     </Link>
@@ -107,4 +103,4 @@ const Result = () => {
     )
 }
 
-export default Result
+export default SingleSchedule

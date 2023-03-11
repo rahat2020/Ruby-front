@@ -82,7 +82,7 @@ const ForGirls = () => {
                                                         </div>
                                                         <div className="px-2 py-2">
                                                             <h4 className="card-title fw-bold">{item.title}</h4>
-                                                            <p className="fgCard_text">{item.Description.slice(0,20)}</p>
+                                                            <p className="fgCard_text">{item.Description.slice(0,100)}</p>
 
                                                         </div>
                                                     </div>
@@ -113,7 +113,6 @@ const ForGirls = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

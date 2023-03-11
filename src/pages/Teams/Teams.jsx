@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import TeamsNav from './TeamsNav';
+import SingleOverview from './SingleOverview/SingleOverview';
 
 const Teams = () => {
 
@@ -65,9 +66,6 @@ const Teams = () => {
                                 </div>
                             ))
                         }
-
-
-
                     </div>
                 </div>
             </div>

@@ -48,30 +48,30 @@ const ForgirlsNav = () => {
                     <div className="row">
                         <div className="col-lg-12 fgnavs">
                             <ul className='fg_ul'>
-                                <Link to="/never-played" className="link">
+                                <Link to="/cms" className="link">
                                     <li className="fgul_lis first_item"
                                         id={nvrcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) =>
                                             handleCatData(e.target.textContent)}>
-                                        NEVER PLAYED</li>
+                                        HIGHLIGHTS</li>
                                 </Link>
-                                <Link to="/play-sometimes" className="link">
+                                <Link to="/cms" className="link">
                                     <li className="fgul_lis"
                                         id={playAcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        PLAY SOMETIMES</li>
+                                        INTERVIEWS</li>
                                 </Link>
-                                <Link to="/play-alot" className="link">
+                                <Link to="/cms" className="link">
                                     <li className="fgul_lis"
                                         id={someTcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        PLAY A LOT</li>
+                                        PRESS-CONFERENCE</li>
                                 </Link>
-                                <Link to="/wildcats" className="link">
+                                <Link to="/cms" className="link">
                                     <li className="fgul_lis"
                                         id={wildcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) => handleCatData(e.target.textContent)}>
-                                        WILDCATS</li>
+                                        ALL-VIDEOS</li>
                                 </Link>
                             </ul>
                         </div>

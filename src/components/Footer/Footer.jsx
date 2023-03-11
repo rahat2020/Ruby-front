@@ -1,26 +1,29 @@
 import React from "react";
-import barclays from '../../assets/barclays.jpg';
-import vitality from '../../assets/vitality.jpg';
-import nike from '../../assets/nike.png';
-import continental from '../../assets/continental.jpg';
-import sports from '../../assets/sports.png';
+import bff from '../../assets/bff.png';
+import ksports from '../../assets/ksports.png';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import logoimg from '../../assets/logo.png';
 import publicitix from '../../assets/publicitix.png';
 import './Footer.css';
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
 
     return (
         <div className="footer">
-            <div className="footer_first">
-                <div className="ffImg_container">
-                    <img src={barclays} alt="" className="ffimg" />
+            <div className="footer_first border-top border-light border-2">
+                <div className="ffImg_container shadow-sm p-3 ">
+                    <Link to="https://www.bff.com.bd/" target="_blank">
+                        <img src={bff} alt="" className="ffimg" />
+                    </Link>
+                    <Link to="http://ksportsbd.com/" target="_blank">
+                        <img src={ksports} alt="" className="ffimg " />
+                    </Link>
                 </div>
             </div>
             <div className="footer_center"></div>
-            <div className="footer_partner">
+            {/* <div className="footer_partner">
                 <div className="fpImg_container">
                     <div className="imgPme">
                         <img src={vitality} alt="" className="fpimage" />
@@ -44,7 +47,7 @@ const Footer = () => {
                         <img src={sports} alt="" className="fpimage sports" />
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="footer_main">
                 <div className="container">
                     <div className="row">
@@ -60,12 +63,12 @@ const Footer = () => {
                                         className="twitterDropdown dropdown-toggle"
                                         data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <span className="twitter_title">THE FA</span>
+                                        <span className="twitter_title text-uppercase">THE bff</span>
                                     </button>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item flsDrp_li" href="#">Action</a></li>
-                                        <li><a className="dropdown-item flsDrp_li" href="#">Another action</a></li>
-                                        <li><a className="dropdown-item flsDrp_li" href="#">Something else here</a></li>
+                                        <li><a className="dropdown-item flsDrp_li" href="#">International</a></li>
+                                        <li><a className="dropdown-item flsDrp_li" href="#">Mens League</a></li>
+                                        <li><a className="dropdown-item flsDrp_li" href="#">Womans League</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -76,12 +79,15 @@ const Footer = () => {
                     <div className="footer_links">
                         <div className="flinks_items">
                             <ul className="flItem">
-                                <li className="fiItem_li">Contact US</li>
-                                <li className="fiItem_li">Privacy policy </li>
-                                <li className="fiItem_li">Terms of use</li>
-                                <li className="fiItem_li">Anti-Slavery</li>
-                                <li className="fiItem_li">Safeguarding</li>
-
+                                <Link to="/contactus" className="link">
+                                    <li className="fiItem_li">Contact US</li>
+                                </Link>
+                                <Link to="/privacy-policy" className="link">
+                                    <li className="fiItem_li">Privacy policy </li>
+                                </Link>
+                                <Link to="/termsOfconditions" className="link">
+                                    <li className="fiItem_li">Terms and Conditions of use</li>
+                                </Link>
                             </ul>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import axios from 'axios'
 import LeagueNav from '../LeaguTable/LeagueNav';
+import MatchesNav from './MatchesNav';
 
 const Matches = () => {
   // FETCH DATA FROM DATABASE
@@ -36,16 +37,18 @@ const Matches = () => {
   return (
     <>
       <Headers />
-      <LeagueNav/>
+      {/* <MatchesNav /> */}
       <div className="container  mt-5 mb-5">
         <div className="d-flex text-start my-4">
           <h4 className="fw-bold shadow-sm">BANGLADESH WOMEN'S SUPER LEAGUE</h4>
         </div>
         <div className="fixturesSelect d-flex align-items-start ">
           <button className='btn btn-dark shadow fw-bold btn_fixture'>FIXTURES</button>
-          <button className='btn btn-light shadow fw-bold ms-2'>RESULTS</button>
+          <Link to="/match-results">
+            <button className='btn btn-light shadow fw-bold ms-2'>RESULTS</button>
+          </Link>
 
-          <div className="frcompetitons border-bottom border-3 border-secondary bg-light ms-4">
+          {/* <div className="frcompetitons border-bottom border-3 border-secondary bg-light ms-4">
             <select className="form-select  border-0 fw-bold " aria-label="Default select example">
               <option selected className="fw-bold ffoptiopn">
                 <p className='frcom'>COMPETITIONS</p>{"   "}Bangladesh woman's super league
@@ -55,7 +58,7 @@ const Matches = () => {
               <option value="Bangladesh woman's super league">Bangladesh woman's super league</option>
               <option value="Bangladesh woman's super league">Bangladesh woman's super league</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="frslec border-bottom border-3 border-secondary bg-light ms-4">
             <select className="form-select  border-0 fw-bold form_slct" aria-label="Default select example">
@@ -81,16 +84,17 @@ const Matches = () => {
                 <div className='row shadow-sm'>
                   {
                     data.map((item, i) => (
-                      <React.Fragment key={i}> 
-                        <div className='col-md-1 col-sm-12 date'>
+                      <React.Fragment key={i}>
+                        <div className='col-md-2 col-sm-12 date'>
                           <h4>{item.Event_Date_Time.slice(0, 10)}</h4>
                         </div>
                         <div className='col-md-2 col-sm-12 date'>
                           <h4>KICK OFF {item.Event_Date_Time.slice(10, 20)}</h4>
+                          {/* <span>4</span> */}
                           <p> BANGABANDHU STADIUM <br /> DHAKA </p>
                         </div>
 
-                        <div className='col-md-5 col-sm-12 vs-card'>
+                        <div className='col-md-4 col-sm-12 vs-card'>
                           <img src={m} alt="logo" style={{ width: '40px', height: '40px', marginRight: '20px' }} />
                           <span>{item.Home_Team}</span>
                           <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>

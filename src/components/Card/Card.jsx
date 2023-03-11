@@ -5,9 +5,9 @@ import img from '../../assets/newFour.jpg';
 // import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const Card = ({ news }) => {
-  console.log('card_news', news);
+  // console.log('card_news', news);
   return (
-    <div className='card bg-white mb-4 shadow' style={{borderRadius:'10px'}}>
+    <div className='card bg-white mb-4'>
       <div className="card">
         <div className="cardImg_container">
           <img src={img} className="card_img" alt="..." />

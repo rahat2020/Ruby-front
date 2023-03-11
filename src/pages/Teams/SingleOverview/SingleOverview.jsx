@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Headers from '../../components/Headers/Headers';
-import './News.css';
-import news from '../../assets/caro_one.jpg'
-import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import NewsTab from './NewsTab/NewsTab';
+import Headers from '../../../components/Headers/Headers';
+import SingleTeam from '../SingleTeam/SingleTeam';
 
-const News = () => {
+const SingleOverview = () => {
     // FETCH DATA FROM DATABASE
     const [data, setData] = useState([])
     // console.log('data', data)
@@ -26,8 +23,7 @@ const News = () => {
 
     return (
         <>
-            <Headers />
-            <NewsTab/>
+        <SingleTeam/>
             <div className="container news">
                 <div className='bg-white mb-4'>
                     <div className="row">
@@ -64,4 +60,4 @@ const News = () => {
     )
 }
 
-export default News
+export default SingleOverview

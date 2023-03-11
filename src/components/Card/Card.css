@@ -1,6 +1,7 @@
 .card{
     border: .3px solid #eeeeed !important;
     position: relative;
+    height: 400px;
     overflow: hidden;
     border-radius: 0;
 }
@@ -30,9 +31,10 @@
     color: #011E41;
 }
 .card_body .card_para{
-    color:#424242;
+    color: #636161a3;
     margin-top: 1rem;
     font-weight: 500;
+    font-size: .77rem;
     /* font-size: .76rem; */
 }
 .card_btnConainer{

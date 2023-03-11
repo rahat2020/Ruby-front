@@ -12,6 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Topsubnav from '../../../components/Topsubnav/Topsubnav';
 import CommonNav from '../../CommonNav/CommonNav';
+import SingleOverview from '../SingleOverview/SingleOverview';
 
 const SingleTeam = () => {
     const { id } = useParams()
@@ -98,13 +99,13 @@ const SingleTeam = () => {
                 </div>
                 <div className="st_overViewWrap">
                     <div className="stOverItems">
-                        <Link to="/team_overview" className="link">
+                        <Link to="/team_overview/players/overview" className="link">
                             <button className="btn btn-light fw-bold">OVERVIEW</button>
                         </Link>
                         <Link to={`/single_team/players/${id}`} className="link stBtn">
                             <button className="btn btn-light fw-bold ">SQUAD</button>
                         </Link>
-                        <Link to="/team_overview" className="link stBtn">
+                        <Link to="/team_schedule/players/schedule" className="link stBtn">
                             <button className="btn btn-light fw-bold ">SCHEDULE</button>
                         </Link>
                         <Link to="/team_overview" className="link stBtn">

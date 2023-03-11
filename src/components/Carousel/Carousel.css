@@ -1,5 +1,5 @@
 .slide_one {
-    height: 480px;
+    height: 500px;
     object-fit: cover;
 }
 
@@ -13,7 +13,7 @@
     background-size: 100% 100%;
 }
 
-.caro_bannerContainer {
+#caro_bannerContainer {
     position: relative;
 
 }
@@ -31,6 +31,7 @@
     left: 120px;
     bottom: -170px;
     width: 300px;
+    text-transform: uppercase;
     height: 400px;
     font-size: 2.74rem;
     color: #fff;
@@ -42,7 +43,85 @@
     display: none;
 }
 
+/* CARUOSEL BUTTON STYLES */
+/* .caruwebBox{
+    position: absolute;
+} */
+.caruWeb_btn {
+    border: 1px solid #011e41;
+    color: #011e41;
+    background-color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    min-width: 170px;
+    min-height: 35px;
+    font-size: .77rem;
+    /* top: 110px; */
+    left: 118px;
+    bottom: 40px;
+    font-weight: bolder;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+    border-radius: 0;
+}
+
+.caruWeb_btn::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 6px;
+    border-color: transparent transparent transparent #fff;
+    right: 200px;
+    top: 10px;
+    z-index: 1;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+
+.caruWeb_btn::after {
+    border-left: 2px solid #011e41;
+    content: '';
+    position: absolute;
+    background-color: #011e41;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    right: -8px;
+    transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+
+.caruWeb_btn {
+    margin-right: 2rem;
+}
+
+.caruWeb_btn:hover::after {
+    border: 1px solid #870064;
+    color: #870064;
+    right: -5.88px;
+    background-color: #870064;
+}
+
 /* responsive styles */
+@media only screen and (min-width: 1668px) {
+    .slide_one {
+        height: 1000px;
+        object-fit: cover;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .mblBannerBox {
         position: absolute;
@@ -58,6 +137,10 @@
 
     .banner_svg,
     .banner_text {
+        display: none;
+    }
+
+    .caruWeb_btn {
         display: none;
     }
 
@@ -92,6 +175,7 @@
         font-weight: bolder;
         line-height: 40px;
     }
+
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
         display: inline-block;
@@ -103,6 +187,7 @@
         background-position: 50%;
         background-size: 100% 100%;
     }
+
     /* CARUOSEL BUTTON STYLES */
     .caru_btn {
         border: 1px solid #011e41;
@@ -160,7 +245,7 @@
     }
 
     .caru_btn {
-        margin-right: 2rem;
+        margin-right: 3rem;
     }
 
     .caru_btn:hover::after {
