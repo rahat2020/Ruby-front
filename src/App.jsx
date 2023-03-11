@@ -65,7 +65,6 @@ function App() {
                     <Route path="/all_teams" element={<Teams />} />
                     <Route path="/all_teams/single_team/:id" element={<SingleTeam />} />
                     <Route path="/single_team/players/:id" element={<TeamPlayers />} />
-                    <Route path="/team_overview/players/overview" element={<SingleOverview />} />
                     <Route path="/team_schedule/players/schedule" element={<SingleSchedule />} />
 
                     {/* VIDEOS */}

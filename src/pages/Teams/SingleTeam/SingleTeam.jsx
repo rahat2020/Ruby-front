@@ -12,7 +12,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Topsubnav from '../../../components/Topsubnav/Topsubnav';
 import CommonNav from '../../CommonNav/CommonNav';
-import SingleOverview from '../SingleOverview/SingleOverview';
+import ReactPlayer from 'react-player';
+
 
 const SingleTeam = () => {
     const { id } = useParams()
@@ -35,6 +36,19 @@ const SingleTeam = () => {
         newsData()
     }, [])
 
+    // FETCH VIDEO DATA FROM DATABASE
+    const [videoData, setVideoData] = useState([])
+    console.log('videoData', data)
+
+    useEffect(() => {
+        const videData = async () => {
+            const data = new FormData();
+            data.append('Process', "see_all_FA");
+            const res = await axios.post('https://h.amaderbazar-bd.com/FA/find_all_FA/', data);
+            setVideoData(res.data);
+        }
+        videData()
+    }, [])
     return (
         <>
             <Topsubnav />
@@ -99,9 +113,6 @@ const SingleTeam = () => {
                 </div>
                 <div className="st_overViewWrap">
                     <div className="stOverItems">
-                        <Link to="/team_overview/players/overview" className="link">
-                            <button className="btn btn-light fw-bold">OVERVIEW</button>
-                        </Link>
                         <Link to={`/single_team/players/${id}`} className="link stBtn">
                             <button className="btn btn-light fw-bold ">SQUAD</button>
                         </Link>
@@ -118,7 +129,40 @@ const SingleTeam = () => {
                             <button className="btn btn-light fw-bold">ARCHIVE</button>
                         </Link>
                     </div>
+                    {/* <SingleSchedule/> */}
                 </div>
+
+                {/* PLAYERS DATA */}
+                <div className="container">
+                    <div className="row mt-5">
+                        {
+                            videoData.slice(0, 3).map((item, i) => (
+                                <div className="col-md-4">
+                                    <div className="d-flex" key={i}>
+                                        <div className="container">
+                                            <div className='card  mb-4'>
+                                                <div className="card" style={{ height: "350px !important" }}>
+                                                    <div className="cardImg_container">
+                                                        <ReactPlayer
+                                                            width="500px" height="220px"
+                                                            controls url={item.video_link} />
+                                                    </div>
+                                                    <div className="card_body">
+                                                        <h2 className="card_text">{item.title}</h2>
+                                                        <p className="card_para">{item.subtitle}</p>
+                                                        <span className="card_desc">{item.Description.slice(0, 60)}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            ))
+                        }
+                    </div>
+                </div>
+
             </div>
         </>
     )

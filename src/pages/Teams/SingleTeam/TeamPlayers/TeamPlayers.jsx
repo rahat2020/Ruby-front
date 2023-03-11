@@ -25,7 +25,8 @@ const TeamPlayers = () => {
             setData(res.data);
         }
         newsData()
-    }, [])
+    },)
+
     return (
         <>
             <SingleTeam />
@@ -42,13 +43,23 @@ const TeamPlayers = () => {
                                     <div className="tcard_text text-center fw-bold text-white fs-3">
                                         <p>{data.Team_player_1_id_from_Plyer_model}</p>
                                     </div>
-                                    <button className='Tckt_btn'>
+                                    <div className="pldetails d-flex justify-content-center align-items-center ">
+                                        <div className="pldLeft">
+                                            <p className="text-white">Positions: LB</p>
+                                            <p className="text-white">Player Age: 25</p>
+                                        </div>
+                                        <div className="pldRight ms-2">
+                                            <p className="text-white">Base Price: LB</p>
+                                            <p className="text-white">Sell Price: 25</p>
+                                        </div>
+                                    </div>
+                                    {/* <button className='Tckt_btn'>
                                         <Link to="/" className='link'>
                                             <span className="cardbtn_text fw-bold text-dark">
                                                 VIEW DETAILS
                                             </span>
                                         </Link>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>
@@ -61,13 +72,23 @@ const TeamPlayers = () => {
                                     <div className="tcard_text text-center fw-bold text-white fs-3">
                                         <p>{data.Team_player_1_id_from_Plyer_model}</p>
                                     </div>
-                                    <button className='Tckt_btn'>
+                                    <div className="pldetails d-flex justify-content-center align-items-center ">
+                                        <div className="pldLeft">
+                                            <p className="text-white">Positions: LB</p>
+                                            <p className="text-white">Player Age: 25</p>
+                                        </div>
+                                        <div className="pldRight ms-2">
+                                            <p className="text-white">Base Price: LB</p>
+                                            <p className="text-white">Sell Price: 25</p>
+                                        </div>
+                                    </div>
+                                    {/* <button className='Tckt_btn'>
                                         <Link to="/" className='link'>
                                             <span className="cardbtn_text fw-bold text-dark">
                                                 VIEW DETAILS
                                             </span>
                                         </Link>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>
@@ -80,17 +101,26 @@ const TeamPlayers = () => {
                                     <div className="tcard_text text-center fw-bold text-white fs-3">
                                         <p>{data.Team_player_1_id_from_Plyer_model}</p>
                                     </div>
-                                    <button className='Tckt_btn'>
+                                    <div className="pldetails d-flex justify-content-center align-items-center ">
+                                        <div className="pldLeft">
+                                            <p className="text-white">Positions: LB</p>
+                                            <p className="text-white">Player Age: 25</p>
+                                        </div>
+                                        <div className="pldRight ms-2">
+                                            <p className="text-white">Base Price: LB</p>
+                                            <p className="text-white">Sell Price: 25</p>
+                                        </div>
+                                    </div>
+                                    {/* <button className='Tckt_btn'>
                                         <Link to="/" className='link'>
                                             <span className="cardbtn_text fw-bold text-dark">
                                                 VIEW DETAILS
                                             </span>
                                         </Link>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>
-
                         <div className="col-md-3 colamThree">
                             <div className="card tckt ">
                                 <div className="tcktImg_container ">
@@ -100,13 +130,23 @@ const TeamPlayers = () => {
                                     <div className="tcard_text text-center fw-bold text-white fs-3">
                                         <p>{data.Team_player_1_id_from_Plyer_model}</p>
                                     </div>
-                                    <button className='Tckt_btn'>
+                                    <div className="pldetails d-flex justify-content-center align-items-center ">
+                                        <div className="pldLeft">
+                                            <p className="text-white">Positions: LB</p>
+                                            <p className="text-white">Player Age: 25</p>
+                                        </div>
+                                        <div className="pldRight ms-2">
+                                            <p className="text-white">Base Price: LB</p>
+                                            <p className="text-white">Sell Price: 25</p>
+                                        </div>
+                                    </div>
+                                    {/* <button className='Tckt_btn'>
                                         <Link to="/" className='link'>
                                             <span className="cardbtn_text fw-bold text-dark">
                                                 VIEW DETAILS
                                             </span>
                                         </Link>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>

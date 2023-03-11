@@ -35,7 +35,8 @@
     height: 400px;
     font-size: 2.74rem;
     color: #fff;
-    font-weight: 900;
+    font-weight: bolder;
+    font-family: 'Tilt Warp', cursive;
     line-height: 50px;
 }
 
@@ -171,8 +172,8 @@
         height: 170px;
         font-size: 38px;
         font-weight: bolder;
+        font-family: 'Tilt Warp', cursive;
         color: #222222;
-        font-weight: bolder;
         line-height: 40px;
     }
 

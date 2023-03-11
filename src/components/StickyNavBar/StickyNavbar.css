@@ -115,7 +115,7 @@ ul li {
         background-color: #fff;
         position: sticky;
         border-bottom: 1px solid #7e7e7e48;
-        top: 7%;
+        top: 90px;
         z-index: 1200;
     }
 
@@ -127,7 +127,6 @@ ul li {
         overflow-x: scroll;
         width: 100vw;
         position: sticky;
-        width: 100vw;
     }
     .ff .line::before{
         transform: rotate(20deg);

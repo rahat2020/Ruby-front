@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Headers from '../../Headers/Headers';
 
 const PrivacyPolicy = () => {
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }, [])
     return (
         <>
             <Headers />

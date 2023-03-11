@@ -32,7 +32,7 @@ const SingleSchedule = () => {
 
     return (
         <>
-        <SingleTeam/>
+            <SingleTeam />
             <div className="container  mt-5 mb-5">
                 <div className="d-flex text-start my-4">
                     <h4 className="fw-bold shadow-sm">BANGLADESH WOMEN'S SUPER LEAGUE</h4>

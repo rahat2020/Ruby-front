@@ -39,6 +39,9 @@ const Topsubnav = () => {
                             data.slice(0, 1).map((item, i) => (
                                 <Link to="/fixtures-results" className="link" key={i}>
                                     <div className="topsRight" key={i}>
+                                        <div className="topsubLeftimg">
+                                            <img src={livegme} alt="live-game-img" className='topsubProPic' />
+                                        </div>
                                         <div className="topsubRight">
                                             <span className="topsubGmeTime">{item.Event_Date_Time}</span>
                                             {/* <span className="topsubGmeTime">NEXT GAME 2023-3-3 03:00 PM</span> */}
@@ -51,9 +54,7 @@ const Topsubnav = () => {
                                             </p>
                                         </div>
                                         <div className="topsubProfile">
-                                           
-                                            {/* <AccountCircleIcon className='topsubProPic' /> */}
-                                            <img src={livegme} alt="live-game-img" className='topsubProPic'/>
+                                            <AccountCircleIcon className='topsubProPic' />
                                         </div>
                                     </div>
                                 </Link>

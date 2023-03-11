@@ -16,6 +16,7 @@ const Card = ({ news }) => {
         <div className="card_body">
           <h2 className="card_text">{news.title}</h2>
           <p className="card_para">{news.subtitle}</p>
+          <span className="card_desc">{news.Description.slice(0,60)}</span>
         </div>
         <div className="card_btnConainer">
           <Link to={`/single-news/${news.id}`}>
