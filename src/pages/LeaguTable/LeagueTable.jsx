@@ -9,6 +9,7 @@ import LeagueNav from './LeagueNav';
 const LeagueTable = () => {
     const [data, setData] = useState([])
     console.log('leagdata', data)
+    // console.log('leagdata', data.map((item, i) => item.PTS))
 
     useEffect(() => {
         const newsData = async () => {
@@ -24,10 +25,17 @@ const LeagueTable = () => {
 
     // sorting the data
     const [tableData, setTableData] = useState(data);
-    const sortData = () => {
-      const sortedData = [...tableData].sort((a, b) => b.points - a.points);
-      setTableData(sortedData);
-    };
+
+    const sortedTeamsData = data.sort((a, b) => b.PTS - a.PTS);
+    console.log('sortedTeamsData',sortedTeamsData)
+    // useEffect(() =>{
+    //     const sortData = () => {
+    //       const sortedData = [...tableData].sort((a, b) => b.PTS - a.PTS);
+    //       setTableData(sortedData);
+    //     };
+    //     sortData()
+    // },[])
+    // console.log('tableData',tableData);
 
     // automatically will be fetched
     // const [tableData, setTableData] = useState([]);
@@ -62,7 +70,7 @@ const LeagueTable = () => {
                     </thead>
                     <tbody>
                         {
-                            data.map((item, i) => (
+                            sortedTeamsData.map((item, i) => (
                                 <tr className='text-center fw-normal' key={i}>
                                     <th scope="row">{item.id}</th>
                                     <td className='text-start'>

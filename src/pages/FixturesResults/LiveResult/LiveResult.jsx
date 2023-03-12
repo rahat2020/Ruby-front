@@ -14,8 +14,9 @@ const LiveResult = () => {
     // console.log(id)
     // FETCH DATA FROM DATABASE
     const [data, setData] = useState({})
-    console.log('data', data?.Goal_json_data_to_dict?.map(i => i.Goal_Date_Time))
-    console.log('data', data?.Goal_json_data_to_dict)
+    console.log(data?.game_json_data_to_dict?.home_Team_player_1_id_from_Plyer_model)
+    // console.log('data', data?.Goal_json_data_to_dict?.map(i => i.Goal_Date_Time))
+    // console.log('data', data?.Goal_json_data_to_dict)
     // console.log('data', data?.Goal_json_data_to_dict?.map(i => Number(i.Home_Team_Goal_Count_In_1)))
     // console.log('data', data.game_json_data_to_dict)
     // console.log('resultsData', data?.Substituitons_json_data_to_dict)
@@ -51,9 +52,9 @@ const LiveResult = () => {
             setData(res.data);
         }
         newsData()
-        setTimeout(function () {
-            window.location.reload();
-          }, [3000])
+        // setTimeout(function () {
+        //     window.location.reload();
+        //   }, [3000])
     },)
 
     // fetching EVENT data FOR STADIUM NAME
@@ -180,8 +181,10 @@ const LiveResult = () => {
                                 <li>
                                     <h4 style={{ fontWeight: '900' }}> <img src={ball} alt="" />
                                         {
-                                            data?.Goal_json_data_to_dict?.map((item, i) => (item.Scorer_Name))
-                                        },
+                                            data?.Goal_json_data_to_dict?.map((item, i) =>
+                                                item.Home_Team_Goal_Count_In_1 === null ? "" : <span>{item.Scorer_Name},</span>
+                                            )
+                                        }
                                         / {exactTime} min
                                     </h4>
                                 </li>
@@ -200,7 +203,9 @@ const LiveResult = () => {
                                 <li>
                                     <h4 style={{ fontWeight: '900' }}>
                                         {
-                                            data?.Goal_json_data_to_dict?.map((item, i) => (item.Scorer_Name))
+                                            data?.Goal_json_data_to_dict?.map((item, i) => (
+                                                item.Way_Team_Goal_Count_In_1 === null ? "" : <span>{item.Scorer_Name},</span>
+                                            ))
                                         } / 32 min  <img src={ball} alt="" />
                                     </h4>
                                 </li>
@@ -224,16 +229,21 @@ const LiveResult = () => {
                         <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
                             <ul>
                                 <li>
-                                    <h4>Rahi Bari</h4>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_1_id_from_Plyer_model}
+                                    </h4>
                                     <span>Goalkeeper</span>
-
                                 </li>
                                 <li>
-                                    <h4>Toybur Rahman</h4>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_2_id_from_Plyer_model}
+                                    </h4>
                                     <span>Right Back</span>
                                 </li>
                                 <li>
-                                    <h4>Raju Mat</h4>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_3_id_from_Plyer_model}
+                                    </h4>
                                     <span>Centre Back</span>
                                 </li>
                             </ul>
@@ -242,25 +252,27 @@ const LiveResult = () => {
                         <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
                             <ul>
                                 <li>
-                                    <h4>Iker Casillas</h4>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_1_id_from_Plyer_model}
+                                    </h4>
                                     <span>Goalkeeper</span>
                                 </li>
                                 <li>
-                                    <h4>Carvajal</h4>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_2_id_from_Plyer_model}
+                                    </h4>
                                     <span>Right Back</span>
                                 </li>
                                 <li>
-                                    <h4>Luka Modric</h4>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_3_id_from_Plyer_model}
+                                    </h4>
                                     <span>Midfield</span>
                                 </li>
-
                             </ul>
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
 
             <div className="container mt-5 mb-5">
@@ -271,13 +283,38 @@ const LiveResult = () => {
                         <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-left'>
                             <ul>
                                 <li>
-                                    <h4>Murad Miya / 62 min</h4>
-                                    <span>replaces Xavi</span>
+                                    <h4>
+                                        {
+                                            data?.Substituitons_json_data_to_dict?.map((item) => (
+                                                <span>{item.Substituitons_Name},</span>
+                                            ))
+                                        }
+                                        / 62 min
+                                    </h4>
+                                    {/* <h4>Murad Miya / 62 min</h4> */}
+                                    <span>replaces {
+                                        data?.Substituitons_json_data_to_dict?.map((item) => (
+                                            <span>{item.PLayer_Name},</span>
+                                        ))
+                                    }</span>
+                                    {/* <span>replaces Xavi</span> */}
 
                                 </li>
                                 <li>
-                                    <h4>Toybur Rahman / 45 min</h4>
-                                    <span>replaces Nadim</span>
+                                    <h4>
+                                        {
+                                            data?.Substituitons_json_data_to_dict?.map((item) => (
+                                                <span>{item.Substituitons_Name},</span>
+
+                                            ))
+                                        }
+                                        / 45 min
+                                    </h4>
+                                    <span>replaces  {
+                                        data?.Substituitons_json_data_to_dict?.map((item) => (
+                                            <span>{item.PLayer_Name}, </span>
+                                        ))
+                                    }</span>
                                 </li>
                             </ul>
                         </div>
@@ -285,8 +322,31 @@ const LiveResult = () => {
                         <div className='col-xl-6 col-md-6 col-sm-6 col-6 team-right'>
                             <ul>
                                 <li>
-                                    <h4>Kroos / 62 min</h4>
-                                    <span>replaces Ozil</span>
+                                    <h4>  {
+                                        data?.Substituitons_json_data_to_dict?.map((item) => (
+                                            <span>{item.Substituitons_Name},</span>
+
+                                        ))
+                                    }/ 62 min</h4>
+                                    <span>replaces  {
+                                        data?.Substituitons_json_data_to_dict?.map((item) => (
+                                            <span>{item.PLayer_Name}, </span>
+                                        ))
+                                    }</span>
+
+                                </li>
+                                <li>
+                                    <h4>  {
+                                        data?.Substituitons_json_data_to_dict?.map((item) => (
+                                            <span>{item.Substituitons_Name},</span>
+
+                                        ))
+                                    }/ 62 min</h4>
+                                    <span>replaces  {
+                                        data?.Substituitons_json_data_to_dict?.map((item) => (
+                                            <span>{item.PLayer_Name}, </span>
+                                        ))
+                                    }</span>
 
                                 </li>
                             </ul>

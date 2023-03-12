@@ -4,7 +4,6 @@
     height: 70px;
     background-color: #fff;
     position: sticky;
-    
     top: 12%;
     z-index: 1200;
 }
@@ -56,7 +55,9 @@ ul li {
     align-items: center;
 }
 
-
+.ff ul {
+    padding-left: 0;
+}
 
 .nav_item .sticky_li {
     font-size: 22px;
@@ -86,6 +87,7 @@ ul li {
 }
 /* responsive styles */
 @media (max-width:393px) {
+
     #stickyNav {
         white-space: nowrap;
         overflow-x: scroll;
@@ -104,6 +106,9 @@ ul li {
         height: 35px;
         width: 1px;
         display: block;
+    }
+    .ff ul {
+        padding-left: 2rem !important;
     }
     .dropdown-menu {
         display: none;

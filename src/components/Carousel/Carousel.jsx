@@ -12,7 +12,7 @@ const Carousel = () => {
 
     // FETCH DATA FROM DATABASE
     const [data, setData] = useState([])
-    console.log('sliders', data)
+    // console.log('sliders', data)
 
     useEffect(() => {
         const newsData = async () => {

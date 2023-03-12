@@ -25,10 +25,7 @@ const StickyNavBar = () => {
             <div className="ff">
                 <ul className="navbar_nav">
                     <div className="container">
-
-
                         <li className="nav_item ">
-                            {/* <div className="line"></div> */}
                             <Link to="/matches_others" className="nav-link sticky_li">
                                 MATCHES
                             </Link>

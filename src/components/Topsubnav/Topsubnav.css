@@ -9,7 +9,7 @@
 }
 
 .topsubLeft_imgContainer {
-    width: 50%;
+    width: 100%;
     height: 98%;
 }
 .topsubLeft_imgContainer .topsubimg {
@@ -106,11 +106,17 @@
     transform: rotate(20deg);
     width: 10px;
 }
-
+.topsubLeftimg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
 .topsubProPic {
-    /* width: 2rem !important;
-    height: 2em !important; */
-    display: none;
+    width: 2rem !important;
+    height: 2em !important;
+    /* display: none; */
 }
 
 /* responsive styles */
@@ -194,8 +200,8 @@
     }
 
     .topsubProPic {
-        width: 3.3rem !important;
-        height: 3em !important;
+        width: 2rem !important;
+        height: 2em !important;
         position: absolute;
         top: 27px !important;
         right: 10px;

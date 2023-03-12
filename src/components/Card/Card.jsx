@@ -8,7 +8,7 @@ const Card = ({ news }) => {
   // console.log('card_news', news);
   return (
     <div className='card bg-white mb-4'>
-      <div className="card">
+      <div className="card homeCard">
         <div className="cardImg_container">
           <div className="imgwrap">
             <img src={img} className="card_img" alt="..." />

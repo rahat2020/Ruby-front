@@ -27,7 +27,7 @@ const Topsubnav = () => {
         <div className="sticky-top topsubN">
             <div className="container">
                 <div className="row topsubnav">
-                    <div className="col-md-12">
+                    <div className="col-md-6">
                         <div className="topsubLeft_imgContainer">
                             <Link to="/">
                                 <img src={image} alt="" className="topsubimg" />
@@ -35,14 +35,17 @@ const Topsubnav = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        {
+                        <div className="topsubLeftimg">
+                            <img src={livegme} alt="live-game-img" className='topsubProPic' />
+                        </div>
+                        {/* {
                             data.slice(0, 1).map((item, i) => (
                                 <Link to="/fixtures-results" className="link" key={i}>
                                     <div className="topsRight" key={i}>
                                         <div className="topsubLeftimg">
                                             <img src={livegme} alt="live-game-img" className='topsubProPic' />
                                         </div>
-                                        {/* <div className="topsubRight">
+                                        <div className="topsubRight">
                                             <span className="topsubGmeTime">{item.Event_Date_Time}</span>
                                             <span className="topsubGmeTime">NEXT GAME 2023-3-3 03:00 PM</span>
                                             <p className='topTeamsNames'>
@@ -55,11 +58,11 @@ const Topsubnav = () => {
                                         </div>
                                         <div className="topsubProfile">
                                             <AccountCircleIcon className='topsubProPic' />
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </Link>
                             ))
-                        }
+                        } */}
 
                     </div>
                 </div>

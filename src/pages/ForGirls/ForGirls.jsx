@@ -29,7 +29,13 @@ const ForGirls = () => {
         }
         newsData()
     }, [])
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
 
+    }, [])
     return (
         <>
             <Headers />
