@@ -32,6 +32,10 @@ import PrivacyPolicy from "./components/Footer/PrivacyPolicy/PrivacyPolicy";
 import TermsConditions from "./components/Footer/TermsConditions/TermsConditions";
 import SingleSchedule from "./pages/Teams/SingleTeam/SingleSchedule/SingleSchedule";
 import SingleOverview from "./pages/Teams/SingleOverview/SingleOverview";
+import Draft from "./pages/Draft/Draft";
+import About from "./pages/About/About";
+import Domestic from "./pages/Draft/Domestic/Domestic";
+import Overseas from "./pages/Draft/Overseas/Overseas";
 // import PlaySomeTimes from "./pages/ForGirls/PlaySomeTimes/PlaySomeTimes";
 // import PlayAlot from "./pages/ForGirls/PlayAlot/PlayAlot";
 // import WildCats from "./pages/ForGirls/WildCats/WildCats";
@@ -60,6 +64,11 @@ function App() {
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="/termsOfconditions" element={<TermsConditions />} />
 
+                    {/* DRAFT ROUTE */}
+                    <Route path="/drafts" element={<Draft />} />
+                    <Route path="/abouts" element={<About />} />
+                    <Route path="/localplayers" element={<Domestic/>} />
+                    <Route path="/foreignplayers" element={<Overseas/>} />
 
                     {/* TEAMS AND SINGLE TEAMS */}
                     <Route path="/all_teams" element={<Teams />} />

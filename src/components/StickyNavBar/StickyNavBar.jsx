@@ -26,6 +26,11 @@ const StickyNavBar = () => {
                 <ul className="navbar_nav">
                     <div className="container">
                         <li className="nav_item ">
+                            <Link to="/abouts" className="nav-link sticky_li">
+                                ABOUT
+                            </Link>
+                        </li>
+                        <li className="nav_item ">
                             <Link to="/matches_others" className="nav-link sticky_li">
                                 MATCHES
                             </Link>
@@ -35,11 +40,11 @@ const StickyNavBar = () => {
                                 VIDEO
                             </Link>
                         </li>
-                        <li className="nav_item line">
+                        {/* <li className="nav_item line">
                             <Link to="/cms" className="nav-link sticky_li">
                                 STATS
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav_item  line">
                             <Link to="/league-table" className="nav-link sticky_li" href="#">
                                 POINT TABLES
@@ -51,8 +56,8 @@ const StickyNavBar = () => {
                             </Link>
                         </li>
                         <li className="nav_item line">
-                            <Link to="/cms" className="nav-link sticky_li" href="#">
-                                AUCTION
+                            <Link to="/drafts" className="nav-link sticky_li" href="#">
+                                DRAFT
                             </Link>
                         </li>
                         <li className="nav_item line">

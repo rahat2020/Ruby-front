@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Headers from '../../components/Headers/Headers';
 import m from '../../assets/manchester.jpg';
+import ab from '../../assets/Logo-01.png';
 import './Teams.css';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -31,36 +32,43 @@ const Teams = () => {
     //         title: 'Tickets is not available',
     //     })
     // }
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }, [])
+
 
     return (
         <>
             <Headers />
-            <TeamsNav/>
+            <TeamsNav />
             <div className="container">
                 <div className="tickets">
                     <div className="row">
 
                         {
                             data.map((item, i) => (
-                                <div className="col-md-3 colamThree" key={i}>
-                                    <div className="card tckt ">
-                                        <div className="tcktImg_container ">
-                                            <img src={`https://api.wslbangladesh.com` + item.Team_Logo} className=" tckt_tem_img" alt="team-logo" />
+                                <div className="col-md-3" key={i}>
+                                    <div className="card temCard shadow-sm" >
+                                        <div className="tmImgContainer">
+                                            <div className="tmImgwrap">
+                                                <div className="d-flex justify-content-center align-tiems-center imgscndcon">
+                                                    <img src={`https://api.wslbangladesh.com` + item.Team_Logo} className="tmgCardImg" alt="..." />
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="card_body tckt_body">
-                                            <div className="tcard_text text-center fw-bold text-white fs-3">
-                                                <p>{item.Team_Name}</p>
-                                            </div>
-                                            <div className="d-flex justify-content-center align-items-center">
-                                                <button className='Tckt_btn'>
-                                                    <Link to={`/all_teams/single_team/${item.id}`} className='link'>
-                                                        <span className="cardbtn_text fw-bold text-dark">
-                                                            SEE MORE
-                                                        </span>
-                                                    </Link>
-                                                </button>
-                                            </div>
-
+                                        <div className="temcard_body">
+                                            <h4 className="temTitle">{item.Team_Name}</h4>
+                                            <button className='Tckt_btn'>
+                                                <Link to={`/all_teams/single_team/${item.id}`} className='link'>
+                                                    <span className="cardbtn_text">
+                                                        SEE MORE
+                                                    </span>
+                                                </Link>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

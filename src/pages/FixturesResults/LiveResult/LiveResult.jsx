@@ -52,9 +52,9 @@ const LiveResult = () => {
             setData(res.data);
         }
         newsData()
-        // setTimeout(function () {
-        //     window.location.reload();
-        //   }, [3000])
+        setTimeout(function () {
+            window.location.reload();
+          }, [5000])
     },)
 
     // fetching EVENT data FOR STADIUM NAME

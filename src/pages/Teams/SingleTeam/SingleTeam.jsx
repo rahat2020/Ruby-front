@@ -21,8 +21,7 @@ const SingleTeam = () => {
 
     // FETCH SINGLE DATA WITH ID FROM DATABASE
     const [data, setData] = useState([])
-    console.log('singleTeamdata', data)
-
+    // console.log('singleTeamdata', data)
 
     useEffect(() => {
         const newsData = async () => {
@@ -30,7 +29,7 @@ const SingleTeam = () => {
             data.append('Process', "find_team_with_id");
             data.append('specific_id', id);
             const res = await axios.post('https://api.wslbangladesh.com/Team/find_team_with_id/', data);
-            console.log(res.data);
+            // console.log(res.data);
             setData(res.data);
         }
         newsData()
@@ -38,7 +37,7 @@ const SingleTeam = () => {
 
     // FETCH VIDEO DATA FROM DATABASE
     const [videoData, setVideoData] = useState([])
-    console.log('videoData', data)
+    // console.log('videoData', data)
 
     useEffect(() => {
         const videData = async () => {
@@ -49,6 +48,27 @@ const SingleTeam = () => {
         }
         videData()
     }, [])
+
+    // will take to the top
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }, [])
+    // show player compo 
+    const [playerShow, SetPlayerShow] = useState(false)
+    console.log(playerShow)
+    const handleClick = () => {
+        SetPlayerShow(true)
+    }
+    // show shcedule compo
+    // const [shceduleShow, SetShceduleShow] = useState(false)
+    // const handleSchd = () => {
+    //     SetShceduleShow(!false)
+    // }
+
     return (
         <>
             <Topsubnav />
@@ -114,10 +134,10 @@ const SingleTeam = () => {
                 <div className="st_overViewWrap">
                     <div className="stOverItems">
                         <Link to={`/single_team/players/${id}`} className="link stBtn">
-                            <button className="btn btn-light fw-bold ">SQUAD</button>
+                            <button className="btn btn-light fw-bold " onClick={handleClick}>SQUAD</button>
                         </Link>
                         <Link to="/team_schedule/players/schedule" className="link stBtn">
-                            <button className="btn btn-light fw-bold ">SCHEDULE</button>
+                            <button className="btn btn-light fw-bold " onClick={handleSchd}>SCHEDULE</button>
                         </Link>
                         <Link to="/team_overview" className="link stBtn">
                             <button className="btn btn-light fw-bold ">RESULTS</button>
@@ -133,35 +153,74 @@ const SingleTeam = () => {
                 </div>
 
                 {/* PLAYERS DATA */}
-                <div className="container">
-                    <div className="row mt-5">
-                        {
-                            videoData.slice(0, 3).map((item, i) => (
-                                <div className="col-md-4">
-                                    <div className="d-flex" key={i}>
-                                        <div className="container">
-                                            <div className='card  mb-4'>
-                                                <div className="card" style={{ height: "350px !important" }}>
-                                                    <div className="cardImg_container">
-                                                        <ReactPlayer
-                                                            width="500px" height="220px"
-                                                            controls url={item.video_link} />
-                                                    </div>
-                                                    <div className="card_body">
-                                                        <h2 className="card_text">{item.title}</h2>
-                                                        <p className="card_para">{item.subtitle}</p>
-                                                        <span className="card_desc">{item.Description.slice(0, 60)}</span>
+                {
+                    playerShow ? " "
+                        :
+                        <div className="container">
+                            <div className="row mt-5">
+                                {
+                                    videoData.slice(0, 3).map((item, i) => (
+                                        <div className="col-md-4">
+                                            <div className="d-flex" key={i}>
+                                                <div className="container">
+                                                    <div className='card  mb-4'>
+                                                        <div className="card" style={{ height: "350px !important" }}>
+                                                            <div className="cardImg_container">
+                                                                <ReactPlayer
+                                                                    width="500px" height="220px"
+                                                                    controls url={item.video_link} />
+                                                            </div>
+                                                            <div className="card_body">
+                                                                <h2 className="card_text">{item.title}</h2>
+                                                                <p className="card_para">{item.subtitle}</p>
+                                                                <span className="card_desc">{item.Description.slice(0, 60)}</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                            ))
-                        }
-                    </div>
-                </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                }
+{/* 
+                {
+                    shceduleShow ? " "
+                        :
+                        <div className="container">
+                            <div className="row mt-5">
+                                {
+                                    videoData.slice(0, 3).map((item, i) => (
+                                        <div className="col-md-4">
+                                            <div className="d-flex" key={i}>
+                                                <div className="container">
+                                                    <div className='card  mb-4'>
+                                                        <div className="card" style={{ height: "350px !important" }}>
+                                                            <div className="cardImg_container">
+                                                                <ReactPlayer
+                                                                    width="500px" height="220px"
+                                                                    controls url={item.video_link} />
+                                                            </div>
+                                                            <div className="card_body">
+                                                                <h2 className="card_text">{item.title}</h2>
+                                                                <p className="card_para">{item.subtitle}</p>
+                                                                <span className="card_desc">{item.Description.slice(0, 60)}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+                            </div>
+                        </div>
+                }
+ */}
 
             </div>
         </>

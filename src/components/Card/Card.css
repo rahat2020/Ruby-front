@@ -27,7 +27,7 @@
 
 
 .cardImg_container .card_img{
-    border-bottom: 14px solid #870064 !important;
+    border-bottom: 14px solid #E5007E !important;
 }
 .cardImg_container .imgwrap::before {
     content: '';
@@ -37,7 +37,7 @@
     width: 45px;
     height: 40px;
     z-index: 2;
-    background: url(https://womenscompetitions.thefa.com/Content/site/img/FemaleEngagement/icons/ic-play-32-light.svg) #870064 right center no-repeat;
+    background: url(https://womenscompetitions.thefa.com/Content/site/img/FemaleEngagement/icons/ic-play-32-light.svg) #E5007E right center no-repeat;
 }
 
 .cardImg_container .imgwrap::after {
@@ -47,7 +47,7 @@
     bottom: 0;
     width: 25px;
     height: 40px;
-    background: #870064;
+    background: #E5007E;
     z-index: 1;
     -webkit-transform: skewX(20deg);
     -moz-transform: skewX(20deg);
@@ -57,6 +57,7 @@
 }
 .card:hover .card_img {
     transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
 }
 .card_body {
     height: 180px;
@@ -174,3 +175,12 @@
     height: 100%;
     transform: skewX(-20deg);
 } */
+
+
+/* responsive styles */
+@media only screen and (min-width: 1468px){
+    .imgwrap{
+        width: 100%;
+        height: 100%;
+    }
+}

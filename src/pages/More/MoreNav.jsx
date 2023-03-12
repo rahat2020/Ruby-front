@@ -53,7 +53,14 @@ const MoreNav = () => {
                                         id={nvrcolor ? 'showUnderline' : 'hideUnderline'}
                                         onClick={(e) =>
                                             handleCatData(e.target.textContent)}>
-                                        ABOUT</li>
+                                        STATS</li>
+                                </Link>
+                                <Link to="/awards" className="link">
+                                    <li className="fgul_lis brekar"
+                                        id={playAcolor ? 'showUnderline' : 'hideUnderline'}
+                                        onClick={(e) => handleCatData(e.target.textContent)}>
+                                        <span style={{ marginLeft: '1rem' }}>AWARDS AND PRIZE MONEY</span>
+                                    </li>
                                 </Link>
                                 <Link to="/cms" className="link">
                                     <li className="fgul_lis brekar"
