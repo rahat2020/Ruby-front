@@ -36,6 +36,7 @@ import Draft from "./pages/Draft/Draft";
 import About from "./pages/About/About";
 import Domestic from "./pages/Draft/Domestic/Domestic";
 import Overseas from "./pages/Draft/Overseas/Overseas";
+import Award from "./pages/Award/Award";
 // import PlaySomeTimes from "./pages/ForGirls/PlaySomeTimes/PlaySomeTimes";
 // import PlayAlot from "./pages/ForGirls/PlayAlot/PlayAlot";
 // import WildCats from "./pages/ForGirls/WildCats/WildCats";
@@ -69,6 +70,7 @@ function App() {
                     <Route path="/abouts" element={<About />} />
                     <Route path="/localplayers" element={<Domestic/>} />
                     <Route path="/foreignplayers" element={<Overseas/>} />
+                    <Route path="/awards" element={<Award/>} />
 
                     {/* TEAMS AND SINGLE TEAMS */}
                     <Route path="/all_teams" element={<Teams />} />

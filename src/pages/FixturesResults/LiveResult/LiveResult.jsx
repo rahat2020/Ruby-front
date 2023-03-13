@@ -8,13 +8,15 @@ import Footer from '../../../components/Footer/Footer';
 import CheckFa from '../../../components/CheckFa/CheckFa';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import ReactPlayer from 'react-player';
 
 const LiveResult = () => {
     const { id } = useParams()
     // console.log(id)
     // FETCH DATA FROM DATABASE
-    const [data, setData] = useState({})
-    console.log(data?.game_json_data_to_dict?.home_Team_player_1_id_from_Plyer_model)
+    const [data, setData] = useState([])
+    console.log(data)
+    // console.log(data?.game_json_data_to_dict?.home_Team_player_1_id_from_Plyer_model)
     // console.log('data', data?.Goal_json_data_to_dict?.map(i => i.Goal_Date_Time))
     // console.log('data', data?.Goal_json_data_to_dict)
     // console.log('data', data?.Goal_json_data_to_dict?.map(i => Number(i.Home_Team_Goal_Count_In_1)))
@@ -23,10 +25,9 @@ const LiveResult = () => {
     // console.log('resultsData', data?.game_json_data_to_dict?.Event_for_game)
 
 
-    const time = (data?.Goal_json_data_to_dict?.map(i => i?.Goal_Date_Time))
-    const newTime = new Date(time)
-    // console.log('newTime',newTime)
-    const exactTime = newTime.toLocaleTimeString()
+    // const time = (data?.Goal_json_data_to_dict?.map(i => i? i.Goal_Date_Time :''))
+    // const newTime = new Date(time)
+    // const exactTime = newTime.toLocaleTimeString()
     // console.log('exactTime', exactTime)
     // FETCHING GOAL DETAILS
 
@@ -52,9 +53,9 @@ const LiveResult = () => {
             setData(res.data);
         }
         newsData()
-        setTimeout(function () {
-            window.location.reload();
-          }, [5000])
+        // setTimeout(function () {
+        //     window.location.reload();
+        //   }, [5000])
     },)
 
     // fetching EVENT data FOR STADIUM NAME
@@ -89,6 +90,13 @@ const LiveResult = () => {
         newsData()
     },)
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }, [])
 
     return (
         <>
@@ -98,6 +106,14 @@ const LiveResult = () => {
                 <div className='result-date'>
                     <h5>3rd March, 8:00pm</h5>
                     <span>{stadNmae?.Stadium_Name}</span>
+                </div>
+
+                <div className="liveMtch">
+                    <div className="MeadiaplayerContainer">
+                        <ReactPlayer
+                            className="videoPlay" 
+                            controls url="https://www.youtube.com/watch?v=G-bLsrNHcpE&t=329s" />
+                    </div>
                 </div>
 
                 <div className='container result-container'
@@ -246,6 +262,54 @@ const LiveResult = () => {
                                     </h4>
                                     <span>Centre Back</span>
                                 </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_4_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_5_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_6_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_7_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_8_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_9_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_10_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.home_Team_player_11_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Centre Back</span>
+                                </li>
                             </ul>
                         </div>
 
@@ -266,6 +330,54 @@ const LiveResult = () => {
                                 <li>
                                     <h4>
                                         {data?.game_json_data_to_dict?.way_Team_player_3_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_4_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_5_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_6_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_7_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_8_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_9_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_10_id_from_Plyer_model}
+                                    </h4>
+                                    <span>Midfield</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        {data?.game_json_data_to_dict?.way_Team_player_11_id_from_Plyer_model}
                                     </h4>
                                     <span>Midfield</span>
                                 </li>

@@ -1,0 +1,108 @@
+.award-top{
+    text-align: center;
+}
+
+.award-top img{
+    width: 100%;
+}
+
+.award-top h1{
+    font-size:35px;
+    position: absolute;
+    background-color: #efefef;
+    font-weight: 900;
+    top: 10%;
+    padding: 10px 20px 10px 20px;
+}
+
+.finalists{
+    margin-bottom: 30px;
+}
+
+.finalists img{
+    width: 100%;
+}
+
+.individuals{
+    background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 70px;
+}
+
+.individuals h2{
+    color: #efefef;
+    font-weight: 900;
+    padding: 20px 0px 0px 30px; 
+}
+
+.individuals img{
+    width: 100%;
+}
+
+.indi-card{
+    background-color: #efefef;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    margin-top: -102px;
+    margin-left: auto;
+    width: 70%;
+    margin-right: auto    
+}
+
+.indi-card h3{
+    font-weight: 900;
+}
+
+.indi-card h4{
+    font-weight: 900;
+    color: slateblue;
+}
+
+.single-indi{
+    margin-top: 30px;
+}
+
+.single-indi h2{
+    font-weight: 900;
+    padding: 20px 0px 0px 0px; 
+    text-align: center;
+}
+
+.first-round h3{
+    text-align: left;
+    font-weight: 700;
+}
+
+.qualifiers h3{
+    text-align: right;
+    font-weight: 700;
+}
+
+.award-box{
+    border: 1px solid #cccccc;
+    width: 90%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 18px 2px;
+}
+.award-box img{
+    width: 50%;
+}
+.final{
+    text-align: center;
+}
+.final h3{
+    font-weight: 800;
+}
+
+.award-box h4{
+    font-weight: 900;
+}
+
+.award-box h5{
+    font-size: 25px;
+    color: #8E0F57;
+    font-weight: 900;
+}

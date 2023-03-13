@@ -43,7 +43,7 @@ const Carousel = () => {
                             {/* <img src={caro_two} className="d-block w-100 slide_one" alt="..." /> */}
                             <img src={`https://api.wslbangladesh.com` + item.Slide_Image} className="d-block w-100 slide_one" alt="..." />
                             <img src={banner} alt="banner" className="banner_svg" />
-                            <span className="banner_text">{item.Slide_title.slice(0, 25)}</span>
+                            <span className="banner_text">{item.Slide_title.slice(0, 25)}...</span>
                             <Link to="/fixtures-results" className="link">
                                 <button className='caruWeb_btn'>
                                     READ MORE

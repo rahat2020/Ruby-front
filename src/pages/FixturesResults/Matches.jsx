@@ -12,7 +12,7 @@ import MatchesNav from './MatchesNav';
 const Matches = () => {
   // FETCH DATA FROM DATABASE
   const [data, setData] = useState([])
-  // console.log('data', data)
+  console.log('data', data)
 
   useEffect(() => {
     const newsData = async () => {
@@ -22,6 +22,22 @@ const Matches = () => {
       const res = await axios.post('https://api.wslbangladesh.com/Event/find_all/', data);
       // console.log(res.data);
       setData(res.data);
+    }
+    newsData()
+  }, [])
+  // FETCH TEAM DATA FROM DATABASE BY NAME
+  const [tdata, setTData] = useState([])
+  console.log('team', tdata)
+
+  useEffect(() => {
+    const newsData = async () => {
+      const data = new FormData();
+      data.append('Process', "find_team_with_team_name");
+      data.append('team_name', data.Home_Team);
+      // console.log('Process', data.append('Process', "see_all_news"));
+      const res = await axios.post('https://api.wslbangladesh.com/Team/find_team_with_team_name/', data);
+      // console.log(res.data);
+      setTData(res.data);
     }
     newsData()
   }, [])
@@ -86,20 +102,21 @@ const Matches = () => {
                     data.map((item, i) => (
                       <React.Fragment key={i}>
                         <div className='col-md-2 col-sm-12 date'>
-                          <h4>{item.Event_Date_Time.slice(0, 10)}</h4>
+                          <h4>{item?.Event_Date_Time ? item.Event_Date_Time?.slice(0, 10) : "Time"}</h4>
                         </div>
                         <div className='col-md-2 col-sm-12 date'>
-                          <h4>KICK OFF {item.Event_Date_Time.slice(10, 20)}</h4>
+                          <h4>KICK OFF {item ? item.Event_Date_Time?.slice(10, 20) :  "Date"}</h4>
                           {/* <span>4</span> */}
-                          <p> BANGABANDHU STADIUM <br /> DHAKA </p>
+                          <p> {item.Stadium_Name} <br /> DHAKA </p>
                         </div>
 
                         <div className='col-md-4 col-sm-12 vs-card'>
-                          <img src={m} alt="logo" style={{ width: '40px', height: '40px', marginRight: '20px' }} />
+                          <img src={`https://api.wslbangladesh.com` + tdata.Team_Logo}
+                            alt="team-logo" style={{ width: '40px', height: '40px', marginRight: '20px' }} />
                           <span>{item.Home_Team}</span>
                           <h5 style={{ margin: '0 15px 0 15px' }} >VS</h5>
                           <span>{item.Way_Team}</span>
-                          <img src={`https://api.wslbangladesh.com` + item.Event_Logo} alt="logo"
+                          <img src={`https://api.wslbangladesh.com` + tdata.Event_Logo} alt="team-logo"
                             style={{ width: '40px', height: '40px', marginLeft: '20px' }} />
                         </div>
 

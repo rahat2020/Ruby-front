@@ -233,11 +233,12 @@
     .footer {
         width: 100%;
         height: 100%;
+
     }
     .ffImg_container .ffimg{
-        width: 60%;
-        height: 60%;
+        width: 48px;
         object-fit: cover;
+        margin-right: .66rem;
     }
     .socialIcon_container {
         width: 100%;

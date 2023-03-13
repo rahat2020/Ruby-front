@@ -3,6 +3,22 @@
     min-height: 450px;
     background-size: auto 100%;
 }
+.MeadiaplayerContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.MeadiaplayerContainer .videoPlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .result-date{
     color: #efefef;
@@ -152,12 +168,18 @@
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width: 359px) {
+@media (max-width: 393px) {
     .responsive{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    .result-below {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 2rem;
     }
     
 }

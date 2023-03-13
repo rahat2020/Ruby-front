@@ -21,7 +21,7 @@ const SingleTeam = () => {
 
     // FETCH SINGLE DATA WITH ID FROM DATABASE
     const [data, setData] = useState([])
-    // console.log('singleTeamdata', data)
+    console.log('singleTeamdata', data)
 
     useEffect(() => {
         const newsData = async () => {
@@ -75,7 +75,7 @@ const SingleTeam = () => {
             <CommonNav />
             <div className="single_team">
                 <div className="st_team">
-                    <img src={ban}
+                    <img src={`https://api.wslbangladesh.com` + data?.Team_banner}
                         className="st_banner"
                         alt="banner"
                         style={{ backgroundColor: "linear-gradient(180deg, #011e4177 0%, #3164f14f 100%" }}
@@ -120,10 +120,10 @@ const SingleTeam = () => {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <p className=" stTeamText">Owner: {data.Team_Owner_Name}</p>
-                                        <p className=" stTeamText">Team Manager: {data.Manager ? data.Manager : "Rahul shrama"}</p>
+                                        <p className=" stTeamText">Team Manager: {data.Manager ? data.Manager?.User_Name : "Rahul shrama"}</p>
                                     </div>
                                     <div className="col-md-6">
-                                        <p className=" stTeamText">Captain: {data.Team_captain ? data.Team_captain : 'Rohit shrama'}</p>
+                                        <p className=" stTeamText">Captain: {data.Team_captain ? data.Team_captain?.PLayer_Name : 'Rohit shrama'}</p>
                                         <p className=" stTeamText">Venue: Bangga Bandhu National Stadium</p>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@ const SingleTeam = () => {
                             <button className="btn btn-light fw-bold " onClick={handleClick}>SQUAD</button>
                         </Link>
                         <Link to="/team_schedule/players/schedule" className="link stBtn">
-                            <button className="btn btn-light fw-bold " onClick={handleSchd}>SCHEDULE</button>
+                            <button className="btn btn-light fw-bold ">SCHEDULE</button>
                         </Link>
                         <Link to="/team_overview" className="link stBtn">
                             <button className="btn btn-light fw-bold ">RESULTS</button>
@@ -186,41 +186,6 @@ const SingleTeam = () => {
                             </div>
                         </div>
                 }
-{/* 
-                {
-                    shceduleShow ? " "
-                        :
-                        <div className="container">
-                            <div className="row mt-5">
-                                {
-                                    videoData.slice(0, 3).map((item, i) => (
-                                        <div className="col-md-4">
-                                            <div className="d-flex" key={i}>
-                                                <div className="container">
-                                                    <div className='card  mb-4'>
-                                                        <div className="card" style={{ height: "350px !important" }}>
-                                                            <div className="cardImg_container">
-                                                                <ReactPlayer
-                                                                    width="500px" height="220px"
-                                                                    controls url={item.video_link} />
-                                                            </div>
-                                                            <div className="card_body">
-                                                                <h2 className="card_text">{item.title}</h2>
-                                                                <p className="card_para">{item.subtitle}</p>
-                                                                <span className="card_desc">{item.Description.slice(0, 60)}</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    ))
-                                }
-                            </div>
-                        </div>
-                }
- */}
 
             </div>
         </>

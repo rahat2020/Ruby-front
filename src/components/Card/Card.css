@@ -1,7 +1,7 @@
 .homeCard {
     border: .3px solid #eeeeed !important;
     position: relative;
-    height: 500px;
+    height: 458px;
     overflow: hidden;
     border-radius: 0;
     transition: all .2s ease;
@@ -135,6 +135,7 @@
 }
 
 .cardbtn_text {
+    color: #011E41;
     margin-right: 2rem;
 }
 

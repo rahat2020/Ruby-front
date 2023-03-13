@@ -11,9 +11,9 @@ const Card = ({ news }) => {
       <div className="card homeCard">
         <div className="cardImg_container">
           <div className="imgwrap">
-            <img src={img} className="card_img" alt="..." />
+            {/* <img src={img} className="card_img" alt="..." /> */}
+            <img src={`https://api.wslbangladesh.com` + news.photo} className="card_img" alt="..." />
           </div>
-          {/* <img src={`https://api.wslbangladesh.com` + news.photo} className="card_img" alt="..." /> */}
         </div>
         <div className="card_body">
           <h2 className="card_text">{news.title}</h2>

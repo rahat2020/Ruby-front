@@ -64,7 +64,7 @@ const Teams = () => {
                                             <h4 className="temTitle">{item.Team_Name}</h4>
                                             <button className='Tckt_btn'>
                                                 <Link to={`/all_teams/single_team/${item.id}`} className='link'>
-                                                    <span className="cardbtn_text">
+                                                    <span className="Allcardbtn_text">
                                                         SEE MORE
                                                     </span>
                                                 </Link>

@@ -105,7 +105,7 @@ const Footer = () => {
                         <div className="col-sm-6">
                             <div className="flrightimg_container">
                                 <img src={publicitix} alt="" className="flRightImg" />
-                                <p className="flRight_text fw-bold">K-SPORTS</p>
+                                <p className="flRight_text fw-bold">K-SPORTS ©2001 - 2023. All Rights Reserved</p>
                             </div>
                         </div>
                     </div>

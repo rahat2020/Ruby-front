@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import CheckFa from "../../components/CheckFa/CheckFa";
 import Footer from "../../components/Footer/Footer";
@@ -35,6 +35,13 @@ function HomePage() {
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }, [])
     return (
         <>
             <div className="App">

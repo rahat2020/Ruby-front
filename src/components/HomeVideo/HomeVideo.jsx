@@ -10,7 +10,7 @@ import Footer from '../../components/Footer/Footer';
 
 
 const HomeVideo = ({ item }) => {
-    // console.log('item', item);
+    console.log('homevideo', item);
 
     return (
         <>
