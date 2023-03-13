@@ -44,7 +44,7 @@ const Teams = () => {
     return (
         <>
             <Headers />
-            <TeamsNav />
+            {/* <TeamsNav /> */}
             <div className="container">
                 <div className="tickets">
                     <div className="row">

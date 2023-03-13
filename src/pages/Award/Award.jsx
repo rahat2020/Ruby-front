@@ -23,9 +23,9 @@ const Award = () => {
     <>
       <Headers />
       <div>
-        <div className='award-top'>
+        {/* <div className='award-top'>
           <img src={aw} alt="" />
-        </div>
+        </div> */}
         <div className="d-flex justify-content-center align-items-center mt-3">
           <h1 className='link shadow-sm p-2'>AWARDS & PRIZES</h1>
         </div>

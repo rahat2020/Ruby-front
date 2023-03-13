@@ -30,7 +30,7 @@ const StickyNavBar = () => {
                                 ABOUT
                             </Link>
                         </li>
-                        <li className="nav_item ">
+                        <li className="nav_item line">
                             <Link to="/matches_others" className="nav-link sticky_li">
                                 MATCHES
                             </Link>

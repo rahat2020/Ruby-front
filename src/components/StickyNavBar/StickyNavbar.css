@@ -1,9 +1,10 @@
 #stickyNav {
     white-space: nowrap;
     width: 100%;
-    height: 70px;
+    height: 55px;
     background-color: #fff;
     position: sticky;
+    overflow: hidden;
     top: 12%;
     z-index: 1200;
 }
@@ -15,14 +16,14 @@
     border-left: 1px solid #ccc;
     /* left: 0; */
     /* right: 0; */
-    top: 7px;
+    top: 10px;
     height: 35px;
     width: 1px;
     display: block;
 }
 .navbar_nav {
     /* margin-left: 5rem; */
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     border-bottom: 1px solid #7e7e7e48;
     /* min-height: 55px; */
 }
@@ -79,7 +80,7 @@ ul li {
         width: 100%;
         background-color: #fff;
         position: sticky;
-        border-bottom: 1px solid #7e7e7e48;
+        /* border-bottom: 1px solid #7e7e7e48; */
         top: 90px;
         z-index: 1200;
     }
@@ -91,7 +92,8 @@ ul li {
     #stickyNav {
         white-space: nowrap;
         overflow-x: scroll;
-        height: 70px;
+        overflow-y:hidden;
+        height: 64px;
         width: 100vw;
         position: sticky;
     }
@@ -102,7 +104,7 @@ ul li {
         border-left: 1px solid #ccc;
         /* left: 0; */
         /* right: 0; */
-        top: 28px;
+        top: 17px;
         height: 35px;
         width: 1px;
         display: block;
@@ -155,11 +157,20 @@ ul li {
     }
 
     .nav_item .sticky_li {
-        display: inline-block;
-        /* color: white; */
+        /* display: inline-block;
+        color: white;
         text-align: center;
         padding: 14px;
-        text-decoration: none;
+        text-decoration: none; */
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 37px;
+        margin-top: 10px;
+        color: #011e41;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease-in-out;
     }
 
     .dropdown-menu {
