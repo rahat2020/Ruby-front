@@ -121,9 +121,12 @@ const Matches = () => {
                         </div>
 
                         <div className='fixture-buttons col-md-4 col-sm-12 date'>
-                          <Link to={`/single-results/${item.id}`}>
+                          <Link to="/cms">
                             <button className="card_btn">WATCH HERE</button>
                           </Link>
+                          {/* <Link to={`/single-results/${item.id}`}>
+                            <button className="card_btn">WATCH HERE</button>
+                          </Link> */}
                           <Link to='/tickets'>
                             <button className='card_btn_red'>BUY TICKETS</button>
                           </Link>

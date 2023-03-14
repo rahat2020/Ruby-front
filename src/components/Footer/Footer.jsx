@@ -1,6 +1,6 @@
 import React from "react";
 import bff from '../../assets/bff.png';
-import tiktok from '../../assets/tik-tok.png';
+// import tiktok from '../../assets/tik-tok.png';
 import ksports from '../../assets/ksports.png';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
@@ -105,7 +105,7 @@ const Footer = () => {
                         <div className="col-sm-6">
                             <div className="flrightimg_container">
                                 <img src={publicitix} alt="" className="flRightImg" />
-                                <p className="flRight_text fw-bold">K-SPORTS ©2001 - 2023. All Rights Reserved</p>
+                                <p className="flRight_text fw-bold">Copyright © 2023 K-SPORTS All Rights Reserved</p>
                             </div>
                         </div>
                     </div>

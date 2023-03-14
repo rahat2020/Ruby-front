@@ -71,10 +71,10 @@ const Result = () => {
                                         data.map((item, i) => (
                                             <React.Fragment key={i}>
                                                 <div className='col-md-2 col-sm-12 date'>
-                                                    <h4>{item.Event_Date_Time.slice(0, 10)}</h4>
+                                                    <h4>{item?.Event_Date_Time ? item.Event_Date_Time?.slice(0, 10) : "Time"}</h4>
                                                 </div>
                                                 <div className='col-md-2 col-sm-12 date'>
-                                                    <h4>KICK OFF {item.Event_Date_Time.slice(10, 20)}</h4>
+                                                    <h4>KICK OFF {item ? item.Event_Date_Time?.slice(10, 20) : "Date"}</h4>
                                                     {/* <span>4</span> */}
                                                     <p> BANGABANDHU STADIUM <br /> DHAKA </p>
                                                 </div>
